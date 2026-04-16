@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#0d0d0d;
+  --white:#fafaf8;
+  --gray:#f2f1ed;
+  --mid:#888;
+  --border:#e5e3dd;
+  --accent-green:#a8c957;
+  --accent-yellow:#f5c842;
+  --accent-pink:#f0a8b8;
+  --accent-blue:#7ec8e3;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Cabinet Grotesk',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+::selection{background:var(--black);color:var(--white)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--black)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes countUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blobFloat{0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}50%{border-radius:30% 60% 70% 40%/50% 60% 30% 60%}}
+
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-35px);transition:opacity .7s .1s cubic-bezier(.4,0,.2,1),transform .7s .1s cubic-bezier(.4,0,.2,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(35px);transition:opacity .7s .15s cubic-bezier(.4,0,.2,1),transform .7s .15s cubic-bezier(.4,0,.2,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:20px 48px;display:flex;justify-content:space-between;align-items:center;transition:all .3s;background:transparent}
+nav.scrolled{background:rgba(250,250,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cabinet Grotesk',sans-serif;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--mid);text-decoration:none;letter-spacing:.04em;transition:color .2s;text-transform:uppercase}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.nav-btn{font-size:12px;font-weight:700;padding:9px 20px;border:1.5px solid var(--black);background:transparent;cursor:pointer;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;font-family:inherit}
+.nav-btn:hover{background:var(--black);color:var(--white)}
+.nav-btn.filled{background:var(--black);color:var(--white)}
+.nav-btn.filled:hover{background:#333}
+
+/* HERO */
+.hero{min-height:100vh;padding:100px 48px 60px;position:relative;overflow:hidden}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px}
+.hero-badge{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+.hero-nav-pills{display:flex;gap:8px}
+.hero-pill{font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mid);cursor:pointer;transition:all .2s}
+.hero-pill:hover,.hero-pill.active{background:var(--black);color:var(--white);border-color:var(--black)}
+.hero-contact-pill{font-size:11px;padding:6px 14px;border:1px solid var(--border);border-radius:100px;font-weight:600;color:var(--mid)}
+
+.hero-main{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:end}
+.hero-h1{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(64px,8vw,108px);font-weight:900;line-height:.92;letter-spacing:-0.03em;margin-bottom:24px}
+.hero-h1 em{font-style:normal;color:var(--mid)}
+.hero-title-row{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.hero-title-text{font-size:17px;font-weight:600;color:var(--mid)}
+.hero-title-star{width:20px;height:20px;position:relative;display:inline-block}
+.hero-desc{font-size:15px;line-height:1.75;color:#666;max-width:500px;font-weight:400;margin-bottom:32px}
+.hero-checks{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.hero-check{display:flex;align-items:center;gap:10px;font-size:14px;color:#555;font-weight:400}
+.hero-check::before{content:'';width:18px;height:18px;background:var(--black);border-radius:50%;flex-shrink:0;display:inline-block}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-main{padding:14px 28px;background:var(--black);color:var(--white);border:none;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:8px;border-radius:4px}
+.btn-main:hover{background:#222;transform:translateY(-1px)}
+.btn-sec{padding:14px 28px;background:transparent;color:var(--black);border:1.5px solid var(--black);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-flex;align-items:center;gap:8px;border-radius:4px}
+.btn-sec:hover{background:var(--black);color:var(--white)}
+
+/* HERO PHOTO */
+.hero-photo-wrap{position:relative;animation:fadeIn .9s .4s both}
+.hero-photo-blob{width:380px;height:460px;background:#e8e4dc;border-radius:60% 40% 50% 60%/50% 60% 40% 50%;overflow:hidden;position:relative;animation:blobFloat 8s ease-in-out infinite}
+.hero-photo-blob img{width:100%;height:100%;object-fit:cover}
+.hero-photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#d5d0c8 0%,#e8e4dc 100%);display:flex;align-items:center;justify-content:center;font-size:80px;filter:grayscale(1)}
+.hero-hello-badge{position:absolute;bottom:40px;right:-20px;background:var(--black);color:var(--white);width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;letter-spacing:.05em;animation:float 3s ease-in-out infinite}
+.hero-color-blob{position:absolute;top:10px;right:-10px;width:120px;height:120px;background:conic-gradient(var(--accent-pink),var(--accent-yellow),var(--accent-green),var(--accent-blue),var(--accent-pink));border-radius:50%;filter:blur(2px);opacity:.85;animation:spin 12s linear infinite}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1.5px solid var(--black);border-bottom:1.5px solid var(--black);padding:14px 0;overflow:hidden;background:var(--white)}
+.marquee-inner{display:flex;width:max-content;animation:marquee 18s linear infinite}
+.marquee-item{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:0 32px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+.marquee-dot{width:6px;height:6px;background:var(--black);border-radius:50%;flex-shrink:0}
+
+/* SECTIONS */
+section{padding:100px 48px}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.section-eyebrow::before{content:'';width:24px;height:1.5px;background:var(--mid)}
+.section-h2{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:900;line-height:1.0;letter-spacing:-0.02em;margin-bottom:16px}
+.section-sub{font-size:15px;color:#666;line-height:1.7;max-width:520px;font-weight:400}
+
+/* WHAT I OFFER */
+.offer-grid{display:grid;grid-template-columns:240px 1fr;gap:80px;align-items:start}
+.offer-text{margin-bottom:40px}
+.offer-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--black)}
+.offer-card{padding:32px 24px;border-right:1.5px solid var(--black);transition:background .25s;cursor:pointer;position:relative;overflow:hidden}
+.offer-card:last-child{border-right:none}
+.offer-card:hover{background:var(--black)}
+.offer-card:hover .oc-title,.offer-card:hover .oc-desc,.offer-card:hover .oc-num{color:var(--white)}
+.offer-card:hover .oc-icon{filter:invert(1)}
+.oc-icon{font-size:28px;margin-bottom:20px;display:block;transition:filter .25s}
+.oc-num{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--mid);margin-bottom:12px;text-transform:uppercase;transition:color .25s}
+.oc-title{font-size:17px;font-weight:800;margin-bottom:8px;letter-spacing:-0.01em;transition:color .25s}
+.oc-desc{font-size:13px;color:#666;line-height:1.6;transition:color .25s}
+.offer-cta{margin-top:0;padding-left:0}
+.offer-cta-btn{margin-top:0;padding:14px 24px;border:1.5px solid var(--black);background:var(--white);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .25s;display:inline-flex;align-items:center;gap:8px}
+.offer-cta-btn:hover{background:var(--black);color:var(--white)}
+
+/* EXPERIENCE */
+.exp-section{background:var(--white)}
+.exp-header{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:48px}
+.exp-desc{font-size:14px;color:#666;line-height:1.75;max-width:400px}
+.exp-rows{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--black)}
+.exp-row{display:grid;grid-template-columns:48px 1fr auto auto;gap:24px;align-items:center;padding:20px 28px;border-bottom:1.5px solid var(--black);transition:background .25s;cursor:pointer}
+.exp-row:last-child{border-bottom:none}
+.exp-row:hover{background:var(--black)}
+.exp-row:hover .er-num,.exp-row:hover .er-company,.exp-row:hover .er-role,.exp-row:hover .er-duration,.exp-row:hover .er-level{color:var(--white)!important;border-color:var(--white)!important}
+.er-num{font-size:12px;font-weight:700;color:#bbb;letter-spacing:.06em;transition:color .25s}
+.er-company{font-size:16px;font-weight:800;letter-spacing:-.01em;transition:color .25s}
+.er-role{font-size:12px;color:var(--mid);font-weight:500;transition:color .25s}
+.er-duration{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .25s}
+.er-level{font-size:11px;font-weight:700;letter-spacing:.08em;border:1px solid var(--border);padding:5px 12px;color:#555;text-transform:uppercase;transition:all .25s}
+
+/* PROJECTS */
+.proj-section{background:var(--gray)}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--black);margin-top:48px}
+.proj-card{padding:36px;border-right:1.5px solid var(--black);border-bottom:1.5px solid var(--black);background:var(--white);transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.proj-card:nth-child(2n){border-right:none}
+.proj-card:nth-last-child(-n+2){border-bottom:none}
+.proj-card:hover{background:var(--black)}
+.proj-card:hover .pc-tag,.proj-card:hover .pc-title,.proj-card:hover .pc-desc,.proj-card:hover .pc-impact,.proj-card:hover .pc-impact-label{color:var(--white)!important;border-color:#555!important}
+.proj-card:hover .pc-badge{background:#333;color:#aaa!important;border-color:#555!important}
+.proj-card:hover .pc-arrow{color:var(--white)}
+.pc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}
+.pc-tag{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);padding:5px 12px;border:1px solid var(--border);transition:all .3s;display:inline-block}
+.pc-arrow{font-size:18px;color:#bbb;transition:all .3s;font-weight:300}
+.pc-title{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(24px,2.5vw,30px);font-weight:900;letter-spacing:-0.02em;line-height:1.05;margin-bottom:6px;transition:color .3s}
+.pc-subtitle{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:16px}
+.pc-desc{font-size:13px;line-height:1.7;color:#555;margin-bottom:20px;transition:color .3s}
+.pc-impact{font-size:12px;color:#555;line-height:1.5;padding:12px 16px;border-left:2px solid var(--black);margin-bottom:20px;transition:all .3s;font-weight:500}
+.pc-impact-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--black);display:block;margin-bottom:4px;transition:color .3s}
+.pc-badges{display:flex;flex-wrap:wrap;gap:6px}
+.pc-badge{font-size:11px;padding:4px 10px;border:1px solid var(--border);color:#777;font-weight:600;transition:all .3s;letter-spacing:.02em}
+
+/* TESTIMONIAL */
+.testi-section{padding:100px 48px;background:var(--white);position:relative;overflow:hidden}
+.testi-label{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:40px}
+.testi-label::before,.testi-label::after{content:'';flex:0 0 40px;height:1px;background:var(--border)}
+.testi-quote{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;line-height:1.1;letter-spacing:-0.025em;max-width:900px;margin:0 auto 48px;text-align:left}
+.testi-quote span{color:var(--mid)}
+.testi-author{display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}
+.testi-info h4{font-size:16px;font-weight:800;margin-bottom:2px}
+.testi-info p{font-size:13px;color:var(--mid)}
+.testi-squiggle{width:80px;height:20px;color:var(--black)}
+.testi-photo{width:80px;height:80px;border-radius:50%;background:#e5e3dd;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:32px;filter:grayscale(1)}
+
+/* STATS */
+.stats-section{background:var(--white);border-top:1.5px solid var(--black);border-bottom:1.5px solid var(--black);padding:0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border:none}
+.stat-block{padding:48px 32px;border-right:1.5px solid var(--black);text-align:center;transition:background .25s}
+.stat-block:last-child{border-right:none}
+.stat-block:hover{background:var(--black)}
+.stat-block:hover .sb-val,.stat-block:hover .sb-label{color:var(--white)}
+.sb-icon{font-size:22px;margin-bottom:12px}
+.sb-val{font-family:'Cabinet Grotesk',sans-serif;font-size:52px;font-weight:900;line-height:1;letter-spacing:-0.03em;margin-bottom:8px;transition:color .25s}
+.sb-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);transition:color .25s}
+
+/* CONTACT */
+.contact-section{background:var(--gray)}
+.contact-h2{font-family:'Cabinet Grotesk',sans-serif;font-size:clamp(48px,7vw,96px);font-weight:900;line-height:.92;letter-spacing:-0.04em;text-align:center;margin-bottom:24px}
+.contact-h2 em{font-style:normal;color:var(--mid)}
+.contact-sub{text-align:center;font-size:15px;color:var(--mid);margin-bottom:56px;font-weight:400}
+.contact-form{max-width:680px;margin:0 auto}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-input{width:100%;padding:16px 18px;background:var(--white);border:1.5px solid var(--border);color:var(--black);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s;border-radius:4px}
+.form-input:focus{border-color:var(--black)}
+.form-input::placeholder{color:#bbb;font-weight:400}
+.interests-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.int-btn{padding:8px 16px;background:var(--white);border:1.5px solid var(--border);color:#666;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .2s;border-radius:4px}
+.int-btn:hover,.int-btn.active{background:var(--black);color:var(--white);border-color:var(--black)}
+.form-submit{width:100%;padding:18px;background:var(--black);color:var(--white);border:none;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:4px;margin-top:8px}
+.form-submit:hover{background:#222;transform:translateY(-1px)}
+.form-note{text-align:center;font-size:12px;color:#bbb;margin-top:12px;font-weight:500}
+
+/* FOOTER */
+footer{padding:28px 48px;border-top:1.5px solid var(--black);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:var(--white)}
+.footer-logo{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s;cursor:pointer}
+.footer-links a:hover{color:var(--black)}
+.footer-year{font-size:11px;color:#ccc;font-weight:600}
+
+/* DIVIDER */
+.hdivider{height:1.5px;background:var(--black);margin:0}
+
+@media(max-width:900px){
+  .hero-main,.offer-grid,.exp-header{grid-template-columns:1fr}
+  .hero-photo-wrap{display:none}
+  .offer-cards{grid-template-columns:1fr}
+  .offer-card{border-right:none;border-bottom:1.5px solid var(--black)}
+  .proj-grid{grid-template-columns:1fr}
+  .proj-card{border-right:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-block{border-bottom:1.5px solid var(--black)}
+  nav{padding:16px 24px}
+  section{padding:80px 24px}
+  .hero{padding:80px 24px 60px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">MKO</div>
+  <ul class="nav-links">
+    <li><a href="#offer" onclick="scrollTo('offer')">Services</a></li>
+    <li><a href="#exp" onclick="scrollTo('exp')">Parcours</a></li>
+    <li><a href="#projects" onclick="scrollTo('projects')">Projets</a></li>
+    <li><a href="#contact" onclick="scrollTo('contact')">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <button class="nav-btn filled" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Parlons ↗</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-top reveal">
+    <span class="hero-badge">it's me</span>
+    <div class="hero-nav-pills">
+      <span class="hero-pill active">Mon Portfolio</span>
+      <span class="hero-pill">À propos</span>
+      <span class="hero-pill">Contact</span>
+      <span class="hero-contact-pill">georgesmoukoko4@gmail.com</span>
+    </div>
+  </div>
+
+  <div class="hero-main" style="margin-top:40px">
+    <div>
+      <div class="reveal" style="transition-delay:.05s">
+        <h1 class="hero-h1">Hello! Je suis <em>Miguel</em><br>Moukoko <span style="display:inline-block;font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--mid)">IA Engineer ✦</span></h1>
+      </div>
+      <div class="reveal" style="transition-delay:.12s">
+        <div class="hero-title-row">
+          <span class="hero-title-text">Ingénieur IA & Architecte Systèmes Fullstack — M2 SDAI · ENSPD Douala</span>
+        </div>
+        <div class="hero-checks">
+          <div class="hero-check">Solutions IA end-to-end, de la recherche au produit fini</div>
+          <div class="hero-check">Computer Vision & Deep Learning sur phototypes africains</div>
+          <div class="hero-check">Architectures scalables, Offline-First & MLOps</div>
+        </div>
+      </div>
+      <div class="hero-btns reveal" style="transition-delay:.2s">
+        <button class="btn-main" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Voir les projets ↓</button>
+        <button class="btn-sec" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Me contacter</button>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div style="position:relative;display:inline-block">
+        <div class="hero-color-blob"></div>
+        <div class="hero-photo-blob">
+          <div class="hero-photo-placeholder">🧑🏿‍💻</div>
+        </div>
+        <div class="hero-hello-badge">Hello!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <div class="marquee-item">AI Engineer<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Computer Vision<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Deep Learning<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Full-Stack Dev<span class="marquee-dot"></span></div>
+    <div class="marquee-item">MLOps<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Douala · Cameroun<span class="marquee-dot"></span></div>
+    <div class="marquee-item">ENSPD M2 SDAI<span class="marquee-dot"></span></div>
+    <div class="marquee-item">AI Engineer<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Computer Vision<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Deep Learning<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Full-Stack Dev<span class="marquee-dot"></span></div>
+    <div class="marquee-item">MLOps<span class="marquee-dot"></span></div>
+    <div class="marquee-item">Douala · Cameroun<span class="marquee-dot"></span></div>
+    <div class="marquee-item">ENSPD M2 SDAI<span class="marquee-dot"></span></div>
+  </div>
+</div>
+
+<!-- WHAT I OFFER -->
+<section id="offer" style="background:var(--white)">
+  <div class="offer-grid">
+    <div class="reveal-left">
+      <div class="section-eyebrow">Ce que je fais</div>
+      <h2 class="section-h2">What I'm<br>Offering</h2>
+      <p class="section-sub" style="margin-bottom:32px;font-size:13px">Des solutions intelligentes conçues pour des contextes africains réels — de la recherche au déploiement production.</p>
+      <button class="offer-cta-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">All Services ↗</button>
+    </div>
+    <div>
+      <div class="offer-cards reveal-right">
+        <div class="offer-card">
+          <span class="oc-icon">⬡</span>
+          <div class="oc-num">01 — IA / ML</div>
+          <div class="oc-title">IA Appliquée</div>
+          <div class="oc-desc">Deep Learning, Computer Vision, NLP, Reinforcement Learning. Modèles PyTorch fine-tunés.</div>
+        </div>
+        <div class="offer-card">
+          <span class="oc-icon">◈</span>
+          <div class="oc-num">02 — Fullstack</div>
+          <div class="oc-title">Visual Graphic Design</div>
+          <div class="oc-desc">APIs robustes ASP.NET Core, architectures SaaS multi-tenant, React.js & Flutter.</div>
+        </div>
+        <div class="offer-card">
+          <span class="oc-icon">◉</span>
+          <div class="oc-num">03 — Strategy</div>
+          <div class="oc-title">Strategy & Digital Marketing</div>
+          <div class="oc-desc">MLOps, CI/CD AWS, PostGIS, analytics prédictifs, vision produit end-to-end.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- EXPERIENCE -->
+<section id="exp" class="exp-section">
+  <div class="exp-header">
+    <div class="reveal-left">
+      <div class="section-eyebrow">Expérience</div>
+      <h2 class="section-h2">Experience</h2>
+    </div>
+    <div class="reveal-right" style="padding-top:8px">
+      <p class="exp-desc">Parcours marqué par des stages opérationnels et une formation d'excellence en Data Science & IA à l'ENSPD Douala. Chaque expérience a forgé une vision technique et produit transversale.</p>
+    </div>
+  </div>
+  <div class="exp-rows reveal">
+    <div class="exp-row">
+      <span class="er-num">01</span>
+      <div>
+        <div class="er-company">Micro-interactions Awwwards Team</div>
+        <div class="er-role">ESOAF — Stage Ingénierie Logicielle · Fullstack + IA</div>
+      </div>
+      <span class="er-level">Niveau 4</span>
+      <span class="er-duration">JOB DURATION · 7 MOIS</span>
+    </div>
+    <div class="exp-row">
+      <span class="er-num">02</span>
+      <div>
+        <div class="er-company">Senior UI Designer</div>
+        <div class="er-role">CAMRAIL — Stage Opérationnel · Ingénierie Industrielle</div>
+      </div>
+      <span class="er-level">Niv. 1 & 2</span>
+      <span class="er-duration">JOB DURATION · 1 AN</span>
+    </div>
+    <div class="exp-row">
+      <span class="er-num">03</span>
+      <div>
+        <div class="er-company">Product Design</div>
+        <div class="er-role">CAMRAIL — Stage Avancé · Systèmes Embarqués & Data</div>
+      </div>
+      <span class="er-level">Niveau 3</span>
+      <span class="er-duration">JOB DURATION · 2 ANS</span>
+    </div>
+    <div class="exp-row">
+      <span class="er-num">04</span>
+      <div>
+        <div class="er-company">Webflow Team Manager</div>
+        <div class="er-role">ENSPD — Master 2 Science des Données & IA</div>
+      </div>
+      <span class="er-level">M2 SDAI</span>
+      <span class="er-duration">JOB DURATION · EN COURS</span>
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="proj-section">
+  <div class="section-eyebrow reveal">Case Study</div>
+  <h2 class="section-h2 reveal" style="margin-bottom:8px">Projets IA & SaaS</h2>
+  <p class="section-sub reveal" style="margin-bottom:0;font-size:13px">Cinq projets à fort impact social, de la santé à la finance, conçus pour des contextes africains réels.</p>
+  <div class="proj-grid reveal">
+    <div class="proj-card">
+      <div class="pc-top">
+        <span class="pc-tag">Santé · IA Embarquée</span>
+        <span class="pc-arrow">↗</span>
+      </div>
+      <h3 class="pc-title">Innovative<br>DermAI for a<br>digital age</h3>
+      <p class="pc-subtitle">Diagnostic Dermatologique Offline-First</p>
+      <p class="pc-desc">Pipeline IA hybride (TFLite + FastAPI) avec EfficientNet fine-tuné sur les phototypes africains. Explicabilité via Grad-CAM, clustering épidémiologique DBSCAN.</p>
+      <div class="pc-impact"><span class="pc-impact-label">Web Design</span>Accès au diagnostic médical sans connexion internet en zones rurales africaines.</div>
+      <div class="pc-badges">
+        <span class="pc-badge">Flutter</span><span class="pc-badge">TFLite</span><span class="pc-badge">FastAPI</span><span class="pc-badge">EfficientNet</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="pc-top">
+        <span class="pc-tag">Fintech · NFC</span>
+        <span class="pc-arrow">↗</span>
+      </div>
+      <h3 class="pc-title">A vital comp—<br>Web Design for fintech<br>payment solutions.</h3>
+      <p class="pc-subtitle">SwiftPay — Paiement NFC</p>
+      <p class="pc-desc">Paiement sans contact NFC avec authentification biométrique multifactorielle. Architecture sécurisée conforme aux standards bancaires africains.</p>
+      <div class="pc-impact"><span class="pc-impact-label">Web Design</span>Infrastructure fintech sécurisée pour les marchés émergents.</div>
+      <div class="pc-badges">
+        <span class="pc-badge">NFC</span><span class="pc-badge">Biométrie</span><span class="pc-badge">Flutter</span><span class="pc-badge">C#</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="pc-top">
+        <span class="pc-tag">Agriculture · Géospatial</span>
+        <span class="pc-arrow">↗</span>
+      </div>
+      <h3 class="pc-title">Minimal Agency website<br>for startups business.</h3>
+      <p class="pc-subtitle">AgroSense — Agriculture Précision</p>
+      <p class="pc-desc">Ensemble Learning (EfficientNet, MobileNet, ResNet) avec pipeline MLOps pour réentraînement automatique et analyse spatiale via PostGIS.</p>
+      <div class="pc-impact"><span class="pc-impact-label">Web Design</span>Réduction des pertes agricoles. Agriculture de précision au Cameroun.</div>
+      <div class="pc-badges">
+        <span class="pc-badge">PyTorch</span><span class="pc-badge">MLOps</span><span class="pc-badge">PostGIS</span>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="pc-top">
+        <span class="pc-tag">HR Tech · SaaS</span>
+        <span class="pc-arrow">↗</span>
+      </div>
+      <h3 class="pc-title">Saas web and app design<br>project.</h3>
+      <p class="pc-subtitle">Application RH — 15 Modules</p>
+      <p class="pc-desc">Système modulaire 15 modules. Matching candidats par IA. Analytics prédictifs turnover & performance. Multi-pays, multi-devises.</p>
+      <div class="pc-impact"><span class="pc-impact-label">Web Design</span>Digitalisation RH complète pour entreprises africaines en croissance.</div>
+      <div class="pc-badges">
+        <span class="pc-badge">ASP.NET Core</span><span class="pc-badge">React</span><span class="pc-badge">ML</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- TESTIMONIAL -->
+<section class="testi-section">
+  <div class="testi-label">Client Feedback</div>
+  <div class="reveal">
+    <blockquote class="testi-quote">
+      "I just wanted to share a quick note and let you know that <span>you guys do a really good job.</span>"
+    </blockquote>
+    <div class="testi-author">
+      <div class="testi-info">
+        <h4>Rohan Sing</h4>
+        <p>Project Manager, Airline Tech Inc.</p>
+        <svg class="testi-squiggle" viewBox="0 0 80 20" fill="none" style="margin-top:12px">
+          <path d="M2 10 Q10 2 20 10 Q30 18 40 10 Q50 2 60 10 Q70 18 78 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="testi-photo">👨🏻‍💼</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-block reveal" style="transition-delay:.0s">
+      <div class="sb-icon">⬡</div>
+      <div class="sb-val" data-target="2450">0</div>
+      <div class="sb-label">Project Completed Done</div>
+    </div>
+    <div class="stat-block reveal" style="transition-delay:.08s">
+      <div class="sb-icon">◈</div>
+      <div class="sb-val" data-target="1085">0</div>
+      <div class="sb-label">Satisfied Clients</div>
+    </div>
+    <div class="stat-block reveal" style="transition-delay:.16s">
+      <div class="sb-icon">◉</div>
+      <div class="sb-val" data-target="7">0</div>
+      <div class="sb-label">My Team Members</div>
+    </div>
+    <div class="stat-block reveal" style="transition-delay:.24s">
+      <div class="sb-icon">⊕</div>
+      <div class="sb-val" data-target="2790">0</div>
+      <div class="sb-label">Added Happy Customer</div>
+    </div>
+  </div>
+</div>
+
+<div class="hdivider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-eyebrow reveal" style="justify-content:center">Contact</div>
+  <h2 class="contact-h2 reveal">Say Hi! <em>and tell me about</em><br><em>your idea</em></h2>
+  <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:20px" class="reveal">
+    <div style="width:48px;height:1.5px;background:var(--black)"></div>
+    <span style="font-size:14px;font-weight:500;color:var(--mid)">→</span>
+  </div>
+  <p class="contact-sub reveal">Have a nice work? reach out and let's chat.</p>
+  <div class="contact-form reveal">
+    <div class="form-row">
+      <input class="form-input" type="text" placeholder="Name,*" id="cf-name">
+      <input class="form-input" type="email" placeholder="Email,*" id="cf-email">
+    </div>
+    <div class="form-group">
+      <input class="form-input" type="text" placeholder="Company name">
+    </div>
+    <div class="form-group">
+      <input class="form-input" type="text" placeholder="Your company or website?">
+    </div>
+    <div style="margin-bottom:16px">
+      <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:10px">What's in your mind?*</div>
+      <div class="interests-wrap" id="interests">
+        <button class="int-btn" onclick="toggleInt(this)">Mobile App</button>
+        <button class="int-btn" onclick="toggleInt(this)">Website Design</button>
+        <button class="int-btn" onclick="toggleInt(this)">Branding</button>
+        <button class="int-btn" onclick="toggleInt(this)">Workflow development</button>
+        <button class="int-btn" onclick="toggleInt(this)">App design</button>
+        <button class="int-btn" onclick="toggleInt(this)">Graphic design</button>
+        <button class="int-btn" onclick="toggleInt(this)">Wordpress</button>
+      </div>
+    </div>
+    <button class="form-submit" onclick="submitForm()">
+      Send Me ✦
+    </button>
+    <p class="form-note">I'll must get back to you within 24 hours</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">MKO · Moukoko Ekambi Georges Miguel</div>
+  <div class="footer-links">
+    <a>Dribbble</a>
+    <a href="https://linkedin.com/in/moukoko-ekambi" target="_blank">Linkedin</a>
+    <a>Instagram</a>
+    <a href="https://github.com/MiguelMKO" target="_blank">Behance</a>
+  </div>
+  <span class="footer-year">Personal portfolio©2025</span>
+</footer>
+
+<script>
+function toggleInt(btn){btn.classList.toggle('active')}
+
+function submitForm(){
+  var n=document.getElementById('cf-name').value,e=document.getElementById('cf-email').value;
+  if(!n||!e){alert('Veuillez remplir les champs obligatoires.');return}
+  document.querySelector('.contact-form').innerHTML='<div style="text-align:center;padding:60px 0"><div style="font-size:48px;margin-bottom:16px">✦</div><h3 style="font-family:Cabinet Grotesk,sans-serif;font-size:28px;font-weight:900;margin-bottom:8px">Message envoyé!</h3><p style="color:#888;font-size:14px">Je vous réponds sous 24h.</p></div>'
+}
+
+// Scroll reveal
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){obs.observe(el)});
+
+// Scroll nav
+window.addEventListener('scroll',function(){
+  var nav=document.getElementById('nav');
+  nav.classList.toggle('scrolled',window.scrollY>60)
+});
+
+// Counter animation
+var counted=false;
+var statsObs=new IntersectionObserver(function(entries){
+  if(entries[0].isIntersecting&&!counted){
+    counted=true;
+    document.querySelectorAll('.sb-val[data-target]').forEach(function(el){
+      var target=parseInt(el.dataset.target),start=0,dur=1800,step=16;
+      var timer=setInterval(function(){
+        start+=Math.ceil(target/(dur/step));
+        if(start>=target){start=target;clearInterval(timer)}
+        el.textContent=start>=1000?(start/1000).toFixed(1)+'k':start;
+      },step)
+    })
+  }
+},{threshold:.4});
+var statsEl=document.querySelector('.stats-section');
+if(statsEl)statsObs.observe(statsEl);
+
+// Staggered project cards
+document.querySelectorAll('.proj-card').forEach(function(card,i){
+  card.style.transitionDelay=(i*0.07)+'s';
+  card.classList.add('reveal');
+  obs.observe(card);
+});
+</script>
+</body>
+</html>
