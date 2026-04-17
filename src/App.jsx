@@ -7,7 +7,7 @@ const PROFILE = {
   email: "georgesmoukoko4@gmail.com",
 };
 
-const INTERESTS = ["IA Embarquée", "Backend SaaS", "Computer Vision", "MLOps", "Mobile Dev", "Full-Stack"];
+const INTERESTS = ["Data Scientist", "Computer Vision", "Deep Learning", "Full-Stack Dev"];
 
 // PROJETS IA (6 projets)
 const PROJECTS_IA = [
@@ -157,7 +157,7 @@ export default function Portfolio() {
                 Hello! Je suis <em>Georges</em><br />
                 MOUKOKO{" "}
                 <span style={{ display: "inline-block", fontSize: "clamp(32px,4vw,52px)", fontWeight: 500, color: "var(--accent-yellow)" }}>
-                  IA Engineer ✦
+                  Data Scientist ✦
                 </span>
               </h1>
             </div>
@@ -202,9 +202,9 @@ export default function Portfolio() {
       <div className="marquee-wrap">
         <div className="marquee-inner">
           {[
-            "AI Engineer", "Computer Vision", "Deep Learning", "Full-Stack Dev",
+            "Data Scientist", "Computer Vision", "Deep Learning", "Full-Stack Dev",
             "MLOps", "Douala · Cameroun", "ENSPD M2 SDAI",
-            "AI Engineer", "Computer Vision", "Deep Learning", "Full-Stack Dev",
+            "Data", "Computer Vision", "Deep Learning", "Full-Stack Dev",
             "MLOps", "Douala · Cameroun", "ENSPD M2 SDAI",
           ].map((item, i) => (
             <div className="marquee-item" key={i}>{item}<span className="marquee-dot" /></div>
@@ -448,10 +448,8 @@ export default function Portfolio() {
       <footer className="mko-footer">
         <div className="footer-logo">MKO · {PROFILE.fullName}</div>
         <div className="footer-links">
-          <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
-          <a href="https://linkedin.com/in/moukoko-ekambi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://github.com/MiguelMKO" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href=" https://www.linkedin.com/in/georgesmoukoko-3890542a5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Dr-MKO-4" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
         <span className="footer-year">Personal portfolio©2025</span>
       </footer>
