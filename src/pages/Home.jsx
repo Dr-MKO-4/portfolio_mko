@@ -1,0 +1,298 @@
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { AnimatePresence, motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
+import { useLang } from "../i18n.jsx";
+import { PROFILE, MARQUEE, PILLARS } from "../data/profile.js";
+import { PROJECTS, FEATURED, publicRepoCount } from "../data/projects.js";
+import { Counter, EASE, Magnetic, Marquee, Page, Reveal, ScrollStatement, SplineField, SplitText } from "../components/motion.jsx";
+import { Footer } from "../components/Layout.jsx";
+import ProjectVisual from "../components/ProjectVisual.jsx";
+
+function Hero({ ready }) {
+  const { ui } = useLang();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const photoY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const d = ready ? 0.1 : 0;
+
+  return (
+    <section ref={ref} className="hero">
+      <SplineField className="hero-field" />
+      <div className="wrap">
+        <div className="hero-grid">
+          <motion.div style={{ y: textY }}>
+            <motion.span className="eyebrow" initial={{ opacity: 0 }} animate={ready ? { opacity: 1 } : {}} transition={{ delay: d }}>
+              {ui("heroEyebrow")}
+            </motion.span>
+            <h1 className="h-display hero-title">
+              <SplitText className="split-line" text={ui("heroLine1")} play={ready} delay={d + 0.05} />
+              <span className="split-line">
+                <SplitText text={ui("heroLine2")} play={ready} delay={d + 0.15} />{" "}
+                <SplitText className="serif" text={ui("heroLine3")} play={ready} delay={d + 0.25} />
+              </span>
+            </h1>
+            <motion.p className="h-3" initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.55, duration: 0.9, ease: EASE }}>
+              {ui("heroLine4")}
+            </motion.p>
+            <motion.p className="lead hero-intro" style={{ marginTop: 18 }} initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.65, duration: 0.9, ease: EASE }}>
+              {ui("heroIntro")}
+            </motion.p>
+            <motion.div className="hero-actions" initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.75, duration: 0.9, ease: EASE }}>
+              <Magnetic>
+                <Link to="/projets" className="btn btn-primary" data-cursor={ui("view")}>
+                  {ui("seeWork")} <span className="arrow">→</span>
+                </Link>
+              </Magnetic>
+              <Magnetic>
+                <Link to="/contact" className="btn btn-ghost">{ui("contactMe")}</Link>
+              </Magnetic>
+            </motion.div>
+          </motion.div>
+
+          <div className="hero-photo">
+            <motion.div
+              className="hero-photo-frame"
+              initial={{ clipPath: "inset(100% 0 0 0 round 28px)" }}
+              animate={ready ? { clipPath: "inset(0% 0 0 0 round 28px)" } : {}}
+              transition={{ duration: 1.3, ease: [0.76, 0, 0.24, 1], delay: d + 0.2 }}
+            >
+              <motion.img
+                src="/img/miguel.webp"
+                alt="Georges Miguel MOUKOKO"
+                style={{ y: photoY }}
+                initial={{ scale: 1.25 }}
+                animate={ready ? { scale: 1 } : {}}
+                transition={{ duration: 1.8, ease: EASE, delay: d + 0.2 }}
+                fetchPriority="high"
+              />
+            </motion.div>
+            <motion.div className="hero-photo-tag" initial={{ opacity: 0, x: -20 }} animate={ready ? { opacity: 1, x: 0 } : {}} transition={{ delay: d + 1.1, duration: 0.7, ease: EASE }}>
+              <span className="pulse" /> {ui("available")}
+            </motion.div>
+            <div className="hero-photo-caption mono">
+              <span>LIDIA Lab</span>
+              <span>ENSPD · Douala</span>
+            </div>
+          </div>
+        </div>
+        <div className="hero-bottom">
+          <div className="scroll-cue mono"><i />{ui("scroll")}</div>
+          <span className="formula">φ(x) = Σ cᵢ · Bᵢ(x)</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StackCard({ project, index, total, progress }) {
+  const { t, ui } = useLang();
+  const start = index / total;
+  const scale = useTransform(progress, [start, 1], [1, 1 - (total - index) * 0.035]);
+  return (
+    <div className="stack-card" style={{ top: `calc(96px + ${index * 14}px)` }}>
+      <motion.div className="stack-inner" style={{ scale }}>
+        <div className="stack-text">
+          <div>
+            <div className="stack-top">
+              <span className="stack-index">{String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+              <span className="chip">{t(project.group)}</span>
+            </div>
+            <h3>{t(project.name)}</h3>
+            <p>{t(project.subtitle)}</p>
+          </div>
+          <div style={{ display: "grid", gap: 20 }}>
+            <div className="stack-chips">
+              {project.stack.slice(0, 5).map((s) => <span key={s} className="chip">{s}</span>)}
+            </div>
+            <div>
+              <Link to={`/projets/${project.slug}`} className="btn btn-primary" data-cursor={ui("view")}>
+                {ui("view")} <span className="arrow">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <Link to={`/projets/${project.slug}`} className="stack-visual" data-cursor={ui("view")} tabIndex={-1} aria-hidden="true">
+          <ProjectVisual project={project} logoClass="stack-logo" />
+        </Link>
+      </motion.div>
+    </div>
+  );
+}
+
+function FeaturedStack() {
+  const { ui } = useLang();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
+  return (
+    <section className="section dark">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow">{ui("featuredEyebrow")}</span>
+            <SplitText as="h2" className="h-1" text={ui("featuredTitle")} />
+          </div>
+        </div>
+        <div ref={ref} className="stack-wrap">
+          {FEATURED.map((p, i) => (
+            <StackCard key={p.slug} project={p} index={i} total={FEATURED.length} progress={scrollYProgress} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectRows() {
+  const { t, ui } = useLang();
+  const others = PROJECTS.filter((p) => !p.featured).slice(0, 8);
+  const [hover, setHover] = useState(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const sx = useSpring(x, { stiffness: 220, damping: 26 });
+  const sy = useSpring(y, { stiffness: 220, damping: 26 });
+  const move = (e) => { x.set(e.clientX + 24); y.set(e.clientY - 120); };
+
+  return (
+    <section className="section">
+      <div className="wrap">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow">{ui("allEyebrow")}</span>
+            <SplitText as="h2" className="h-1" text={ui("allTitle")} />
+          </div>
+          <Reveal><p className="lead muted">{ui("allIntro")}</p></Reveal>
+        </div>
+        <div className="rows-container" onPointerMove={move} onPointerLeave={() => setHover(null)}>
+          <div className="rows">
+            {others.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 0.03} y={20}>
+                <Link to={`/projets/${p.slug}`} className="row" onPointerEnter={() => setHover(p)} data-cursor={ui("view")}>
+                  <span className="mono muted">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="row-title">{t(p.name)}</span>
+                  <span className="muted hide-sm">{t(p.subtitle)}</span>
+                  <span className="mono muted hide-sm">{p.year}</span>
+                  <span className="row-arrow">→</span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          <AnimatePresence>
+            {hover && (
+              <motion.div
+                className="row-preview"
+                style={{ x: sx, y: sy }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3, ease: EASE }}
+              >
+                <AnimatePresence mode="popLayout">
+                  <motion.div key={hover.slug} style={{ position: "absolute", inset: 0 }} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }} transition={{ duration: 0.45, ease: EASE }}>
+                    <ProjectVisual project={hover} showLogo={false} />
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+        <Reveal style={{ marginTop: 48, display: "flex", justifyContent: "center" }}>
+          <Magnetic>
+            <Link to="/projets" className="btn btn-ghost">
+              {ui("viewAll")} ({PROJECTS.length}) <span className="arrow">→</span>
+            </Link>
+          </Magnetic>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+export default function Home({ ready }) {
+  const { lang, ui } = useLang();
+  const statement =
+    lang === "fr"
+      ? "Je veux que l'IA soit *utile et *explicable là où elle compte : dans les banques, les champs, les hôpitaux et les réseaux de paiement d'Afrique centrale."
+      : "I want AI to be *useful and *explainable where it matters: in banks, farms, hospitals and payment networks across Central Africa.";
+  const domains = new Set(PROJECTS.flatMap((p) => p.categories)).size;
+
+  return (
+    <Page>
+      <Hero ready={ready} />
+      <Marquee key={lang} items={MARQUEE[lang]} />
+
+      <section className="section">
+        <div className="wrap">
+          <span className="eyebrow">{ui("pillarsEyebrow")}</span>
+          <div style={{ margin: "28px 0 clamp(60px, 9vw, 120px)" }}>
+            <ScrollStatement className="statement" text={statement} />
+          </div>
+          <Reveal>
+            <h2 className="h-2" style={{ marginBottom: 32 }}>{ui("pillarsTitle")}</h2>
+          </Reveal>
+          <div className="pillars">
+            {PILLARS.map((p, i) => (
+              <Reveal key={p.num} className="pillar" delay={i * 0.08}>
+                <span className="pillar-num">{p.num}</span>
+                <h3 className="h-3">{lang === "fr" ? p.title.fr : p.title.en}</h3>
+                <p>{lang === "fr" ? p.text.fr : p.text.en}</p>
+                <ul>{p.tags.map((tag) => <li key={tag} className="chip">{tag}</li>)}</ul>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="dark" style={{ paddingTop: "clamp(60px, 8vw, 100px)" }}>
+        <div className="wrap">
+          <div className="counters">
+            {[
+              { v: PROJECTS.length, s: "", l: { fr: "projets documentés sur ce site", en: "projects documented on this site" } },
+              { v: FEATURED.length, s: "", l: { fr: "projets phares (laboratoire, concours, recherche)", en: "featured projects (lab, challenges, research)" } },
+              { v: publicRepoCount, s: "", l: { fr: "dépôts de code publics liés", en: "linked public code repositories" } },
+              { v: domains, s: "", l: { fr: "domaines couverts", en: "domains covered" } },
+            ].map((c, i) => (
+              <Reveal key={i} className="counter" delay={i * 0.06}>
+                <Counter value={c.v} suffix={c.s} />
+                <p>{lang === "fr" ? c.l.fr : c.l.en}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <FeaturedStack />
+      <ProjectRows />
+
+      <section className="section dark">
+        <div className="wrap">
+          <Reveal className="lab-card">
+            <img src="/img/logos/lidia.webp" alt="LIDIA" />
+            <div>
+              <span className="eyebrow">{ui("labEyebrow")}</span>
+              <h2 className="h-2" style={{ margin: "14px 0" }}>LIDIA Lab</h2>
+              <p className="lead muted">
+                {lang === "fr"
+                  ? "Le laboratoire où je mène mes projets d'IA appliquée : agriculture, santé, sécurité et marketing. L'identité visuelle de ce site reprend ses couleurs."
+                  : "The lab where I run my applied AI projects: agriculture, health, security and marketing. This site's visual identity borrows its colours."}
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="wrap">
+          <span className="eyebrow">{ui("contactEyebrow")}</span>
+          <h2 className="h-display" style={{ marginTop: 24 }}>
+            <Link to="/contact" data-cursor={ui("letsTalk")}>
+              <SplitText text={ui("letsTalk")} /> <span className="serif accent">↗</span>
+            </Link>
+          </h2>
+          <p className="mono muted" style={{ marginTop: 24 }}>{PROFILE.email}</p>
+        </div>
+      </section>
+      <Footer />
+    </Page>
+  );
+}

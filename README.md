@@ -1,16 +1,24 @@
-# React + Vite
+# Portfolio · Georges Miguel MOUKOKO EKAMBI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio bilingue (FR / EN) d'un Data Scientist et ingénieur IA : recherche (MKAN, détection de fraude Mobile Money), projets du LIDIA Lab, concours CAMRAIL et plateformes full-stack.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19, Vite, React Router
+- Motion (animations, transitions de page), Lenis (défilement fluide)
+- Identité visuelle aux couleurs du LIDIA Lab (`#CD4918`, `#2A2E32`)
 
-## React Compiler
+## Lancer en local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Contenu
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Les projets sont décrits dans `src/data/` (un fichier par groupe). Chaque fiche est bilingue et alimente automatiquement la grille, les filtres et la page détaillée `/projets/:slug`.
+
+## Déploiement
+
+Configuré pour Vercel (`vercel.json` redirige toutes les routes vers `index.html`).
