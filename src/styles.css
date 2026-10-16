@@ -505,3 +505,7 @@ img.cover.contain { object-fit: contain; background: #fff; padding: 4%; }
 @media (max-width: 900px) { .pcat-head { grid-template-columns: 1fr; gap: 8px; } }
 
 .dark .cat-card .chip { border-color: var(--line); }
+
+.title-row { display: flex; align-items: center; gap: 12px; }
+.p-logo { flex: none; width: 36px; height: 36px; object-fit: contain; border-radius: 10px; background: #fff; padding: 3px; border: 1px solid var(--line); }
+.p-logo-lg { width: clamp(56px, 6vw, 84px); height: clamp(56px, 6vw, 84px); border-radius: 18px; padding: 6px; }

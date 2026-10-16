@@ -27,7 +27,7 @@ function Card({ p }) {
             <span>{t(p.group)}</span>
             <span>{p.year}</span>
           </div>
-          <h3>{t(p.name)}</h3>
+          <h3 className="title-row">{p.logo && <img className="p-logo" src={p.logo} alt="" loading="lazy" />}{t(p.name)}</h3>
           <p>{t(p.subtitle)}</p>
           <div className="card-foot">
             {p.stack.slice(0, 4).map((s) => <span key={s} className="chip">{s}</span>)}

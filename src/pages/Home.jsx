@@ -95,7 +95,7 @@ function FeatureCard({ project, index }) {
         </div>
         <div className="cat-card-body">
           <div className="card-meta mono"><span>{t(project.group)}</span><span>{project.year}</span></div>
-          <h3>{t(project.name)}</h3>
+          <h3 className="title-row">{project.logo && <img className="p-logo" src={project.logo} alt="" loading="lazy" />}{t(project.name)}</h3>
           <p>{t(project.subtitle)}</p>
           <div className="card-foot">
             {project.stack.slice(0, 4).map((s) => <span key={s} className="chip">{s}</span>)}

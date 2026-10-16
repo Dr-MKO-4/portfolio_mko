@@ -92,12 +92,11 @@ const CAT_OF = {
   "kalati-rag": "genai", "nexus-ai": "genai",
   predoc: "ds", "crypto-trader-dqn": "ds", "cademi-clustering": "ds", "ia-generative": "ds", "gaz-dissous": "ds", "chiffres-manuscrits": "ds", "phone-price-bigdata": "ds",
   meerkat: "security", "aura-careos": "security",
-  winplus: "platforms", homegamesfive: "platforms", "messagerie-multitenant": "platforms", ngondo: "platforms", "mboa-shop": "platforms",
-  "ma-co": "platforms", talentis: "platforms", "ajpeac-platform": "platforms", "testing-platform": "platforms", "gala-promo": "platforms",
+  winplus: "platforms", homegamesfive: "platforms", "messagerie-multitenant": "platforms", ngondo: "platforms", "mboa-shop": "platforms", talentis: "platforms", "ajpeac-platform": "platforms", "testing-platform": "platforms", "gala-promo": "platforms",
   "hotel-manager": "platforms", "lidia-restaurant": "platforms",
   swiftpay: "mobile", pharmacon: "mobile",
-  "sisia-sarl": "web", syswatch: "web", "ai4sg-cameroon": "web", fluxemi: "web", "winui-prototypes": "web", smartcameroun: "web",
-  "qr-image-platform": "web", "reseau-social-enspd": "web", "gestion-absences": "web", "ecommerce-simple": "web", "gestion-scolarite": "web",
+  "sisia-sarl": "web", syswatch: "web", "ai4sg-cameroon": "web", fluxemi: "web", "winui-prototypes": "web",
+  "qr-image-platform": "web", "reseau-social-enspd": "web", "ecommerce-simple": "web",
   "depot-boissons": "web",
 };
 
@@ -117,6 +116,13 @@ function withVisuals(p) {
   };
 }
 
+const LOGOS = {
+  "mkan-momtsim": "/img/logos/mkan.webp", "beac-detect-anomalies": "/img/logos/beac-detect.webp", predoc: "/img/logos/predoc.webp",
+  "ma-ra": "/img/logos/mara.webp", "lidia-restaurant": "/img/logos/lidia-restaurant.webp", talentis: "/img/logos/talentis.webp",
+  "langue-des-signes": "/img/logos/langue-signes.webp", "drone-livraison": "/img/logos/drone.webp", syswatch: "/img/logos/syswatch.webp",
+  "qr-image-platform": "/img/logos/qr-image.webp", "messagerie-multitenant": "/img/logos/messagerie.webp", "ajpeac-platform": "/img/logos/ajpeac.svg",
+};
+
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
 const CAT_INDEX = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
 
@@ -126,7 +132,7 @@ export const PROJECTS = [...RESEARCH_PRO, ...FEATURED_PROJECTS, ...OTHER_PROJECT
     const cat = CAT_OF[p.slug];
     const featured = FEATURED_SET.has(p.slug);
     const featuredRank = featured ? CATEGORIES[CAT_INDEX[cat]].featured.indexOf(p.slug) : 99;
-    return { ...withVisuals(p), cat, featured, featuredRank, name: { fr: p.title, en: p.titleEn || p.title } };
+    return { ...withVisuals(p), logo: LOGOS[p.slug] || p.logo, cat, featured, featuredRank, name: { fr: p.title, en: p.titleEn || p.title } };
   })
   .sort((a, b) => CAT_INDEX[a.cat] - CAT_INDEX[b.cat] || a.featuredRank - b.featuredRank || a.order - b.order);
 

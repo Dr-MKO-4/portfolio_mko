@@ -33,7 +33,7 @@ export default function ProjectDetail() {
           <Reveal delay={0.55} y={10}>
             <span className="eyebrow">{t(p.group)}{p.featured ? ` · ${ui("featuredBadge")}` : ""}</span>
           </Reveal>
-          <h1 className="h-1 pd-title"><SplitText key={p.slug} text={t(p.name)} delay={0.6} /></h1>
+          <h1 className="h-1 pd-title title-row">{p.logo && <motion.img className="p-logo p-logo-lg" src={p.logo} alt={`Logo ${t(p.name)}`} initial={{ scale: 0, rotate: -15 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.6, duration: 0.7, ease: EASE }} />}<SplitText key={p.slug} text={t(p.name)} delay={0.6} /></h1>
           <Reveal delay={0.75}><p className="pd-sub">{t(p.subtitle)}</p></Reveal>
           <Reveal delay={0.85}>
             <dl className="pd-meta">
