@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { useLang } from "../i18n.jsx";
 import { PROFILE, MARQUEE, PILLARS } from "../data/profile.js";
-import { PROJECTS, CATEGORIES, byCategory, publicRepoCount } from "../data/projects.js";
+import { PROJECTS, CATEGORIES, byCategory } from "../data/projects.js";
 import { Counter, EASE, Magnetic, Marquee, Page, Reveal, ScrollStatement, SplineField, SplitText, Surface3D, KANNetwork, IsoStack } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
@@ -295,10 +295,10 @@ export default function Home({ ready }) {
         <div className="wrap">
           <div className="counters">
             {[
-              { v: PROJECTS.length, l: { fr: "projets documentés sur ce site", en: "projects documented on this site" } },
-              { v: CATEGORIES.length, l: { fr: "catégories, dont deux axes de recherche", en: "categories, including two research tracks" } },
-              { v: publicRepoCount, l: { fr: "dépôts de code publics liés", en: "linked public code repositories" } },
-              { v: PROJECTS.filter((p) => p.featured).length, l: { fr: "projets mis en avant", en: "featured projects" } },
+              { v: PROJECTS.length, l: { fr: "projets réalisés, de la recherche à la production", en: "projects built, from research to production" } },
+              { v: PROJECTS.filter((p) => p.live).length, l: { fr: "applications en ligne, à tester directement ici", en: "live apps you can try right here" } },
+              { v: 5, l: { fr: "produits en production réelle", en: "products running in production" } },
+              { v: 5, l: { fr: "organisations qui m'ont fait confiance", en: "organisations that trusted me" } },
             ].map((c, i) => (
               <Reveal key={i} className="counter" delay={i * 0.06}>
                 <Link to="/projets" data-cursor={ui("view")} style={{ display: "block" }}>
