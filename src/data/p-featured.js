@@ -512,8 +512,8 @@ export const FEATURED_PROJECTS = [
     status: { fr: "Conception documentée avec code livré", en: "Documented design with delivered code" },
     role: { fr: "Concepteur et auteur", en: "Designer and author" },
     context: {
-      fr: "Le Cameroun compte très peu de dermatologues par habitant et la connexion est faible ou absente en zone rurale. DermAI vise la détection précoce de six dermatoses tropicales prioritaires : gale, teigne, impétigo, ulcère de Buruli, dermatite atopique et leishmaniose cutanée.",
-      en: "Cameroon has very few dermatologists per inhabitant and connectivity is weak or absent in rural areas. DermAI targets early detection of six priority tropical skin diseases: scabies, ringworm, impetigo, Buruli ulcer, atopic dermatitis and cutaneous leishmaniasis.",
+      fr: "Le Cameroun compte très peu de dermatologues par habitant et la connexion est faible ou absente en zone rurale. DermAI vise la détection précoce de six dermatoses tropicales prioritaires : gale, teigne, impétigo, ulcère de Buruli, eczéma et leishmaniose cutanée.",
+      en: "Cameroon has very few dermatologists per inhabitant and connectivity is weak or absent in rural areas. DermAI targets early detection of six priority tropical skin diseases: scabies, ringworm, impetigo, Buruli ulcer, eczema and cutaneous leishmaniasis.",
     },
     built: {
       fr: [

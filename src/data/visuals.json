@@ -73,6 +73,80 @@
    }
   }
  ],
+ "dermai": [
+  {
+   "file": "/img/projects/dermai-demo-1.webp",
+   "alt": {
+    "fr": "Démo DermAI : résultat professionnel avec carte Grad-CAM simulée sur une illustration générée (simulation pédagogique, pas un diagnostic)",
+    "en": "DermAI demo: professional result with a simulated Grad-CAM map over a generated illustration (teaching simulation, not a diagnosis)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/dermai-demo-2.webp",
+   "alt": {
+    "fr": "Capture guidée simulée : cadre ovale, indicateurs de lumière et de distance, lésion schématique générée",
+    "en": "Simulated guided capture: oval frame, light and distance indicators, generated schematic lesion"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/dermai-demo-3.webp",
+   "alt": {
+    "fr": "Tableau de bord professionnel de la démo DermAI avec alerte épidémiologique fictive",
+    "en": "DermAI demo professional dashboard with a fictitious epidemiological alert"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/dermai-demo-4.webp",
+   "alt": {
+    "fr": "Atlas dermatologique des six dermatoses avec niveaux d'urgence et illustrations schématiques",
+    "en": "Dermatology atlas of the six skin diseases with urgency levels and schematic illustrations"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/dermai-mobile-showcase.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile DermAI (capture, résultat Grad-CAM, paramètres hors ligne)",
+    "en": "DermAI mobile app mockups (capture, Grad-CAM result, offline settings)"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Première synchronisation de DermAI en mode hors ligne avec les données médicales embarquées",
+    "en": "DermAI first sync in offline mode with embedded medical data"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Capture de la lésion avec cadre ovale et indicateurs de luminosité et de distance",
+    "en": "Lesion capture with oval guide and lighting and distance indicators"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Résultat de l'analyse : diagnostic principal, zones décisives Grad-CAM et diagnostics différentiels",
+    "en": "Analysis result: main diagnosis, Grad-CAM decisive areas and differential diagnoses"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-4.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Paramètres : profil professionnel, consultations en attente de synchronisation hors ligne et préférences",
+    "en": "Settings: professional profile, consultations pending offline sync and preferences"
+   }
+  }
+ ],
  "fluxemi": [
   {
    "file": "/img/projects/fluxemi-demo-1.webp",
@@ -360,6 +434,48 @@
    "alt": {
     "fr": "Page de partage d'une image en thème sombre, palette marine et menthe issue du logo",
     "en": "Shared image page in dark theme, navy and mint palette derived from the logo"
+   }
+  }
+ ],
+ "syswatch": [
+  {
+   "file": "/img/projects/syswatch-demo-1.webp",
+   "alt": {
+    "fr": "Démo web de SysWatch : console de l'agent et client nc authentifié par jeton (commandes cpu, mem, ps, msg), métriques simulées",
+    "en": "SysWatch web demo: agent console and token-authenticated nc client (cpu, mem, ps, msg commands), simulated metrics"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/syswatch-demo-2.webp",
+   "alt": {
+    "fr": "Console maître : scan du parc, sélection d'une machine et diffusion d'une commande à toutes les machines",
+    "en": "Master console: fleet scan, machine selection and broadcasting a command to every machine"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/syswatch-demo-3.webp",
+   "alt": {
+    "fr": "Menu de la console maître SysWatch et parc de quatre machines fictives avec CPU et mémoire en direct (simulés)",
+    "en": "SysWatch master console menu and a fleet of four fictitious machines with live (simulated) CPU and memory"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/syswatch-1.webp",
+   "kind": "terminal",
+   "alt": {
+    "fr": "Agent SysWatch démarré à gauche, client nc envoyant cpu, mem et ps à droite",
+    "en": "SysWatch agent starting on the left, nc client sending cpu, mem and ps on the right"
+   }
+  },
+  {
+   "file": "/img/projects/syswatch-2.webp",
+   "kind": "terminal",
+   "alt": {
+    "fr": "Console maître : scan du réseau, sélection d'une machine et commande envoyée à tous les postes",
+    "en": "Master console: network scan, machine selection and a command broadcast to every host"
    }
   }
  ],
@@ -1317,48 +1433,6 @@
    }
   }
  ],
- "dermai": [
-  {
-   "file": "/img/projects/dermai-mobile-showcase.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Maquettes de l'application mobile DermAI (capture, résultat Grad-CAM, paramètres hors ligne)",
-    "en": "DermAI mobile app mockups (capture, Grad-CAM result, offline settings)"
-   }
-  },
-  {
-   "file": "/img/projects/dermai-mobile-1.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Première synchronisation de DermAI en mode hors ligne avec les données médicales embarquées",
-    "en": "DermAI first sync in offline mode with embedded medical data"
-   }
-  },
-  {
-   "file": "/img/projects/dermai-mobile-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Capture de la lésion avec cadre ovale et indicateurs de luminosité et de distance",
-    "en": "Lesion capture with oval guide and lighting and distance indicators"
-   }
-  },
-  {
-   "file": "/img/projects/dermai-mobile-3.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Résultat de l'analyse : diagnostic principal, zones décisives Grad-CAM et diagnostics différentiels",
-    "en": "Analysis result: main diagnosis, Grad-CAM decisive areas and differential diagnoses"
-   }
-  },
-  {
-   "file": "/img/projects/dermai-mobile-4.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Paramètres : profil professionnel, consultations en attente de synchronisation hors ligne et préférences",
-    "en": "Settings: professional profile, consultations pending offline sync and preferences"
-   }
-  }
- ],
  "swiftpay": [
   {
    "file": "/img/projects/swiftpay-mobile-2.webp",
@@ -1432,24 +1506,6 @@
    "alt": {
     "fr": "Concept PharmaCon : suivi de livraison par statut et code de remise",
     "en": "PharmaCon concept: status-based delivery tracking and handover code"
-   }
-  }
- ],
- "syswatch": [
-  {
-   "file": "/img/projects/syswatch-1.webp",
-   "kind": "terminal",
-   "alt": {
-    "fr": "Agent SysWatch démarré à gauche, client nc envoyant cpu, mem et ps à droite",
-    "en": "SysWatch agent starting on the left, nc client sending cpu, mem and ps on the right"
-   }
-  },
-  {
-   "file": "/img/projects/syswatch-2.webp",
-   "kind": "terminal",
-   "alt": {
-    "fr": "Console maître : scan du réseau, sélection d'une machine et commande envoyée à tous les postes",
-    "en": "Master console: network scan, machine selection and a command broadcast to every host"
    }
   }
  ],

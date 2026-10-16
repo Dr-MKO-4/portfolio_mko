@@ -142,7 +142,10 @@ const LIVE = {
  "meerkat": "https://mko-meerkat.vercel.app",
  "messagerie-multitenant": "https://mko-messagerie.vercel.app",
  "qr-image-platform": "https://mko-qr-image.vercel.app",
- "sisia-sarl": "https://www.sisia-sarl.com"
+ "sisia-sarl": "https://www.sisia-sarl.com",
+ "nexus-ai": "https://mko-nexus.vercel.app",
+ "agrosense": "https://mko-agrosense.vercel.app",
+ "dermai": "https://mko-dermai.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
