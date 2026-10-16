@@ -193,6 +193,40 @@
    }
   }
  ],
+ "langue-des-signes": [
+  {
+   "file": "/img/projects/langue-des-signes-mobile-showcase.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquettes de l'application de traduction LSC vers le français (traduction en direct, conversation, dictionnaire avec avatar 3D)",
+    "en": "Mockups of the LSC-to-French translation app (live translation, conversation, 3D avatar dictionary)"
+   }
+  },
+  {
+   "file": "/img/projects/langue-des-signes-mobile-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Traduction en direct : détection de la main, suivi Kalman et phrase reconnue",
+    "en": "Live translation: hand detection, Kalman tracking and recognised sentence"
+   }
+  },
+  {
+   "file": "/img/projects/langue-des-signes-mobile-2.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Conversation bidirectionnelle avec gloses des signes",
+    "en": "Two-way conversation with sign glosses"
+   }
+  },
+  {
+   "file": "/img/projects/langue-des-signes-mobile-3.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Dictionnaire LSC avec avatar 3D",
+    "en": "LSC dictionary with 3D avatar"
+   }
+  }
+ ],
  "kalati-rag": [
   {
    "file": "/img/projects/kalati-rag-1.webp",
