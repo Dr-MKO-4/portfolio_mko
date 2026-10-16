@@ -339,6 +339,7 @@ export const FEATURED_PROJECTS = [
         "Découverte de surface produisant un contexte de cible partagé entre modules.",
         "Persistance des exécutions et constats, rapports JSON / HTML / PDF, alertes e-mail.",
         "Tableau de bord FastAPI distinguant nouveautés et récurrences ; architecture multi-agent LangGraph en cours.",
+        "Démo web en ligne : audit défensif simulé sur une application fictive, validation humaine avant publication et rapport exécutif exportable.",
       ],
       en: [
         "Mandatory target allowlist and emergency kill switch as authorisation controls.",
@@ -347,6 +348,7 @@ export const FEATURED_PROJECTS = [
         "Surface discovery producing a target context shared across modules.",
         "Persisted runs and findings, JSON / HTML / PDF reports, email alerts.",
         "FastAPI dashboard separating new from recurring findings; LangGraph multi-agent architecture in progress.",
+        "Live web demo: simulated defensive audit of a fictional app, human review before publishing and exportable executive report.",
       ],
     },
     stack: ["Python", "Typer", "httpx", "SQLAlchemy", "Jinja2", "FastAPI", "APScheduler", "LangGraph"],

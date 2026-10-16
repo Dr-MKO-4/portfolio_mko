@@ -1,4 +1,104 @@
 {
+ "meerkat": [
+  {
+   "file": "/img/projects/meerkat-demo-1.webp",
+   "alt": {
+    "fr": "Tableau de bord Meerkat : indice de risque, répartition par sévérité et historique des audits (données simulées)",
+    "en": "Meerkat dashboard: risk index, severity breakdown and audit history (simulated data)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/meerkat-demo-2.webp",
+   "alt": {
+    "fr": "Audit simulé en direct : étapes de l'orchestration multi-agents et validation humaine requise avant publication",
+    "en": "Simulated live audit: multi-agent orchestration steps and required human review before publication"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/meerkat-demo-3.webp",
+   "alt": {
+    "fr": "Détail d'un constat : impact, références CWE et OWASP, recommandation de correction et revue de l'analyste",
+    "en": "Finding detail: impact, CWE and OWASP references, remediation advice and analyst review"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/meerkat-demo-4.webp",
+   "alt": {
+    "fr": "Rapport exécutif exportable en HTML ou en PDF : synthèse, priorités et plan de correction",
+    "en": "Executive report exportable as HTML or PDF: summary, priorities and remediation plan"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/meerkat-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Résumé exécutif généré par l’agent : score de risque, vulnérabilités, couverture (cible de test example.com)",
+    "en": "Agent-generated executive summary: risk score, findings, coverage (test target example.com)"
+   }
+  }
+ ],
+ "qr-image-platform": [
+  {
+   "file": "/img/projects/qr-image-platform-demo-1.webp",
+   "alt": {
+    "fr": "QR code généré dans le navigateur, avec lien de partage et téléchargement",
+    "en": "QR code generated in the browser, with share link and download"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/qr-image-platform-demo-2.webp",
+   "alt": {
+    "fr": "Page publique de l'image partagée : métadonnées, QR code et actions",
+    "en": "Public page of the shared image: metadata, QR code and actions"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/qr-image-platform-demo-3.webp",
+   "alt": {
+    "fr": "Accueil avec la zone de dépôt d'image",
+    "en": "Home page with the image drop zone"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/qr-image-platform-demo-4.webp",
+   "alt": {
+    "fr": "Accueil en thème sombre",
+    "en": "Home page in dark theme"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/qr-image-platform-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil de QR Image Platform : hero marine et carte de résultat avec le QR code généré, lien à copier et boutons Voir l'image / Télécharger le QR",
+    "en": "QR Image Platform home page: navy hero and result card with the generated QR code, copyable link and View image / Download QR buttons"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de partage d'une image : aperçu, métadonnées (date, poids, dimensions), QR code à scanner et boutons de téléchargement",
+    "en": "Shared image page: preview, metadata (date, size, dimensions), scannable QR code and download buttons"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de partage d'une image en thème sombre, palette marine et menthe issue du logo",
+    "en": "Shared image page in dark theme, navy and mint palette derived from the logo"
+   }
+  }
+ ],
  "mkan-momtsim": [
   {
    "file": "/img/projects/mkan-live-1.webp",
@@ -200,32 +300,6 @@
    "alt": {
     "fr": "Configuration d'une simulation : choix de l'actif, de la période de backtest et des hyperparamètres DQN (learning rate, gamma, epsilon, replay buffer).",
     "en": "Simulation setup: asset, backtest period and DQN hyperparameters (learning rate, gamma, epsilon, replay buffer)."
-   }
-  }
- ],
- "qr-image-platform": [
-  {
-   "file": "/img/projects/qr-image-platform-new-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page d'accueil de QR Image Platform : hero marine et carte de résultat avec le QR code généré, lien à copier et boutons Voir l'image / Télécharger le QR",
-    "en": "QR Image Platform home page: navy hero and result card with the generated QR code, copyable link and View image / Download QR buttons"
-   }
-  },
-  {
-   "file": "/img/projects/qr-image-platform-new-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de partage d'une image : aperçu, métadonnées (date, poids, dimensions), QR code à scanner et boutons de téléchargement",
-    "en": "Shared image page: preview, metadata (date, size, dimensions), scannable QR code and download buttons"
-   }
-  },
-  {
-   "file": "/img/projects/qr-image-platform-new-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de partage d'une image en thème sombre, palette marine et menthe issue du logo",
-    "en": "Shared image page in dark theme, navy and mint palette derived from the logo"
    }
   }
  ],
@@ -666,16 +740,6 @@
    "alt": {
     "fr": "Comparaison des indices de validation du clustering par méthode",
     "en": "Clustering validation indices compared across methods"
-   }
-  }
- ],
- "meerkat": [
-  {
-   "file": "/img/projects/meerkat-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Résumé exécutif généré par l’agent : score de risque, vulnérabilités, couverture (cible de test example.com)",
-    "en": "Agent-generated executive summary: risk score, findings, coverage (test target example.com)"
    }
   }
  ],

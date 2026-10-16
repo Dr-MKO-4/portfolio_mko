@@ -138,7 +138,8 @@ const LIVE = {
  "reseau-social-enspd": "https://mko-reseau-social.vercel.app",
  "ecommerce-simple": "https://mko-ecommerce-stripe.vercel.app",
  "depot-boissons": "https://mko-depot-boissons.vercel.app",
- "mkan-momtsim": "https://mko-mkan.vercel.app"
+ "mkan-momtsim": "https://mko-mkan.vercel.app",
+ "meerkat": "https://mko-meerkat.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
