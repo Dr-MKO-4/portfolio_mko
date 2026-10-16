@@ -23,30 +23,6 @@
     "fr": "Configuration d'une simulation : choix de l'actif, de la période de backtest et des hyperparamètres DQN (learning rate, gamma, epsilon, replay buffer).",
     "en": "Simulation setup: asset, backtest period and DQN hyperparameters (learning rate, gamma, epsilon, replay buffer)."
    }
-  },
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Accueil de l'interface Trading Agent : cartes de synthèse et tendances (valeurs d'exemple codées en dur)",
-    "en": "Trading Agent home screen: summary cards and trends (hard-coded sample values)"
-   }
-  },
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Configuration d'une simulation DQN : crypto, agent, learning rate, gamma",
-    "en": "DQN simulation setup: crypto, agent, learning rate, gamma"
-   }
-  },
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Historique des simulations",
-    "en": "Simulation history"
-   }
   }
  ],
  "qr-image-platform": [
@@ -73,22 +49,6 @@
     "fr": "Page de partage d'une image en thème sombre, palette marine et menthe issue du logo",
     "en": "Shared image page in dark theme, navy and mint palette derived from the logo"
    }
-  },
-  {
-   "file": "/img/projects/qr-image-platform-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "QR code généré après l'envoi d'une image (mode sombre)",
-    "en": "QR code generated after uploading an image (dark mode)"
-   }
-  },
-  {
-   "file": "/img/projects/qr-image-platform-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page d'accueil et zone de dépôt",
-    "en": "Home page and upload area"
-   }
   }
  ],
  "messagerie-multitenant": [
@@ -114,22 +74,6 @@
    "alt": {
     "fr": "Console d'administration : domaines, statut DNS et boîtes mail d'une société",
     "en": "Admin console: a tenant's domains, DNS status and mailboxes"
-   }
-  },
-  {
-   "file": "/img/projects/messagerie-multitenant-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Écran de connexion de la messagerie professionnelle",
-    "en": "Business webmail login screen"
-   }
-  },
-  {
-   "file": "/img/projects/messagerie-multitenant-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Écran de connexion de l'administration (sociétés, domaines, boîtes mail)",
-    "en": "Administration login screen (companies, domains, mailboxes)"
    }
   }
  ],

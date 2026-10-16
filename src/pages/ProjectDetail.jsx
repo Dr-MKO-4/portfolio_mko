@@ -7,6 +7,7 @@ import { EASE, Page, Reveal, SplitText } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
 import Lightbox from "../components/Lightbox.jsx";
+import LivePreview from "../components/LivePreview.jsx";
 import NotFound from "./NotFound.jsx";
 
 export default function ProjectDetail() {
@@ -42,6 +43,14 @@ export default function ProjectDetail() {
           </Reveal>
           <h1 className="h-1 pd-title title-row">{p.logo && <motion.img className="p-logo p-logo-lg" src={p.logo} alt={`Logo ${t(p.name)}`} initial={{ scale: 0, rotate: -15 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.6, duration: 0.7, ease: EASE }} />}<SplitText key={p.slug} text={t(p.name)} delay={0.6} /></h1>
           <Reveal delay={0.75}><p className="pd-sub">{t(p.subtitle)}</p></Reveal>
+          {p.live && (
+            <Reveal delay={0.8} className="pd-live-cta">
+              <a href={p.live} target="_blank" rel="noopener noreferrer" className="btn btn-primary" data-cursor={ui("view")}>
+                <span className="pulse" /> {ui("liveOpen")} <span className="arrow">↗</span>
+              </a>
+              <a href="#apercu" className="btn btn-ghost">{ui("liveJump")}</a>
+            </Reveal>
+          )}
           <Reveal delay={0.85}>
             <dl className="pd-meta">
               <div><dt className="mono">{ui("status")}</dt><dd>{t(p.status)}</dd></div>
@@ -80,6 +89,11 @@ export default function ProjectDetail() {
             <div>
               <h4 className="mono muted">{ui("links")}</h4>
               <div className="pd-links">
+                {p.live && (
+                  <a href={p.live} target="_blank" rel="noopener noreferrer" className="pd-link" data-cursor={ui("view")}>
+                    <span>{ui("liveOpen")}</span><span>↗</span>
+                  </a>
+                )}
                 {p.links?.length ? (
                   p.links.map((l) => (
                     <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer" className="pd-link" data-cursor="GitHub">
@@ -87,7 +101,7 @@ export default function ProjectDetail() {
                     </a>
                   ))
                 ) : (
-                  <p className="muted" style={{ fontSize: 14 }}>{ui("privateCode")}</p>
+                  !p.live && <p className="muted" style={{ fontSize: 14 }}>{ui("privateCode")}</p>
                 )}
               </div>
             </div>
@@ -128,6 +142,8 @@ export default function ProjectDetail() {
           </div>
         </div>
       </div>
+
+      {p.live && <div id="apercu"><LivePreview url={p.live} cover={p.cover} /></div>}
 
       {images.length > 0 && (
         <section className="pd-catalogue">

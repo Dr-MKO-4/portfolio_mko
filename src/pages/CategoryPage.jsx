@@ -15,6 +15,7 @@ function BigCard({ p, i }) {
         <div className="big-card-visual">
           <ProjectVisual project={p} eager />
           <span className="card-badge">{ui("featuredBadge")}</span>
+          {p.live && <span className="live-badge"><span className="pulse" />{ui("liveBadge")}</span>}
         </div>
         <div className="big-card-body">
           <div className="card-meta mono"><span>{t(p.group)}</span><span>{p.year}</span></div>
@@ -32,7 +33,7 @@ function Card({ p, i }) {
   return (
     <Reveal delay={(i % 3) * 0.06} y={30}>
       <Link to={`/projets/${p.slug}`} className="card" data-cursor={ui("view")}>
-        <div className="card-visual"><ProjectVisual project={p} /></div>
+        <div className="card-visual"><ProjectVisual project={p} />{p.live && <span className="live-badge"><span className="pulse" />{ui("liveBadge")}</span>}</div>
         <div className="card-body">
           <div className="card-meta mono"><span>{t(p.group)}</span><span>{p.year}</span></div>
           <h3 className="title-row">{p.logo && <img className="p-logo" src={p.logo} alt="" loading="lazy" />}{t(p.name)}</h3>

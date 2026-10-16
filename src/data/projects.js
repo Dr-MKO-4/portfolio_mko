@@ -123,6 +123,20 @@ const LOGOS = {
   "qr-image-platform": "/img/logos/qr-image.webp", "messagerie-multitenant": "/img/logos/messagerie.webp", "ajpeac-platform": "/img/logos/ajpeac.svg",
 };
 
+const LIVE = {
+ "winplus": "https://winplus.cm",
+ "ngondo": "https://mko-ngondo.vercel.app",
+ "ai4sg-cameroon": "https://mko-ai4sg.vercel.app",
+ "mboa-shop": "https://mko-mboa-shop.vercel.app",
+ "ajpeac-platform": "https://mko-ajpeac.vercel.app",
+ "homegamesfive": "https://mko-homegamesfive.vercel.app",
+ "gala-promo": "https://mko-gala.vercel.app",
+ "testing-platform": "https://mko-testing-platform.vercel.app",
+ "hotel-manager": "https://mko-hotel.vercel.app",
+ "crypto-trader-dqn": "https://mko-crypto-trader.vercel.app",
+ "reseau-social-enspd": "https://mko-reseau-social.vercel.app"
+};
+
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
 const CAT_INDEX = Object.fromEntries(CATEGORIES.map((c, i) => [c.key, i]));
 
@@ -132,7 +146,7 @@ export const PROJECTS = [...RESEARCH_PRO, ...FEATURED_PROJECTS, ...OTHER_PROJECT
     const cat = CAT_OF[p.slug];
     const featured = FEATURED_SET.has(p.slug);
     const featuredRank = featured ? CATEGORIES[CAT_INDEX[cat]].featured.indexOf(p.slug) : 99;
-    return { ...withVisuals(p), logo: LOGOS[p.slug] || p.logo, cat, featured, featuredRank, name: { fr: p.title, en: p.titleEn || p.title } };
+    return { ...withVisuals(p), live: LIVE[p.slug] || null, logo: LOGOS[p.slug] || p.logo, cat, featured, featuredRank, name: { fr: p.title, en: p.titleEn || p.title } };
   })
   .sort((a, b) => CAT_INDEX[a.cat] - CAT_INDEX[b.cat] || a.featuredRank - b.featuredRank || a.order - b.order);
 
