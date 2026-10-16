@@ -1,4 +1,144 @@
 {
+ "agrosense": [
+  {
+   "file": "/img/projects/agrosense-demo-1.webp",
+   "alt": {
+    "fr": "Démo AgroSense : résultat d'un diagnostic simulé avec niveau de confiance, dans un cadre de téléphone",
+    "en": "AgroSense demo: simulated diagnosis result with confidence level, shown in a phone frame"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/agrosense-demo-2.webp",
+   "alt": {
+    "fr": "Explication visuelle : carte de chaleur type Grad-CAM superposée à une feuille générée (simulation pédagogique)",
+    "en": "Visual explanation: Grad-CAM-style heatmap over a generated leaf (teaching simulation)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/agrosense-demo-3.webp",
+   "alt": {
+    "fr": "Surveillance phytosanitaire : foyers détectés par DBSCAN (ε 15 km, min_samples 3) sur une carte schématique, points fictifs",
+    "en": "Crop-health surveillance: DBSCAN outbreaks (ε 15 km, min_samples 3) on a schematic map, fictitious points"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/agrosense-demo-4.webp",
+   "alt": {
+    "fr": "Parcelle et journal agricole : état sanitaire, observations, traitements et suivi",
+    "en": "Plot and farm log: health status, observations, treatments and follow-up"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-showcase.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile AgroSense (accueil, résultat avec Grad-CAM, prise de photo)",
+    "en": "AgroSense mobile app mockups (home, result with Grad-CAM, photo capture)"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Accueil AgroSense : statistiques de la semaine, alertes phytosanitaires actives de la zone et diagnostics récents",
+    "en": "AgroSense home: weekly stats, active plant-health alerts in the area and recent diagnoses"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Écran Diagnostic IA : photo d'une feuille prête pour l'analyse",
+    "en": "AI Diagnosis screen: leaf photo ready for analysis"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Résultat du diagnostic : maladie la plus probable, carte de chaleur Grad-CAM et autres hypothèses du top-3",
+    "en": "Diagnosis result: most likely disease, Grad-CAM heatmap and the other top-3 hypotheses"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-4.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Historique des diagnostics par culture et par parcelle",
+    "en": "Diagnosis history by crop and plot"
+   }
+  }
+ ],
+ "fluxemi": [
+  {
+   "file": "/img/projects/fluxemi-demo-1.webp",
+   "alt": {
+    "fr": "Démo web de Fluxemi : tableau de bord avec indicateurs du parc, ajouts récents et stock critique (données fictives)",
+    "en": "Fluxemi web demo: dashboard with fleet indicators, recent additions and critical stock (fictitious data)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/fluxemi-demo-2.webp",
+   "alt": {
+    "fr": "Catalogue des produits avec recherche et filtres par catégorie, département et statut",
+    "en": "Product catalogue with search and filters by category, department and status"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/fluxemi-demo-3.webp",
+   "alt": {
+    "fr": "Fiche produit, onglet Analyse IA : analyse simulée selon les règles locales de l'application",
+    "en": "Product sheet, AI analysis tab: simulated analysis based on the app's local rules"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/fluxemi-demo-4.webp",
+   "alt": {
+    "fr": "Statistiques : répartition par catégorie, top produits par valeur et analyse globale simulée du stock",
+    "en": "Statistics: breakdown by category, top products by value and simulated global stock analysis"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/fluxemi-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fluxemi Equipment Manager, tableau de bord en thème clair : barre latérale de navigation, huit cartes KPI (références, unités en stock, actifs, maintenance, valeur du parc, ventes du mois, stock critique, garanties), ajouts récents et alertes de stock critique.",
+    "en": "Fluxemi Equipment Manager dashboard in light theme: navigation sidebar, eight KPI cards (items, units in stock, active, maintenance, fleet value, monthly sales, low stock, warranties), recent additions and low-stock alerts."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Liste des produits Fluxemi : recherche, filtres par catégorie, département et statut, tableau à en-têtes discrets et lignes alternées avec quantité, prix d'achat, qualité et pastille de statut.",
+    "en": "Fluxemi product list: search, category, department and status filters, a table with subtle headers and alternating rows showing quantity, purchase price, condition and a status pill."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord Fluxemi en thème sombre, avec les mêmes cartes KPI et listes que le thème clair.",
+    "en": "Fluxemi dashboard in dark theme, with the same KPI cards and lists as the light theme."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fiche produit Fluxemi, onglet Maintenance : historique des interventions d'une imprimante avec type, date, technicien, coût et statut En cours ou Terminée.",
+    "en": "Fluxemi product sheet, Maintenance tab: a printer's intervention history with type, date, technician, cost and an In progress or Completed status."
+   }
+  }
+ ],
  "meerkat": [
   {
    "file": "/img/projects/meerkat-demo-1.webp",
@@ -38,6 +178,130 @@
    "alt": {
     "fr": "Résumé exécutif généré par l’agent : score de risque, vulnérabilités, couverture (cible de test example.com)",
     "en": "Agent-generated executive summary: risk score, findings, coverage (test target example.com)"
+   }
+  }
+ ],
+ "messagerie-multitenant": [
+  {
+   "file": "/img/projects/messagerie-multitenant-demo-1.webp",
+   "alt": {
+    "fr": "Webmail : dossiers, liste des messages et lecture avec pièce jointe",
+    "en": "Webmail: folders, message list and reading pane with an attachment"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-demo-2.webp",
+   "alt": {
+    "fr": "Console d'administration : domaines et boîtes mail d'une société",
+    "en": "Admin console: a company's domains and mailboxes"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-demo-3.webp",
+   "alt": {
+    "fr": "Enregistrements DNS à publier pour un domaine : MX, SPF, DKIM, DMARC",
+    "en": "DNS records to publish for a domain: MX, SPF, DKIM, DMARC"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-demo-4.webp",
+   "alt": {
+    "fr": "Lettre d'information affichée après déblocage des images distantes",
+    "en": "Newsletter shown after allowing remote images"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Webmail de la messagerie multitenant : dossiers, liste des messages avec avatars et indicateurs de non-lus",
+    "en": "Multi-tenant mail webmail: folders and message list with avatars and unread indicators"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Lecture d'un message dans un cadre isolé, avec barre d'actions et pièces jointes",
+    "en": "Reading a message in a sandboxed frame, with action toolbar and attachments"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Console d'administration : domaines, statut DNS et boîtes mail d'une société",
+    "en": "Admin console: a tenant's domains, DNS status and mailboxes"
+   }
+  }
+ ],
+ "nexus-ai": [
+  {
+   "file": "/img/projects/nexus-ai-demo-1.webp",
+   "alt": {
+    "fr": "Centre de contrôle des agents : graphe LangGraph de l'orchestrateur et fil d'activité en temps réel (démo simulée)",
+    "en": "Agent control centre: orchestrator LangGraph graph and real-time activity feed (simulated demo)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/nexus-ai-demo-2.webp",
+   "alt": {
+    "fr": "Tableau de bord : KPIs, objectifs de la semaine et budget planifié par canal (données fictives)",
+    "en": "Dashboard: KPIs, weekly goals and planned budget per channel (fictitious data)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/nexus-ai-demo-3.webp",
+   "alt": {
+    "fr": "Validation humaine : réallocation de budget proposée par l'orchestrateur au-delà du seuil de 50 %",
+    "en": "Human approval: budget reallocation proposed by the orchestrator above the 50% threshold"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/nexus-ai-demo-4.webp",
+   "alt": {
+    "fr": "Calendrier éditorial des contenus générés par les agents, par plateforme",
+    "en": "Editorial calendar of agent-generated content, by platform"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord NEXUS AI : campagnes en cours et répartition du budget par canal (données de démonstration)",
+    "en": "NEXUS AI dashboard: running campaigns and budget split by channel (demo data)"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Centre de contrôle des agents : graphe LangGraph de l'orchestration",
+    "en": "Agent control centre: LangGraph orchestration graph"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Liste des campagnes marketing avec statut et budget",
+    "en": "Marketing campaign list with status and budget"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Calendrier éditorial des contenus générés",
+    "en": "Editorial calendar of generated content"
    }
   }
  ],
@@ -193,40 +457,6 @@
    }
   }
  ],
- "fluxemi": [
-  {
-   "file": "/img/projects/fluxemi-new-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Fluxemi Equipment Manager, tableau de bord en thème clair : barre latérale de navigation, huit cartes KPI (références, unités en stock, actifs, maintenance, valeur du parc, ventes du mois, stock critique, garanties), ajouts récents et alertes de stock critique.",
-    "en": "Fluxemi Equipment Manager dashboard in light theme: navigation sidebar, eight KPI cards (items, units in stock, active, maintenance, fleet value, monthly sales, low stock, warranties), recent additions and low-stock alerts."
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-new-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Liste des produits Fluxemi : recherche, filtres par catégorie, département et statut, tableau à en-têtes discrets et lignes alternées avec quantité, prix d'achat, qualité et pastille de statut.",
-    "en": "Fluxemi product list: search, category, department and status filters, a table with subtle headers and alternating rows showing quantity, purchase price, condition and a status pill."
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-new-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Tableau de bord Fluxemi en thème sombre, avec les mêmes cartes KPI et listes que le thème clair.",
-    "en": "Fluxemi dashboard in dark theme, with the same KPI cards and lists as the light theme."
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-new-4.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Fiche produit Fluxemi, onglet Maintenance : historique des interventions d'une imprimante avec type, date, technicien, coût et statut En cours ou Terminée.",
-    "en": "Fluxemi product sheet, Maintenance tab: a printer's intervention history with type, date, technician, cost and an In progress or Completed status."
-   }
-  }
- ],
  "testing-platform": [
   {
    "file": "/img/projects/testing-platform-new-1.webp",
@@ -300,32 +530,6 @@
    "alt": {
     "fr": "Configuration d'une simulation : choix de l'actif, de la période de backtest et des hyperparamètres DQN (learning rate, gamma, epsilon, replay buffer).",
     "en": "Simulation setup: asset, backtest period and DQN hyperparameters (learning rate, gamma, epsilon, replay buffer)."
-   }
-  }
- ],
- "messagerie-multitenant": [
-  {
-   "file": "/img/projects/messagerie-multitenant-new-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Webmail de la messagerie multitenant : dossiers, liste des messages avec avatars et indicateurs de non-lus",
-    "en": "Multi-tenant mail webmail: folders and message list with avatars and unread indicators"
-   }
-  },
-  {
-   "file": "/img/projects/messagerie-multitenant-new-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Lecture d'un message dans un cadre isolé, avec barre d'actions et pièces jointes",
-    "en": "Reading a message in a sandboxed frame, with action toolbar and attachments"
-   }
-  },
-  {
-   "file": "/img/projects/messagerie-multitenant-new-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Console d'administration : domaines, statut DNS et boîtes mail d'une société",
-    "en": "Admin console: a tenant's domains, DNS status and mailboxes"
    }
   }
  ],
@@ -983,40 +1187,6 @@
    }
   }
  ],
- "nexus-ai": [
-  {
-   "file": "/img/projects/nexus-ai-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Tableau de bord NEXUS AI : campagnes en cours et répartition du budget par canal (données de démonstration)",
-    "en": "NEXUS AI dashboard: running campaigns and budget split by channel (demo data)"
-   }
-  },
-  {
-   "file": "/img/projects/nexus-ai-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Centre de contrôle des agents : graphe LangGraph de l'orchestration",
-    "en": "Agent control centre: LangGraph orchestration graph"
-   }
-  },
-  {
-   "file": "/img/projects/nexus-ai-web-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Liste des campagnes marketing avec statut et budget",
-    "en": "Marketing campaign list with status and budget"
-   }
-  },
-  {
-   "file": "/img/projects/nexus-ai-web-4.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Calendrier éditorial des contenus générés",
-    "en": "Editorial calendar of generated content"
-   }
-  }
- ],
  "mboa-shop": [
   {
    "file": "/img/projects/mboa-shop-web-1.webp",
@@ -1144,48 +1314,6 @@
    "alt": {
     "fr": "Fil d'actualité du prototype de réseau social étudiant (HTML/CSS statique)",
     "en": "News feed of the student social network prototype (static HTML/CSS)"
-   }
-  }
- ],
- "agrosense": [
-  {
-   "file": "/img/projects/agrosense-mobile-showcase.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Maquettes de l'application mobile AgroSense (accueil, résultat avec Grad-CAM, prise de photo)",
-    "en": "AgroSense mobile app mockups (home, result with Grad-CAM, photo capture)"
-   }
-  },
-  {
-   "file": "/img/projects/agrosense-mobile-1.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Accueil AgroSense : statistiques de la semaine, alertes phytosanitaires actives de la zone et diagnostics récents",
-    "en": "AgroSense home: weekly stats, active plant-health alerts in the area and recent diagnoses"
-   }
-  },
-  {
-   "file": "/img/projects/agrosense-mobile-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Écran Diagnostic IA : photo d'une feuille prête pour l'analyse",
-    "en": "AI Diagnosis screen: leaf photo ready for analysis"
-   }
-  },
-  {
-   "file": "/img/projects/agrosense-mobile-3.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Résultat du diagnostic : maladie la plus probable, carte de chaleur Grad-CAM et autres hypothèses du top-3",
-    "en": "Diagnosis result: most likely disease, Grad-CAM heatmap and the other top-3 hypotheses"
-   }
-  },
-  {
-   "file": "/img/projects/agrosense-mobile-4.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Historique des diagnostics par culture et par parcelle",
-    "en": "Diagnosis history by crop and plot"
    }
   }
  ],

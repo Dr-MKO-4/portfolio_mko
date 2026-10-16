@@ -139,7 +139,10 @@ const LIVE = {
  "ecommerce-simple": "https://mko-ecommerce-stripe.vercel.app",
  "depot-boissons": "https://mko-depot-boissons.vercel.app",
  "mkan-momtsim": "https://mko-mkan.vercel.app",
- "meerkat": "https://mko-meerkat.vercel.app"
+ "meerkat": "https://mko-meerkat.vercel.app",
+ "messagerie-multitenant": "https://mko-messagerie.vercel.app",
+ "qr-image-platform": "https://mko-qr-image.vercel.app",
+ "sisia-sarl": "https://www.sisia-sarl.com"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
