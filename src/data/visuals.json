@@ -41,6 +41,48 @@
    }
   }
  ],
+ "messagerie-multitenant": [
+  {
+   "file": "/img/projects/messagerie-multitenant-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Webmail de la messagerie multitenant : dossiers, liste des messages avec avatars et indicateurs de non-lus",
+    "en": "Multi-tenant mail webmail: folders and message list with avatars and unread indicators"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Lecture d'un message dans un cadre isolé, avec barre d'actions et pièces jointes",
+    "en": "Reading a message in a sandboxed frame, with action toolbar and attachments"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Console d'administration : domaines, statut DNS et boîtes mail d'une société",
+    "en": "Admin console: a tenant's domains, DNS status and mailboxes"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion de la messagerie professionnelle",
+    "en": "Business webmail login screen"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion de l'administration (sociétés, domaines, boîtes mail)",
+    "en": "Administration login screen (companies, domains, mailboxes)"
+   }
+  }
+ ],
  "mko-riccati": [
   {
    "file": "/img/projects/mko-riccati-1.webp",
@@ -804,24 +846,6 @@
    "alt": {
     "fr": "Marché de cosmétiques entre membres de la communauté",
     "en": "Community cosmetics marketplace"
-   }
-  }
- ],
- "messagerie-multitenant": [
-  {
-   "file": "/img/projects/messagerie-multitenant-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Écran de connexion de la messagerie professionnelle",
-    "en": "Business webmail login screen"
-   }
-  },
-  {
-   "file": "/img/projects/messagerie-multitenant-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Écran de connexion de l'administration (sociétés, domaines, boîtes mail)",
-    "en": "Administration login screen (companies, domains, mailboxes)"
    }
   }
  ],
