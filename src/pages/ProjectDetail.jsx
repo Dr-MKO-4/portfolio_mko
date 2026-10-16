@@ -1,11 +1,12 @@
 import { useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { useLang } from "../i18n.jsx";
 import { PROJECTS, CATEGORY_OF } from "../data/projects.js";
 import { EASE, Page, Reveal, SplitText } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
+import Lightbox from "../components/Lightbox.jsx";
 import NotFound from "./NotFound.jsx";
 
 export default function ProjectDetail() {
@@ -24,6 +25,10 @@ export default function ProjectDetail() {
   const cat = CATEGORY_OF[p.cat];
   const built = t(p.built) || [];
   const arch = t(p.architecture) || [];
+  const images = [
+    ...(p.cover ? [{ src: p.cover, alt: p.subtitle }] : []),
+    ...(p.gallery || []),
+  ].filter((g, i, arr) => arr.findIndex((x) => x.src === g.src) === i);
 
   return (
     <Page>
@@ -51,7 +56,10 @@ export default function ProjectDetail() {
       <div className="wrap">
         <motion.div
           ref={coverRef}
-          className="pd-cover"
+          className={`pd-cover${images.length ? " clickable" : ""}`}
+          onClick={() => images.length && setZoom(0)}
+          data-cursor={images.length ? ui("view") : undefined}
+          role={images.length ? "button" : undefined}
           initial={{ clipPath: "inset(12% 6% 12% 6% round 28px)" }}
           animate={{ clipPath: "inset(0% 0% 0% 0% round 28px)" }}
           transition={{ duration: 1.3, ease: [0.76, 0, 0.24, 1], delay: 0.7 }}
@@ -114,27 +122,33 @@ export default function ProjectDetail() {
               </section>
             )}
 
-            {p.gallery?.length > 0 && (
-              <section>
-                <Reveal><span className="eyebrow">{ui("gallery")}</span></Reveal>
-                <div className="pd-gallery" style={{ marginTop: 24 }}>
-                  {p.gallery.map((g, i) => (
-                    <Reveal key={g.src} delay={i * 0.05}>
-                      <button onClick={() => setZoom(g)} data-cursor="Zoom" aria-label={t(g.alt)}>
-                        <img src={g.src} alt={t(g.alt)} loading="lazy" />
-                      </button>
-                    </Reveal>
-                  ))}
-                </div>
-              </section>
-            )}
-
             {p.note && (
               <Reveal as="section"><p className="pd-note">{t(p.note)}</p></Reveal>
             )}
           </div>
         </div>
       </div>
+
+      {images.length > 0 && (
+        <section className="pd-catalogue">
+          <div className="wrap">
+            <div className="pd-cat-head">
+              <Reveal><span className="eyebrow">{ui("gallery")}</span></Reveal>
+              <Reveal><span className="mono muted">{images.length} {ui("imagesCount")} · {ui("clickToZoom")}</span></Reveal>
+            </div>
+            <div className={`pd-cat-grid n${Math.min(images.length, 3)}`}>
+              {images.map((g, i) => (
+                <Reveal key={g.src} delay={(i % 3) * 0.06} y={24}>
+                  <button className="pd-thumb" onClick={() => setZoom(i)} data-cursor={ui("view")} aria-label={t(g.alt)}>
+                    <img src={g.src} alt={t(g.alt)} loading="lazy" />
+                    <span className="pd-thumb-cap">{t(g.alt)}</span>
+                  </button>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="dark">
         <div className="wrap">
@@ -146,13 +160,7 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <AnimatePresence>
-        {zoom && (
-          <motion.div className="lightbox" onClick={() => setZoom(null)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <motion.img src={zoom.src} alt={t(zoom.alt)} initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.95 }} transition={{ ease: EASE, duration: 0.5 }} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Lightbox images={images} index={zoom} onChange={setZoom} />
       <Footer />
     </Page>
   );
