@@ -349,7 +349,7 @@ export const OTHER_PROJECTS = [
       ],
     },
     stack: [".NET 8", "YARP", "FastAPI", "React", "Leaflet", "PostgreSQL", "RabbitMQ", "MinIO"],
-    links: [],
+    links: [gh("Dr-MKO-4/ajpeac-platform", { fr: "Code source", en: "Source code" })],
   },
   {
     slug: "talentis",
@@ -443,7 +443,7 @@ export const OTHER_PROJECTS = [
       ],
     },
     stack: ["React", "MUI", "Express", "MySQL", "ASP.NET MVC", "Power BI"],
-    links: [],
+    links: [gh("Dr-MKO-4/hotel-manager", { fr: "Code source", en: "Source code" })],
   },
   {
     slug: "gestion-absences",
@@ -588,6 +588,6 @@ export const OTHER_PROJECTS = [
       ],
     },
     stack: ["React", "TypeScript", "Vite", "PWA", "IndexedDB", "Python", "UML"],
-    links: [],
+    links: [gh("Dr-MKO-4/kasa-depot-boissons", { fr: "Code source", en: "Source code" })],
   },
 ];
