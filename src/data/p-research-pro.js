@@ -31,6 +31,7 @@ export const RESEARCH_PRO = [
         "Recherche d'architecture par algorithme génétique et NSGA-II, fonction de fitness pondérée par AHP, protocole de benchmark des bases KAN par porte.",
         "Application MoMTSim : API FastAPI, interface React/TypeScript en huit écrans, historique SQLite, installeur Windows Electron.",
         "Tableau de bord Dash temps réel : flux brut via REST ou Kafka, fenêtres glissantes par compte dans Redis, contributions expliquées par variable, suivi de dérive et de calibration, journal d'audit exportable.",
+        "Démo web pédagogique en ligne : flux MoMTSim et scoreur de forme KAN simulés dans le navigateur, explication de chaque alerte par variable, dérive et rapport d'audit exportable. Ce n'est pas le modèle entraîné.",
       ],
       en: [
         "MoMTSim, a PyTorch-vectorised simulator: five fraud scenarios (account takeover, refund, fake credentials, split deposits, smurfing), SPSA-calibrated rates and twelve business features.",
@@ -40,6 +41,7 @@ export const RESEARCH_PRO = [
         "Architecture search with a genetic algorithm and NSGA-II, AHP-weighted fitness, per-gate KAN basis benchmark protocol.",
         "MoMTSim app: FastAPI backend, eight-screen React/TypeScript interface, SQLite history, Electron Windows installer.",
         "Real-time Dash dashboard: raw stream via REST or Kafka, per-account sliding windows in Redis, per-feature explanations, drift and calibration monitoring, exportable audit log.",
+        "Educational live web demo: MoMTSim stream and KAN-shaped scorer simulated in the browser, per-feature explanation of each alert, drift and exportable audit report. It is not the trained model.",
       ],
     },
     architecture: {

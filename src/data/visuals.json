@@ -1,4 +1,38 @@
 {
+ "mkan-momtsim": [
+  {
+   "file": "/img/projects/mkan-live-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Dashboard live MKAN · MoMTSim en thème sombre : compteurs du flux, contrôles de simulation et d'injection de scénarios, flux de transactions Mobile Money scorées en FCFA et file d'alertes (démo pédagogique, flux et scoreur simulés dans le navigateur).",
+    "en": "MKAN · MoMTSim live dashboard in dark theme: stream counters, simulation and scenario injection controls, scrolling feed of scored Mobile Money transactions in FCFA and alert queue (teaching demo, stream and scorer simulated in the browser)."
+   }
+  },
+  {
+   "file": "/img/projects/mkan-live-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Explication d'une alerte de smurfing : jauge de risque, contributions signées φ par variable qui somment au logit, fonction φ du KAN avec le point courant et forme symbolique approchée.",
+    "en": "Explanation of a smurfing alert: risk gauge, signed per-variable φ contributions summing to the logit, the KAN φ function with the current point and its approximate symbolic form."
+   }
+  },
+  {
+   "file": "/img/projects/mkan-live-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Suivi de dérive : divergence de Jensen-Shannon des scores face à son seuil, et distributions des scores de référence et courants, sous l'explication d'une alerte.",
+    "en": "Drift monitoring: Jensen-Shannon divergence of scores against its threshold, and reference versus current score distributions, below an alert explanation."
+   }
+  },
+  {
+   "file": "/img/projects/mkan-live-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page « Comment ça marche » : schéma du scoreur additif à la KAN, douze variables métier, fonctions φ gaussiennes et Fourier, somme, sigmoïde et score.",
+    "en": "How-it-works page: diagram of the additive KAN-style scorer, twelve business variables, Gaussian and Fourier φ functions, sum, sigmoid and score."
+   }
+  }
+ ],
  "depot-boissons": [
   {
    "file": "/img/projects/depot-boissons-new-1.webp",
@@ -120,6 +154,30 @@
   }
  ],
  "crypto-trader-dqn": [
+  {
+   "file": "/img/projects/crypto-trader-dqn-live-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Simulation en direct de Crypto Trader DQN en thème sombre : chandeliers BTC/USD qui défilent avec les ordres d'achat et de vente de l'agent, choc de marché surligné, KPI live et cerveau de l'agent avec les valeurs Q (politique simulée dans le navigateur).",
+    "en": "Crypto Trader DQN live simulation in dark theme: scrolling BTC/USD candlesticks with the agent's buy and sell orders, highlighted market shock, live KPIs and the agent's brain with Q-values (policy simulated in the browser)."
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-live-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord en mode démo alimenté par la simulation live : valeur du portefeuille, rendement face au Buy & Hold, Sharpe glissant, aperçu live des chandeliers et décision courante de l'agent.",
+    "en": "Demo-mode dashboard fed by the live simulation: portfolio value, return against Buy & Hold, rolling Sharpe, live candlestick preview and the agent's current decision."
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-live-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Simulation en direct en thème clair sur ETH/USD : entrées normalisées du réseau Dueling Q, courbe d'équité de l'agent face au Buy & Hold et journal des ordres horodatés avec prix, quantité et P&L.",
+    "en": "Live simulation in light theme on ETH/USD: normalised Dueling Q network inputs, agent equity curve against Buy & Hold and time-stamped order log with price, quantity and P&L."
+   }
+  },
   {
    "file": "/img/projects/crypto-trader-dqn-new-1.webp",
    "kind": "screenshot",
