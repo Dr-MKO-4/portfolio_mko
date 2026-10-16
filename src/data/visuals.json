@@ -1,4 +1,30 @@
 {
+ "testing-platform": [
+  {
+   "file": "/img/projects/testing-platform-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Session d'épreuve candidat : énoncé, consignes et compte à rebours anthracite et or bien visible",
+    "en": "Candidate test session: task brief, instructions and a prominent charcoal and gold countdown timer"
+   }
+  },
+  {
+   "file": "/img/projects/testing-platform-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord administrateur : indicateurs, actions rapides, sessions et soumissions récentes",
+    "en": "Admin dashboard: key metrics, quick actions, recent sessions and submissions"
+   }
+  },
+  {
+   "file": "/img/projects/testing-platform-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion par code à usage unique avec panneau de marque GOGIVAM",
+    "en": "One-time code sign-in screen with the GOGIVAM brand panel"
+   }
+  }
+ ],
  "crypto-trader-dqn": [
   {
    "file": "/img/projects/crypto-trader-dqn-new-1.webp",
@@ -722,32 +748,6 @@
    "alt": {
     "fr": "Produits vedettes et parcours « Quel joueur êtes-vous ? »",
     "en": "Featured products and \"What kind of gamer are you?\" guide"
-   }
-  }
- ],
- "testing-platform": [
-  {
-   "file": "/img/projects/testing-platform-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Tableau de bord administrateur de la plateforme de tests techniques",
-    "en": "Administrator dashboard of the technical testing platform"
-   }
-  },
-  {
-   "file": "/img/projects/testing-platform-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Gestion des tests : recherche, filtres par domaine et difficulté",
-    "en": "Test management: search and filters by domain and difficulty"
-   }
-  },
-  {
-   "file": "/img/projects/testing-platform-web-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Connexion sans mot de passe par code envoyé par e-mail",
-    "en": "Passwordless login with an e-mailed code"
    }
   }
  ],
