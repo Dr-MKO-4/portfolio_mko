@@ -145,7 +145,10 @@ const LIVE = {
  "sisia-sarl": "https://www.sisia-sarl.com",
  "nexus-ai": "https://mko-nexus.vercel.app",
  "agrosense": "https://mko-agrosense.vercel.app",
- "dermai": "https://mko-dermai.vercel.app"
+ "dermai": "https://mko-dermai.vercel.app",
+ "fluxemi": "https://mko-fluxemi.vercel.app",
+ "winui-prototypes": "https://mko-winui.vercel.app",
+ "syswatch": "https://mko-syswatch.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));

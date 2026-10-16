@@ -479,6 +479,56 @@
    }
   }
  ],
+ "winui-prototypes": [
+  {
+   "file": "/img/projects/winui-prototypes-demo-1.webp",
+   "alt": {
+    "fr": "Démo web des prototypes WinUI 3 : MStore, boutique d'applications avec NavigationView à icônes et grilles de jeux fictifs",
+    "en": "WinUI 3 prototypes web demo: MStore, an app store with an icon NavigationView and fictitious game grids"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/winui-prototypes-demo-2.webp",
+   "alt": {
+    "fr": "SpotifyClone version 1 : volet de navigation, mixes, recommandations et lecteur (lecture simulée, sans son)",
+    "en": "SpotifyClone version 1: navigation pane, mixes, recommendations and player (simulated playback, no sound)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/winui-prototypes-demo-3.webp",
+   "alt": {
+    "fr": "SpotifyClone version 2 découpée en composants : Sidebar, TopItem, HomePage et PlayerControl",
+    "en": "SpotifyClone version 2 split into components: Sidebar, TopItem, HomePage and PlayerControl"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/winui-prototypes-demo-4.webp",
+   "alt": {
+    "fr": "MimiGO : page de connexion atteinte par navigation de Frame, styles centralisés dans App.xaml",
+    "en": "MimiGO: login page reached through Frame navigation, styles centralised in App.xaml"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/winui-prototypes-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Prototype WinUI 3 de boutique d'applications : barre de recherche, navigation latérale, sections de jeux",
+    "en": "WinUI 3 app-store prototype: search bar, side navigation, game sections"
+   }
+  },
+  {
+   "file": "/img/projects/winui-prototypes-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Prototype WinUI 3 de lecteur de musique : mixes, playlists et barre de lecture",
+    "en": "WinUI 3 music-player prototype: mixes, playlists and playback bar"
+   }
+  }
+ ],
  "mkan-momtsim": [
   {
    "file": "/img/projects/mkan-live-1.webp",
@@ -1506,24 +1556,6 @@
    "alt": {
     "fr": "Concept PharmaCon : suivi de livraison par statut et code de remise",
     "en": "PharmaCon concept: status-based delivery tracking and handover code"
-   }
-  }
- ],
- "winui-prototypes": [
-  {
-   "file": "/img/projects/winui-prototypes-1.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Prototype WinUI 3 de boutique d'applications : barre de recherche, navigation latérale, sections de jeux",
-    "en": "WinUI 3 app-store prototype: search bar, side navigation, game sections"
-   }
-  },
-  {
-   "file": "/img/projects/winui-prototypes-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Prototype WinUI 3 de lecteur de musique : mixes, playlists et barre de lecture",
-    "en": "WinUI 3 music-player prototype: mixes, playlists and playback bar"
    }
   }
  ],
