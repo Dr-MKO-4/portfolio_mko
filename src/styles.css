@@ -623,3 +623,13 @@ img.cover.contain { object-fit: contain; background: #fff; padding: 4%; }
   .pillar-split.reverse .pillar-art { order: 2; }
 }
 @media (max-width: 600px) { .pillar-cards { grid-template-columns: 1fr; } }
+
+.nav-cv { height: 38px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); font-size: 12px; transition: border-color .3s, color .3s; }
+.nav.on-dark:not(.scrolled) .nav-cv { border-color: var(--line-dark); }
+.nav-cv:hover { border-color: var(--orange); color: var(--orange); }
+@media (max-width: 900px) { .nav-cv { display: none; } }
+.edu-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); }
+.edu-list { margin-top: 22px; display: grid; gap: 0; border-top: 1px solid var(--line); list-style: none; }
+.edu-item { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.edu-list.plain li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+@media (max-width: 900px) { .edu-grid { grid-template-columns: 1fr; } }

@@ -2,6 +2,7 @@ export const PROFILE = {
   fullName: "Georges Miguel MOUKOKO EKAMBI",
   email: "georgesmoukoko4@gmail.com",
   location: "Douala, Cameroun",
+  cv: { fr: "/cv/CV_Georges-Miguel-MOUKOKO_FR.pdf", en: "/cv/CV_Georges-Miguel-MOUKOKO_EN.pdf" },
   whatsapp: { display: "+237 691 69 79 24", url: "https://wa.me/237691697924" },
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/georgesmoukoko-3890542a5" },
@@ -60,20 +61,20 @@ export const PILLARS = [
 
 export const EXPERIENCES = [
   {
-    when: { fr: "En cours", en: "Ongoing" },
-    org: "ENSPD · Université de Douala",
-    logo: "/img/logos/enspd.webp",
-    role: { fr: "Master 2 Science des Données & Intelligence Artificielle", en: "MSc Data Science & Artificial Intelligence" },
+    when: { fr: "2025 · en cours", en: "2025 · present" },
+    org: "LIDIA",
+    logo: "/img/logos/lidia.webp",
+    role: { fr: "Fondateur & Lead IA · startup d'IA souveraine", en: "Founder & AI Lead · sovereign AI startup" },
     points: {
       fr: [
-        "Mémoire : détection de fraude Mobile Money en zone CEMAC par réseaux de Kolmogorov-Arnold, simulation multi-agent et calibration NSGA-II / AHP.",
-        "Apprentissage profond, IA générative, apprentissage par renforcement, data mining, Big Data, statistique bayésienne, traitement du signal et de l'image.",
-        "Génie logiciel : 13 projets de programmation système en Rust.",
+        "Architecture RAG hybride (recherche sémantique + BM25) et pipelines OCR multimodaux pour un déploiement intranet fermé.",
+        "Produits : AgroSense, Nexus AI, Meerkat, PharmaCon et Lead's AI, un LLM souverain adapté aux langues africaines.",
+        "Recherche appliquée en IA explicable et en IA embarquée.",
       ],
       en: [
-        "Thesis: Mobile Money fraud detection in the CEMAC zone with Kolmogorov-Arnold networks, multi-agent simulation and NSGA-II / AHP calibration.",
-        "Deep learning, generative AI, reinforcement learning, data mining, Big Data, Bayesian statistics, signal and image processing.",
-        "Software engineering: 13 systems programming projects in Rust.",
+        "Hybrid RAG architecture (semantic + BM25 retrieval) and multimodal OCR pipelines for closed intranet deployment.",
+        "Products: AgroSense, Nexus AI, Meerkat, PharmaCon and Lead's AI, a sovereign LLM adapted to African languages.",
+        "Applied research in explainable AI and edge AI.",
       ],
     },
   },
@@ -95,50 +96,63 @@ export const EXPERIENCES = [
     },
   },
   {
-    when: { fr: "En cours", en: "Ongoing" },
+    when: { fr: "2026 · en cours", en: "2026 · present" },
     org: "NexCQISolutions",
     role: { fr: "Développeur logiciel · Aura CareOS", en: "Software developer · Aura CareOS" },
     points: {
-      fr: [
-        "Développement d'un dossier médical électronique en marque blanche basé sur OpenEMR.",
-        "Tableaux de bord par rôle, intégration continue et déploiement automatisé.",
-      ],
-      en: [
-        "Development of a white-label electronic medical record built on OpenEMR.",
-        "Role-based dashboards, continuous integration and automated deployment.",
-      ],
+      fr: ["Module sécurité d'un dossier médical électronique basé sur OpenEMR : MFA, contrôle d'accès, journal d'audit infalsifiable, tests PHPUnit."],
+      en: ["Security module of an OpenEMR-based electronic medical record: MFA, access control, tamper-evident audit log, PHPUnit tests."],
     },
   },
   {
-    when: { fr: "En cours", en: "Ongoing" },
-    org: "LIDIA Lab",
-    logo: "/img/logos/lidia.webp",
-    role: { fr: "Chercheur et ingénieur IA", en: "AI researcher and engineer" },
+    when: { fr: "07/2025 · 01/2026", en: "07/2025 · 01/2026" },
+    org: "ESOAF · Yaoundé",
+    role: { fr: "Stagiaire ingénierie logicielle · Full-stack et IA", en: "Software engineering intern · Full-stack and AI" },
     points: {
       fr: [
-        "AgroSense : diagnostic phytosanitaire par photo avec explication Grad-CAM.",
-        "Nexus : plateforme open source d'agents IA pour le marketing digital.",
-        "PharmaCon : plateforme pharmacie, application mobile et portail officine.",
+        "Architecture et développement de modules full-stack pour l'anonymisation de données d'entreprise.",
+        "Intégration de modèles de vision par ordinateur dans des workflows industriels.",
+        "Structuration des flux de données et pipelines de traitement pour l'aide à la décision.",
       ],
       en: [
-        "AgroSense: photo-based crop disease diagnosis with Grad-CAM explanations.",
-        "Nexus: open-source AI agent platform for digital marketing.",
-        "PharmaCon: pharmacy platform, mobile app and pharmacy portal.",
+        "Designed and built full-stack modules for enterprise data anonymisation.",
+        "Integrated computer vision models into industrial workflows.",
+        "Structured data flows and processing pipelines for decision support.",
       ],
     },
   },
   {
     when: { fr: "En parallèle", en: "Alongside" },
-    org: { fr: "Indépendant", en: "Freelance" },
-    role: { fr: "Développeur full-stack", en: "Full-stack developer" },
+    org: { fr: "Indépendant · ENSPD", en: "Freelance · ENSPD" },
+    role: { fr: "Développeur full-stack et instructeur en développement logiciel", en: "Full-stack developer and software development instructor" },
     points: {
       fr: [
-        "Messagerie professionnelle multitenant en production, SIRH, marketplaces, plateformes communautaires et e-commerce.",
+        "WinPlus (plateforme éducative en production), messagerie professionnelle multitenant, HomeGamesFive, SISIA SARL.",
         "Intégration des paiements Mobile Money (MTN MoMo, Orange Money) et déploiement sur AWS.",
+        "Instructeur en développement logiciel à l'ENSPD.",
       ],
       en: [
-        "Multi-tenant business email platform in production, HRIS, marketplaces, community and e-commerce platforms.",
+        "WinPlus (live learning platform), multi-tenant business email, HomeGamesFive, SISIA SARL.",
         "Mobile Money payment integration (MTN MoMo, Orange Money) and AWS deployment.",
+        "Software development instructor at ENSPD.",
+      ],
+    },
+  },
+  {
+    when: { fr: "2022 · 2023 · 2024", en: "2022 · 2023 · 2024" },
+    org: "CAMRAIL · Douala",
+    logo: "/img/logos/camrail.webp",
+    role: { fr: "Stagiaire · trois stages d'été", en: "Intern · three summer internships" },
+    points: {
+      fr: [
+        "Observation et soutien aux équipes de gestion du trafic ferroviaire.",
+        "Rédaction de rapports techniques sur les indicateurs de performance opérationnelle.",
+        "Contribution à des projets d'optimisation du temps de transport.",
+      ],
+      en: [
+        "Supported railway traffic management teams.",
+        "Wrote technical reports on operational performance indicators.",
+        "Contributed to transit-time optimisation projects.",
       ],
     },
   },
@@ -147,30 +161,27 @@ export const EXPERIENCES = [
     org: "Club IA · ENSPD",
     role: { fr: "Responsable Recherche & Développement", en: "Head of Research & Development" },
     points: {
-      fr: ["Organisation de la commission R&D et du programme hebdomadaire du club.", "Animation de projets étudiants en IA et participation aux compétitions de data science (Zindi, Data Tour)."],
-      en: ["Organised the R&D committee and the club's weekly programme.", "Led student AI projects and took part in data science competitions (Zindi, Data Tour)."],
+      fr: ["Organisation de la commission R&D et du programme hebdomadaire du club.", "Projets étudiants en IA et compétitions de data science (Zindi, Data Tour)."],
+      en: ["Organised the R&D committee and the club's weekly programme.", "Student AI projects and data science competitions (Zindi, Data Tour)."],
     },
   },
-  {
-    when: { fr: "Niveau 4 · 7 mois", en: "Year 4 · 7 months" },
-    org: "ESOAF",
-    role: { fr: "Stagiaire ingénierie logicielle · Full-stack et IA", en: "Software engineering intern · Full-stack and AI" },
-    points: { fr: [], en: [] },
-  },
-  {
-    when: { fr: "Niveau 3", en: "Year 3" },
-    org: "CAMRAIL",
-    logo: "/img/logos/camrail.webp",
-    role: { fr: "Stagiaire · Systèmes embarqués et data", en: "Intern · Embedded systems and data" },
-    points: { fr: [], en: [] },
-  },
-  {
-    when: { fr: "Niveaux 1 et 2", en: "Years 1 and 2" },
-    org: "CAMRAIL",
-    logo: "/img/logos/camrail.webp",
-    role: { fr: "Stagiaire · Ingénierie industrielle", en: "Intern · Industrial engineering" },
-    points: { fr: [], en: [] },
-  },
+];
+
+export const EDUCATION = [
+  { when: { fr: "En cours", en: "Ongoing" }, title: { fr: "Master 2 Science des Données & IA (SDIA)", en: "MSc Data Science & AI (SDIA)" }, where: { fr: "ENSPD, Université de Douala · mémoire : détection de fraude Mobile Money par réseaux de Kolmogorov-Arnold", en: "ENSPD, University of Douala · thesis: Mobile Money fraud detection with Kolmogorov-Arnold networks" } },
+  { when: { fr: "2024", en: "2024" }, title: { fr: "Licence Science des Données & IA", en: "BSc Data Science & AI" }, where: { fr: "ENSPD · mention Assez-Bien", en: "ENSPD · with honours" } },
+  { when: { fr: "2021", en: "2021" }, title: { fr: "Baccalauréat C (mathématiques et physique)", en: "Baccalaureate, series C (maths & physics)" }, where: { fr: "Collège Adventiste de Yaoundé · mention Bien", en: "Collège Adventiste de Yaoundé · with honours" } },
+];
+
+export const CERTIFICATIONS = [
+  "Huawei · Artificial Intelligence Technology and Application V2.0",
+  "Meta · Front-End Developer (HTML, CSS, JavaScript, React)",
+  "Board Infinity · .NET Developer & ASP.NET Core",
+];
+
+export const LANGUAGES = [
+  { name: "Français", level: { fr: "langue maternelle", en: "native" } },
+  { name: "English", level: { fr: "niveau professionnel (B2)", en: "professional (B2)" } },
 ];
 
 export const SKILLS = [

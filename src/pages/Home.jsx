@@ -9,7 +9,7 @@ import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
 
 function Hero({ ready }) {
-  const { ui } = useLang();
+  const { t, ui } = useLang();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const photoY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
@@ -46,6 +46,9 @@ function Hero({ ready }) {
               </Magnetic>
               <Magnetic>
                 <Link to="/contact" className="btn btn-ghost">{ui("contactMe")}</Link>
+              </Magnetic>
+              <Magnetic>
+                <a href={t(PROFILE.cv)} className="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-cursor={ui("cvShort")}>{ui("downloadCv")} <span className="arrow">↓</span></a>
               </Magnetic>
             </motion.div>
           </motion.div>
@@ -320,8 +323,8 @@ export default function Home({ ready }) {
               <h2 className="h-2" style={{ margin: "14px 0" }}>LIDIA Lab</h2>
               <p className="lead muted">
                 {lang === "fr"
-                  ? "Le laboratoire où je mène mes recherches sur l'IA explicable et l'IA embarquée, appliquées à l'agriculture, la santé, la sécurité et la finance. L'identité visuelle de ce site reprend ses couleurs."
-                  : "The lab where I research explainable AI and edge AI, applied to agriculture, health, security and finance. This site's visual identity borrows its colours."}
+                  ? "La startup d'IA souveraine que j'ai fondée, où je mène mes recherches sur l'IA explicable et l'IA embarquée, appliquées à l'agriculture, la santé, la sécurité et la finance. L'identité visuelle de ce site reprend ses couleurs."
+                  : "The sovereign AI startup I founded, where I research explainable AI and edge AI, applied to agriculture, health, security and finance. This site's visual identity borrows its colours."}
               </p>
             </div>
           </Link>

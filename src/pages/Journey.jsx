@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll } from "motion/react";
 import { useLang } from "../i18n.jsx";
-import { EXPERIENCES, SKILLS } from "../data/profile.js";
-import { Page, Reveal, SplineField, SplitText } from "../components/motion.jsx";
+import { EXPERIENCES, SKILLS, EDUCATION, CERTIFICATIONS, LANGUAGES, PROFILE } from "../data/profile.js";
+import { Magnetic, Page, Reveal, SplineField, SplitText } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 
 export default function Journey() {
@@ -19,6 +19,11 @@ export default function Journey() {
           <h1 className="h-display" style={{ marginTop: 20 }}>
             <SplitText text={ui("journeyTitle")} delay={0.5} />
           </h1>
+          <Reveal delay={0.7} style={{ marginTop: 32 }}>
+            <Magnetic>
+              <a href={t(PROFILE.cv)} className="btn btn-primary" target="_blank" rel="noopener noreferrer" data-cursor={ui("cvShort")}>{ui("downloadCv")} <span className="arrow">↓</span></a>
+            </Magnetic>
+          </Reveal>
         </div>
       </section>
 
@@ -46,6 +51,29 @@ export default function Journey() {
                 </Reveal>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingBottom: 0 }}>
+        <div className="wrap edu-grid">
+          <div>
+            <span className="eyebrow">{ui("educationTitle")}</span>
+            <div className="edu-list">
+              {EDUCATION.map((e, i) => (
+                <Reveal key={i} className="edu-item" delay={i * 0.06}>
+                  <span className="mono accent">{t(e.when)}</span>
+                  <h3 className="h-3">{t(e.title)}</h3>
+                  <p className="muted">{t(e.where)}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+          <div>
+            <span className="eyebrow">{ui("certsTitle")}</span>
+            <ul className="edu-list plain">{CERTIFICATIONS.map((c) => <li key={c}>{c}</li>)}</ul>
+            <span className="eyebrow" style={{ marginTop: 36 }}>{ui("langsTitle")}</span>
+            <ul className="edu-list plain">{LANGUAGES.map((l) => <li key={l.name}><b>{l.name}</b> · {t(l.level)}</li>)}</ul>
           </div>
         </div>
       </section>

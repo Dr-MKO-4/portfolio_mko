@@ -5,7 +5,7 @@ import { Magnetic, Page, Reveal, SplineField, SplitText } from "../components/mo
 import { Footer } from "../components/Layout.jsx";
 
 export default function Contact() {
-  const { ui } = useLang();
+  const { t, ui } = useLang();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [error, setError] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -51,6 +51,9 @@ export default function Contact() {
                     <span>{s.label}</span><span className="mono">↗</span>
                   </a>
                 ))}
+                <a className="contact-line" href={t(PROFILE.cv)} target="_blank" rel="noopener noreferrer" data-cursor={ui("cvShort")}>
+                  <span>{ui("downloadCv")}</span><span className="mono">PDF ↓</span>
+                </a>
                 <a className="contact-line" href={PROFILE.whatsapp.url} target="_blank" rel="noopener noreferrer">
                   <span>WhatsApp · {PROFILE.whatsapp.display}</span><span className="mono">↗</span>
                 </a>

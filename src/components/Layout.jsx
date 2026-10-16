@@ -112,6 +112,7 @@ export function Nav() {
           </nav>
           <div className="nav-right">
             <LangSwitch />
+            <a href={t(PROFILE.cv)} className="nav-cv mono" target="_blank" rel="noopener noreferrer" data-cursor={ui("cvShort")}>{ui("cvShort")} ↓</a>
             <Magnetic>
               <Link to="/contact" className="btn btn-primary nav-cta" data-cursor={ui("letsTalk")}>
                 {ui("letsTalk")} <span className="arrow">→</span>
@@ -162,7 +163,7 @@ export function Nav() {
 }
 
 export function Footer() {
-  const { ui } = useLang();
+  const { t, ui } = useLang();
   const lenis = useLenis();
   const toTop = () => (lenis.current ? lenis.current.scrollTo(0) : window.scrollTo({ top: 0, behavior: "smooth" }));
   return (
@@ -185,6 +186,7 @@ export function Footer() {
               {PROFILE.socials.map((s) => (
                 <li key={s.label}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>
               ))}
+              <li><a href={t(PROFILE.cv)} target="_blank" rel="noopener noreferrer">{ui("downloadCv")} ↓</a></li>
             </ul>
           </div>
         </div>
