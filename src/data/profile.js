@@ -18,24 +18,27 @@ export const MARQUEE = {
 export const PILLARS = [
   {
     num: "01",
+    cat: "xai",
     title: { fr: "IA explicable", en: "Explainable AI" },
     text: {
-      fr: "Axe de recherche. Des modèles qui justifient chaque décision : réseaux de Kolmogorov-Arnold, régression symbolique, SHAP, Grad-CAM, prédiction conforme. Indispensable en finance, en santé et face au régulateur.",
-      en: "Research track. Models that justify every decision: Kolmogorov-Arnold networks, symbolic regression, SHAP, Grad-CAM, conformal prediction. Essential in finance, health and in front of regulators.",
+      fr: "Des modèles qui justifient chaque décision : réseaux de Kolmogorov-Arnold, régression symbolique, SHAP, Grad-CAM, prédiction conforme. Indispensable en finance, en santé et face au régulateur.",
+      en: "Models that justify every decision: Kolmogorov-Arnold networks, symbolic regression, SHAP, Grad-CAM, conformal prediction. Essential in finance, health and in front of regulators.",
     },
     tags: ["KAN", "SHAP", "Grad-CAM", "Conformal", "PyTorch"],
   },
   {
     num: "02",
+    cat: "edge",
     title: { fr: "IA embarquée (Edge AI)", en: "Edge AI" },
     text: {
-      fr: "Axe de recherche. Faire tourner l'IA sans réseau : quantification INT8, TensorFlow Lite, inférence sur smartphone et lunettes connectées, synchronisation hors ligne pour les zones rurales.",
-      en: "Research track. Running AI without a network: INT8 quantisation, TensorFlow Lite, inference on phones and smart glasses, offline sync for rural areas.",
+      fr: "Faire tourner l'IA sans réseau : quantification INT8, TensorFlow Lite, inférence sur smartphone et lunettes connectées, synchronisation hors ligne pour les zones rurales.",
+      en: "Running AI without a network: INT8 quantisation, TensorFlow Lite, inference on phones and smart glasses, offline sync for rural areas.",
     },
     tags: ["TFLite", "INT8", "YOLOv8", "EfficientNet", "Flutter"],
   },
   {
     num: "03",
+    cat: "genai",
     title: { fr: "IA générative & agents", en: "Generative AI & agents" },
     text: {
       fr: "Assistants documentaires souverains et systèmes multi-agents sur infrastructure maîtrisée : recherche hybride, reranking, GraphRAG, LLM locaux.",
@@ -45,6 +48,7 @@ export const PILLARS = [
   },
   {
     num: "04",
+    cat: "platforms",
     title: { fr: "Ingénierie full-stack", en: "Full-stack engineering" },
     text: {
       fr: "Des modèles aux produits : API en Clean Architecture, interfaces React, applications Flutter, PostgreSQL, Docker, déploiement cloud et intégration continue.",

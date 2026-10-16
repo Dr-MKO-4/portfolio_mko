@@ -61,16 +61,34 @@ export const UI = {
   available: { fr: "Ouvert aux opportunités", en: "Open to opportunities" },
 
   pillarsEyebrow: { fr: "Ce que je fais", en: "What I do" },
+  researchEyebrow: { fr: "Axes de recherche", en: "Research tracks" },
+  researchTitle: { fr: "Ce que je cherche", en: "What I research" },
+  researchIntro: {
+    fr: "Au LIDIA Lab et dans mon mémoire, je travaille sur deux questions : comment rendre une décision d'IA justifiable, et comment faire tourner l'IA là où le réseau manque.",
+    en: "At LIDIA Lab and in my thesis I work on two questions: how to make an AI decision justifiable, and how to run AI where the network is missing.",
+  },
+  craftEyebrow: { fr: "Savoir-faire", en: "Craft" },
+  craftTitle: { fr: "Ce que je construis", en: "What I build" },
+  craftIntro: {
+    fr: "Pour que la recherche serve, je la mets en production : des données aux modèles, des API aux interfaces.",
+    en: "For research to matter, I ship it: from data to models, from APIs to interfaces.",
+  },
   pillarsTitle: { fr: "Deux axes de recherche, deux savoir-faire", en: "Two research tracks, two crafts" },
 
-  featuredEyebrow: { fr: "Projets par catégorie", en: "Work by category" },
-  featuredTitle: { fr: "Huit domaines, deux projets phares chacun", en: "Eight fields, two highlights each" },
+  featuredEyebrow: { fr: "Mes réalisations", en: "What I've built" },
+  featuredTitle: { fr: "De la recherche à la production", en: "From research to production" },
   featuredIntro: {
-    fr: "Chaque catégorie met en avant ses projets les plus représentatifs. Les autres restent accessibles juste en dessous et sur la page Projets.",
-    en: "Each category highlights its most representative projects. The others remain one click away, below and on the Work page.",
+    fr: "Je travaille sur toute la chaîne : je cherche, je modélise, puis je livre. Voici ce que j'ai construit, domaine par domaine, en commençant par les projets qui me représentent le mieux.",
+    en: "I work across the whole chain: I research, I model, then I ship. Here is what I've built, field by field, starting with the projects that represent me best.",
   },
+  projectsIndexIntro: {
+    fr: "Mes projets sont classés en huit domaines. Choisissez-en un, ou cherchez directement un projet ou une technologie.",
+    en: "My projects are organised into eight fields. Pick one, or search directly for a project or a technology.",
+  },
+  allCategories: { fr: "Toutes les catégories", en: "All categories" },
+  categoriesMenu: { fr: "Catégories", en: "Categories" },
   viewCategory: { fr: "Voir la catégorie", en: "View category" },
-  alsoInCategory: { fr: "Aussi dans cette catégorie", en: "Also in this category" },
+  alsoInCategory: { fr: "J'ai aussi réalisé", en: "I also built" },
   allEyebrow: { fr: "Tous mes projets", en: "All projects" },
   allTitle: { fr: "L'archive complète", en: "The full archive" },
   allIntro: {

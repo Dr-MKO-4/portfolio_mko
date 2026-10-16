@@ -1,4 +1,156 @@
 {
+ "qr-image-platform": [
+  {
+   "file": "/img/projects/qr-image-platform-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil de QR Image Platform : hero marine et carte de résultat avec le QR code généré, lien à copier et boutons Voir l'image / Télécharger le QR",
+    "en": "QR Image Platform home page: navy hero and result card with the generated QR code, copyable link and View image / Download QR buttons"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de partage d'une image : aperçu, métadonnées (date, poids, dimensions), QR code à scanner et boutons de téléchargement",
+    "en": "Shared image page: preview, metadata (date, size, dimensions), scannable QR code and download buttons"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de partage d'une image en thème sombre, palette marine et menthe issue du logo",
+    "en": "Shared image page in dark theme, navy and mint palette derived from the logo"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "QR code généré après l'envoi d'une image (mode sombre)",
+    "en": "QR code generated after uploading an image (dark mode)"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil et zone de dépôt",
+    "en": "Home page and upload area"
+   }
+  }
+ ],
+ "mko-riccati": [
+  {
+   "file": "/img/projects/mko-riccati-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-2.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-3.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-4.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  }
+ ],
+ "em-variationnel": [
+  {
+   "file": "/img/projects/em-variationnel-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Illustration de l'algorithme EM sur un mélange gaussien synthétique",
+    "en": "Illustration of EM on a synthetic Gaussian mixture"
+   }
+  }
+ ],
+ "beac-detect-anomalies": [
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Comparaison LOF* et BiVAT sur scores normalisés, concordance par pays",
+    "en": "LOF* vs BiVAT comparison on normalised scores, per-country agreement"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Exploration : scree plot RPCA et projection ACP",
+    "en": "Exploration: RPCA scree plot and PCA projection"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Prétraitement : carte des valeurs manquantes et décomposition STL",
+    "en": "Preprocessing: missing-value map and STL decomposition"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Réentraînement LOF* et BiVAT avec calibration conforme",
+    "en": "LOF* and BiVAT retraining with conformal calibration"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Optimisation heuristique des hyperparamètres par algorithme génétique",
+    "en": "Genetic-algorithm hyperparameter search"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-6.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Génération de rapports HTML / PDF",
+    "en": "HTML / PDF report generation"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-7.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique et revue des exécutions",
+    "en": "Run history and review"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de l’outil de détection d’anomalies monétaires",
+    "en": "Sign-in page of the monetary anomaly detection tool"
+   }
+  }
+ ],
  "kalati-rag": [
   {
    "file": "/img/projects/kalati-rag-1.webp",
@@ -214,16 +366,6 @@
    "alt": {
     "fr": "Page d'accueil publique de WinPlus : catalogue d'annales corrigées",
     "en": "WinPlus public home page: catalogue of corrected past papers"
-   }
-  }
- ],
- "beac-detect-anomalies": [
-  {
-   "file": "/img/projects/beac-detect-anomalies-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de connexion de l’outil de détection d’anomalies monétaires",
-    "en": "Sign-in page of the monetary anomaly detection tool"
    }
   }
  ],
@@ -1144,68 +1286,6 @@
    "alt": {
     "fr": "Architecture de la bibliothèque : classe de base, six algorithmes et module de validation",
     "en": "Library architecture: base class, six algorithms and validation module"
-   }
-  }
- ],
- "qr-image-platform": [
-  {
-   "file": "/img/projects/qr-image-platform-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "QR code généré après l'envoi d'une image (mode sombre)",
-    "en": "QR code generated after uploading an image (dark mode)"
-   }
-  },
-  {
-   "file": "/img/projects/qr-image-platform-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page d'accueil et zone de dépôt",
-    "en": "Home page and upload area"
-   }
-  }
- ],
- "mko-riccati": [
-  {
-   "file": "/img/projects/mko-riccati-1.webp",
-   "kind": "figure",
-   "alt": {
-    "fr": "Graphique produit par le package MKO.RICCATI",
-    "en": "Plot produced by the MKO.RICCATI package"
-   }
-  },
-  {
-   "file": "/img/projects/mko-riccati-2.webp",
-   "kind": "figure",
-   "alt": {
-    "fr": "Graphique produit par le package MKO.RICCATI",
-    "en": "Plot produced by the MKO.RICCATI package"
-   }
-  },
-  {
-   "file": "/img/projects/mko-riccati-3.webp",
-   "kind": "figure",
-   "alt": {
-    "fr": "Graphique produit par le package MKO.RICCATI",
-    "en": "Plot produced by the MKO.RICCATI package"
-   }
-  },
-  {
-   "file": "/img/projects/mko-riccati-4.webp",
-   "kind": "figure",
-   "alt": {
-    "fr": "Graphique produit par le package MKO.RICCATI",
-    "en": "Plot produced by the MKO.RICCATI package"
-   }
-  }
- ],
- "em-variationnel": [
-  {
-   "file": "/img/projects/em-variationnel-1.webp",
-   "kind": "figure",
-   "alt": {
-    "fr": "Illustration de l'algorithme EM sur un mélange gaussien synthétique",
-    "en": "Illustration of EM on a synthetic Gaussian mixture"
    }
   }
  ]

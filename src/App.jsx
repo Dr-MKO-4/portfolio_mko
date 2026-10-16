@@ -7,6 +7,7 @@ import { Footer, Nav } from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
+import CategoryPage from "./pages/CategoryPage.jsx";
 import Journey from "./pages/Journey.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
@@ -54,6 +55,7 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home ready={!loading} />} />
             <Route path="/projets" element={<Projects />} />
+            <Route path="/projets/categorie/:cat" element={<CategoryPage />} />
             <Route path="/projets/:slug" element={<ProjectDetail />} />
             <Route path="/parcours" element={<Journey />} />
             <Route path="/contact" element={<Contact />} />

@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { useLang } from "../i18n.jsx";
-import { PROJECTS } from "../data/projects.js";
+import { PROJECTS, CATEGORY_OF } from "../data/projects.js";
 import { EASE, Page, Reveal, SplitText } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
@@ -19,7 +19,9 @@ export default function ProjectDetail() {
 
   if (idx === -1) return <NotFound />;
   const p = PROJECTS[idx];
-  const next = PROJECTS[(idx + 1) % PROJECTS.length];
+  const sameCat = PROJECTS.filter((x) => x.cat === p.cat);
+  const next = sameCat[(sameCat.indexOf(p) + 1) % sameCat.length];
+  const cat = CATEGORY_OF[p.cat];
   const built = t(p.built) || [];
   const arch = t(p.architecture) || [];
 
@@ -28,7 +30,7 @@ export default function ProjectDetail() {
       <section className="pd-hero">
         <div className="wrap">
           <Reveal delay={0.5} y={10}>
-            <Link to="/projets" className="pd-back mono">← {ui("backToProjects")}</Link>
+            <Link to={`/projets/categorie/${p.cat}`} className="pd-back mono">← {cat.num} · {t(cat.label)}</Link>
           </Reveal>
           <Reveal delay={0.55} y={10}>
             <span className="eyebrow">{t(p.group)}{p.featured ? ` · ${ui("featuredBadge")}` : ""}</span>

@@ -427,3 +427,197 @@ export function GenCover({ seed, color = "#cd4918", initials, dark = true }) {
 /* ---------- Smooth scroll context ---------- */
 export const ScrollContext = createContext({ current: null });
 export const useLenis = () => useContext(ScrollContext);
+
+/* ---------- 3D surface: rotating B-spline landscape (projected SVG) ---------- */
+export function Surface3D({ className, n = 22 }) {
+  const reduce = useReducedMotion();
+  const ref = useRef(null);
+  const rows = useRef([]);
+  const cols = useRef([]);
+  const dots = useRef([]);
+  const tilt = useRef({ x: 0, y: 0, tx: 0, ty: 0 });
+  const visible = useRef(true);
+  const W = 600, H = 520;
+
+  const height = (u, v, t) =>
+    0.55 * Math.exp(-((u - 0.3 * Math.sin(t * 0.4)) ** 2 + (v + 0.2) ** 2) / 0.18) +
+    0.4 * Math.exp(-((u + 0.45) ** 2 + (v - 0.35 * Math.cos(t * 0.3)) ** 2) / 0.12) -
+    0.3 * Math.exp(-((u - 0.5) ** 2 + (v - 0.5) ** 2) / 0.1) +
+    0.08 * Math.sin(3 * u + t * 0.8) * Math.cos(3 * v - t * 0.5);
+
+  const draw = (time) => {
+    const t = time / 1000;
+    const tl = tilt.current;
+    tl.x += (tl.tx - tl.x) * 0.06;
+    tl.y += (tl.ty - tl.y) * 0.06;
+    const ay = t * 0.18 + tl.x * 0.9;
+    const ax = 1.0 + tl.y * 0.35;
+    const cy = Math.cos(ay), sy = Math.sin(ay), cx = Math.cos(ax), sx = Math.sin(ax);
+    const P = [];
+    for (let i = 0; i < n; i++) {
+      P.push([]);
+      for (let j = 0; j < n; j++) {
+        const u = (i / (n - 1)) * 2 - 1, v = (j / (n - 1)) * 2 - 1;
+        const z = height(u, v, t);
+        let X = u * cy - v * sy, Y = u * sy + v * cy, Z = z;
+        const Y2 = Y * cx - Z * sx, Z2 = Y * sx + Z * cx;
+        const d = 3.2 / (3.2 + Y2);
+        P[i].push([W / 2 + X * 230 * d, H / 2 - Z2 * 230 * d + 20, z]);
+      }
+    }
+    const pts = (arr) => arr.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+    for (let i = 0; i < n; i++) {
+      rows.current[i]?.setAttribute("points", pts(P[i]));
+      cols.current[i]?.setAttribute("points", pts(P.map((r) => r[i])));
+    }
+    const peaks = [[Math.round(n * 0.65), Math.round(n * 0.4)], [Math.round(n * 0.27), Math.round(n * 0.68)], [Math.round(n * 0.5), Math.round(n * 0.5)]];
+    peaks.forEach(([i, j], k) => {
+      const el = dots.current[k];
+      if (el) { el.setAttribute("cx", P[i][j][0].toFixed(1)); el.setAttribute("cy", P[i][j][1].toFixed(1)); }
+    });
+  };
+
+  useEffect(() => {
+    draw(0);
+    const el = ref.current;
+    const io = new IntersectionObserver(([e]) => { visible.current = e.isIntersecting; });
+    io.observe(el);
+    const move = (e) => {
+      const r = el.getBoundingClientRect();
+      tilt.current.tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+      tilt.current.ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+    };
+    window.addEventListener("pointermove", move);
+    return () => { io.disconnect(); window.removeEventListener("pointermove", move); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useAnimationFrame((time) => {
+    if (reduce || !visible.current) return;
+    draw(time);
+  });
+
+  const accent = (i) => i === Math.round(n * 0.5) || i === Math.round(n * 0.25);
+  return (
+    <svg ref={ref} className={className} viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
+      {Array.from({ length: n }).map((_, i) => (
+        <polyline key={"r" + i} ref={(e) => (rows.current[i] = e)} fill="none" stroke={accent(i) ? "#cd4918" : "rgba(243,239,232,0.22)"} strokeWidth={accent(i) ? 1.8 : 0.9} />
+      ))}
+      {Array.from({ length: n }).map((_, i) => (
+        <polyline key={"c" + i} ref={(e) => (cols.current[i] = e)} fill="none" stroke="rgba(243,239,232,0.12)" strokeWidth={0.8} />
+      ))}
+      {[0, 1, 2].map((k) => (
+        <circle key={k} ref={(e) => (dots.current[k] = e)} r="5" fill="#2a2e32" stroke="#cd4918" strokeWidth="2" />
+      ))}
+    </svg>
+  );
+}
+
+/* ---------- KAN network: spline edges with travelling activations ---------- */
+export function KANNetwork({ className, layers = [3, 5, 5, 2] }) {
+  const reduce = useReducedMotion();
+  const W = 600, H = 460;
+  const ref = useRef(null);
+  const visible = useRef(true);
+  const edgeRefs = useRef([]);
+  const pulseRefs = useRef([]);
+  const nodeRefs = useRef([]);
+
+  const nodes = useMemo(() => layers.map((n, li) => Array.from({ length: n }, (_, k) => ({
+    x: 70 + (li * (W - 140)) / (layers.length - 1),
+    y: H / 2 + (k - (n - 1) / 2) * (H / (Math.max(...layers) + 1)),
+  }))), [layers]);
+  const edges = useMemo(() => {
+    const out = [];
+    for (let li = 0; li < layers.length - 1; li++)
+      nodes[li].forEach((a, i) => nodes[li + 1].forEach((b, j) => out.push({ a, b, li, i, j, ph: (i * 1.7 + j * 2.3 + li) % 6.28 })));
+    return out;
+  }, [nodes, layers]);
+  const pulses = useMemo(() => Array.from({ length: 9 }, (_, k) => ({ e: (k * 7) % edges.length, off: k / 9 })), [edges]);
+
+  const path = (e, t) => {
+    const w = 18 * Math.sin(t * 1.3 + e.ph);
+    const mx = (e.a.x + e.b.x) / 2;
+    return `M${e.a.x},${e.a.y} C${mx},${e.a.y + w} ${mx},${e.b.y - w} ${e.b.x},${e.b.y}`;
+  };
+
+  const draw = (time) => {
+    const t = time / 1000;
+    edges.forEach((e, k) => edgeRefs.current[k]?.setAttribute("d", path(e, t)));
+    pulses.forEach((p, k) => {
+      const cycle = (t * 0.45 + p.off) % 1;
+      const idx = (p.e + Math.floor(t * 0.45 + p.off) * 5) % edges.length;
+      const el = edgeRefs.current[idx];
+      const dot = pulseRefs.current[k];
+      if (!el || !dot) return;
+      const L = el.getTotalLength();
+      const pt = el.getPointAtLength(cycle * L);
+      dot.setAttribute("cx", pt.x.toFixed(1));
+      dot.setAttribute("cy", pt.y.toFixed(1));
+      dot.setAttribute("opacity", Math.sin(cycle * Math.PI).toFixed(2));
+    });
+    nodeRefs.current.forEach((n, k) => n?.setAttribute("r", (6 + 1.6 * Math.sin(t * 2 + k)).toFixed(2)));
+  };
+
+  useEffect(() => {
+    draw(0);
+    const io = new IntersectionObserver(([e]) => { visible.current = e.isIntersecting; });
+    io.observe(ref.current);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useAnimationFrame((time) => { if (!reduce && visible.current) draw(time); });
+
+  let ni = 0;
+  return (
+    <svg ref={ref} className={className} viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
+      {edges.map((e, k) => (
+        <path key={k} ref={(el) => (edgeRefs.current[k] = el)} fill="none" stroke={(e.i + e.j) % 4 === 0 ? "rgba(205,73,24,0.55)" : "rgba(42,46,50,0.16)"} strokeWidth={(e.i + e.j) % 4 === 0 ? 1.6 : 1} />
+      ))}
+      {pulses.map((_, k) => <circle key={k} ref={(el) => (pulseRefs.current[k] = el)} r="4.5" fill="#cd4918" />)}
+      {nodes.flat().map((n) => {
+        const k = ni++;
+        return (
+          <g key={k}>
+            <circle cx={n.x} cy={n.y} r="14" fill="#f3efe8" stroke="rgba(42,46,50,0.25)" />
+            <circle ref={(el) => (nodeRefs.current[k] = el)} cx={n.x} cy={n.y} r="6" fill="#2a2e32" />
+          </g>
+        );
+      })}
+      <text x={W / 2} y={H - 8} textAnchor="middle" fontFamily="JetBrains Mono, monospace" fontSize="12" fill="#6f747a">KAN · φ(x) appris sur chaque arête</text>
+    </svg>
+  );
+}
+
+/* ---------- Isometric stack: data → models → API → apps ---------- */
+export function IsoStack({ className, labels }) {
+  const reduce = useReducedMotion();
+  const W = 640, H = 480, cx = 190, w = 160, h = 80;
+  const plate = (y) => `${cx},${y - h / 2} ${cx + w},${y} ${cx},${y + h / 2} ${cx - w},${y}`;
+  const side = (y, d = 16) => `${cx - w},${y} ${cx},${y + h / 2} ${cx + w},${y} ${cx + w},${y + d} ${cx},${y + h / 2 + d} ${cx - w},${y + d}`;
+  const ys = [380, 285, 190, 95];
+  const fills = ["#2a2e32", "#363b40", "#cd4918", "#f3efe8"];
+  return (
+    <svg className={className} viewBox={`0 0 ${W} ${H}`} aria-hidden="true">
+      <defs>
+        <pattern id="iso-grid" width="22" height="11" patternUnits="userSpaceOnUse" patternTransform="skewX(-63)">
+          <path d="M0 11 L22 11" stroke="rgba(243,239,232,0.08)" strokeWidth="1" />
+        </pattern>
+      </defs>
+      {[0, 1, 2].map((k) => (
+        <motion.line key={"l" + k} x1={cx} y1={ys[k]} x2={cx} y2={ys[k + 1]} stroke="#cd4918" strokeWidth="2" strokeDasharray="6 8"
+          animate={reduce ? {} : { strokeDashoffset: [0, -28] }} transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }} />
+      ))}
+      {ys.map((y, k) => (
+        <motion.g key={k} animate={reduce ? {} : { y: [0, -10, 0] }} transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: k * 0.35 }}>
+          <polygon points={side(y)} fill={k === 3 ? "#ddd5c7" : "#16181b"} opacity={k === 3 ? 1 : 0.85} />
+          <polygon points={plate(y)} fill={fills[k]} stroke={k === 3 ? "#cd4918" : "rgba(243,239,232,0.18)"} strokeWidth="1.2" />
+          {k < 3 && <polygon points={plate(y)} fill="url(#iso-grid)" />}
+          <line x1={cx + w + 14} y1={y} x2={cx + w + 44} y2={y} stroke="rgba(243,239,232,0.35)" />
+          <text x={cx + w + 52} y={y - 4} fontFamily="Space Grotesk, sans-serif" fontSize="17" fontWeight="500" fill="#f3efe8">{labels[k][0]}</text>
+          <text x={cx + w + 52} y={y + 16} fontFamily="JetBrains Mono, monospace" fontSize="11.5" fill="#a2a7ad">{labels[k][1]}</text>
+        </motion.g>
+      ))}
+    </svg>
+  );
+}

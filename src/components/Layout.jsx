@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import { useLang } from "../i18n.jsx";
 import { PROFILE } from "../data/profile.js";
+import { CATEGORIES, byCategory } from "../data/projects.js";
 import { EASE, Magnetic, useLenis } from "./motion.jsx";
 
 const LINKS = [
@@ -35,11 +36,14 @@ function LangSwitch() {
 }
 
 export function Nav() {
-  const { ui } = useLang();
+  const { t, ui } = useLang();
+  const [ddAt, setDdAt] = useState(null);
   const { pathname } = useLocation();
+  const dd = ddAt === pathname;
+  const setDd = (v) => setDdAt((cur) => ((typeof v === "function" ? v(cur === pathname) : v) ? pathname : null));
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const onDark = pathname === "/" || pathname === "/parcours" || pathname === "/contact";
+  const onDark = pathname === "/" || pathname === "/parcours" || pathname === "/contact" || pathname.startsWith("/projets/categorie/");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -63,14 +67,47 @@ export function Nav() {
           </Link>
           <nav aria-label="Principal">
             <ul className="nav-links">
-              {LINKS.map((l) => (
-                <li key={l.to}>
-                  <NavLink to={l.to} className="nav-link">
-                    {ui(l.key)}
-                    {isActive(l.to) && <motion.span layoutId="nav-dot" className="dot" transition={{ type: "spring", stiffness: 500, damping: 35 }} />}
-                  </NavLink>
-                </li>
-              ))}
+              {LINKS.map((l) =>
+                l.to === "/projets" ? (
+                  <li key={l.to} className="nav-dd" onMouseEnter={() => setDd(true)} onMouseLeave={() => setDd(false)}>
+                    <button className="nav-link nav-dd-btn" aria-expanded={dd} aria-haspopup="true" onClick={() => setDd((v) => !v)}>
+                      {ui(l.key)} <span className={`chev${dd ? " open" : ""}`}>⌄</span>
+                      {isActive(l.to) && <motion.span layoutId="nav-dot" className="dot" transition={{ type: "spring", stiffness: 500, damping: 35 }} />}
+                    </button>
+                    <AnimatePresence>
+                      {dd && (
+                        <motion.div
+                          className="dd-panel"
+                          initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                          transition={{ duration: 0.28, ease: EASE }}
+                        >
+                          <div className="dd-grid">
+                            {CATEGORIES.map((c, i) => (
+                              <motion.div key={c.key} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.03 * i, duration: 0.3 }}>
+                                <Link to={`/projets/categorie/${c.key}`} className="dd-item" onClick={() => setDd(false)}>
+                                  <span className="mono accent">{c.num}</span>
+                                  <span className="dd-label">{t(c.label)}</span>
+                                  <span className="mono dd-count">{byCategory(c.key).length}</span>
+                                </Link>
+                              </motion.div>
+                            ))}
+                          </div>
+                          <Link to="/projets" className="dd-all mono" onClick={() => setDd(false)}>{ui("allCategories")} →</Link>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </li>
+                ) : (
+                  <li key={l.to}>
+                    <NavLink to={l.to} className="nav-link">
+                      {ui(l.key)}
+                      {isActive(l.to) && <motion.span layoutId="nav-dot" className="dot" transition={{ type: "spring", stiffness: 500, damping: 35 }} />}
+                    </NavLink>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
           <div className="nav-right">
@@ -101,6 +138,15 @@ export function Nav() {
               {LINKS.map((l, i) => (
                 <motion.li key={l.to} initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.25 + i * 0.07, ease: EASE, duration: 0.7 }}>
                   <Link to={l.to} onClick={() => setOpen(false)} className={`big${isActive(l.to) ? " accent" : ""}`}>{ui(l.key)}</Link>
+                  {l.to === "/projets" && (
+                    <div className="m-cats">
+                      {CATEGORIES.map((c) => (
+                        <Link key={c.key} to={`/projets/categorie/${c.key}`} onClick={() => setOpen(false)}>
+                          <span className="mono accent">{c.num}</span> {t(c.label)}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </motion.li>
               ))}
             </ul>

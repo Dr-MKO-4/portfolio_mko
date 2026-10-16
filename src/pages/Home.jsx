@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { useLang } from "../i18n.jsx";
 import { PROFILE, MARQUEE, PILLARS } from "../data/profile.js";
 import { PROJECTS, CATEGORIES, byCategory, publicRepoCount } from "../data/projects.js";
-import { Counter, EASE, Magnetic, Marquee, Page, Reveal, ScrollStatement, SplineField, SplitText } from "../components/motion.jsx";
+import { Counter, EASE, Magnetic, Marquee, Page, Reveal, ScrollStatement, SplineField, SplitText, Surface3D, KANNetwork, IsoStack } from "../components/motion.jsx";
 import { Footer } from "../components/Layout.jsx";
 import ProjectVisual from "../components/ProjectVisual.jsx";
 
@@ -85,29 +85,101 @@ function Hero({ ready }) {
   );
 }
 
-function FeatureCard({ project, index }) {
+const ISO_LABELS = {
+  fr: [["Données", "PostgreSQL · PostGIS · Kafka"], ["Modèles", "PyTorch · XGBoost · RAG"], ["API", ".NET 8 · FastAPI · Node"], ["Interfaces", "React · Flutter · Dash"]],
+  en: [["Data", "PostgreSQL · PostGIS · Kafka"], ["Models", "PyTorch · XGBoost · RAG"], ["APIs", ".NET 8 · FastAPI · Node"], ["Interfaces", "React · Flutter · Dash"]],
+};
+
+function PillarCard({ p, i, dark }) {
   const { t, ui } = useLang();
   return (
-    <Reveal delay={index * 0.1}>
-      <Link to={`/projets/${project.slug}`} className="cat-card" data-cursor={ui("view")}>
-        <div className="cat-card-visual">
-          <ProjectVisual project={project} />
-        </div>
-        <div className="cat-card-body">
-          <div className="card-meta mono"><span>{t(project.group)}</span><span>{project.year}</span></div>
-          <h3 className="title-row">{project.logo && <img className="p-logo" src={project.logo} alt="" loading="lazy" />}{t(project.name)}</h3>
-          <p>{t(project.subtitle)}</p>
-          <div className="card-foot">
-            {project.stack.slice(0, 4).map((s) => <span key={s} className="chip">{s}</span>)}
-          </div>
-        </div>
+    <Reveal delay={i * 0.08}>
+      <Link to={`/projets/categorie/${p.cat}`} className={`pillar-card${dark ? " on-dark" : ""}`} data-cursor={ui("view")}>
+        <div className="pillar-card-top"><span className="pillar-num">{p.num}</span><span className="pillar-go">→</span></div>
+        <h3 className="h-3">{t(p.title)}</h3>
+        <p>{t(p.text)}</p>
+        <ul>{p.tags.map((tag) => <li key={tag} className="chip">{tag}</li>)}</ul>
       </Link>
     </Reveal>
   );
 }
 
+function StackCard({ project, index, total, progress }) {
+  const { t, ui } = useLang();
+  const scale = useTransform(progress, [index / total, 1], [1, 1 - (total - index) * 0.04]);
+  const dim = useTransform(progress, [index / total, 1], [0, index < total - 1 ? 0.35 : 0]);
+  return (
+    <div className="stack-card" style={{ top: `calc(110px + ${index * 18}px)` }}>
+      <motion.div className="stack-inner" style={{ scale }}>
+        <div className="stack-text">
+          <div>
+            <div className="stack-top">
+              <span className="stack-index">{String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+              <span className="chip">{t(project.group)}</span>
+            </div>
+            <h3 className="title-row">{project.logo && <img className="p-logo" src={project.logo} alt="" loading="lazy" />}{t(project.name)}</h3>
+            <p>{t(project.subtitle)}</p>
+          </div>
+          <div style={{ display: "grid", gap: 18 }}>
+            <div className="stack-chips">{project.stack.slice(0, 5).map((s) => <span key={s} className="chip">{s}</span>)}</div>
+            <div>
+              <Link to={`/projets/${project.slug}`} className="btn btn-primary" data-cursor={ui("view")}>
+                {ui("view")} <span className="arrow">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <Link to={`/projets/${project.slug}`} className="stack-visual" data-cursor={ui("view")} tabIndex={-1} aria-hidden="true">
+          <ProjectVisual project={project} logoClass="stack-logo" />
+        </Link>
+        <motion.div className="stack-dim" style={{ opacity: dim }} />
+      </motion.div>
+    </div>
+  );
+}
+
+function RowsList({ projects }) {
+  const { t, ui } = useLang();
+  const [hover, setHover] = useState(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const sx = useSpring(x, { stiffness: 220, damping: 26 });
+  const sy = useSpring(y, { stiffness: 220, damping: 26 });
+  const move = (e) => { x.set(e.clientX + 24); y.set(e.clientY - 120); };
+  return (
+    <div className="rows-container" onPointerMove={move} onPointerLeave={() => setHover(null)}>
+      <div className="rows">
+        {projects.map((p, i) => (
+          <Reveal key={p.slug} delay={i * 0.03} y={20}>
+            <Link to={`/projets/${p.slug}`} className="row" onPointerEnter={() => setHover(p)} data-cursor={ui("view")}>
+              <span className="mono muted">{String(i + 1).padStart(2, "0")}</span>
+              <span className="row-title title-row">{p.logo && <img className="p-logo" src={p.logo} alt="" loading="lazy" />}{t(p.name)}</span>
+              <span className="muted hide-sm">{t(p.subtitle)}</span>
+              <span className="mono muted hide-sm">{p.year}</span>
+              <span className="row-arrow">→</span>
+            </Link>
+          </Reveal>
+        ))}
+      </div>
+      <AnimatePresence>
+        {hover && (
+          <motion.div className="row-preview" style={{ x: sx, y: sy }} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} transition={{ duration: 0.3, ease: EASE }}>
+            <AnimatePresence mode="popLayout">
+              <motion.div key={hover.slug} style={{ position: "absolute", inset: 0 }} initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "-100%" }} transition={{ duration: 0.45, ease: EASE }}>
+                <ProjectVisual project={hover} showLogo={false} />
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 function CategoryBlock({ cat }) {
   const { t, ui } = useLang();
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const all = byCategory(cat.key);
   const featured = all.filter((p) => p.featured);
   const others = all.filter((p) => !p.featured);
@@ -116,26 +188,22 @@ function CategoryBlock({ cat }) {
       <div className="cat-head">
         <Reveal y={20}>
           <span className="cat-num mono">{cat.num}</span>
-          <h3 className="h-2 cat-title">{t(cat.label)}</h3>
+          <Link to={`/projets/categorie/${cat.key}`} data-cursor={ui("view")}><h3 className="h-2 cat-title">{t(cat.label)}</h3></Link>
           <p className="muted-on-dark cat-desc">{t(cat.desc)}</p>
-          <Link to={`/projets?cat=${cat.key}`} className="cat-link mono">
+          <Link to={`/projets/categorie/${cat.key}`} className="cat-link mono">
             {ui("viewCategory")} ({all.length}) <span>→</span>
           </Link>
         </Reveal>
       </div>
       <div className="cat-body">
-        <div className={`cat-featured n${featured.length}`}>
-          {featured.map((p, i) => <FeatureCard key={p.slug} project={p} index={i} />)}
+        <div ref={ref} className="stack-wrap">
+          {featured.map((p, i) => <StackCard key={p.slug} project={p} index={i} total={featured.length} progress={scrollYProgress} />)}
         </div>
         {others.length > 0 && (
-          <Reveal y={16} className="cat-others">
+          <div className="cat-others">
             <span className="mono muted-on-dark">{ui("alsoInCategory")}</span>
-            <div>
-              {others.map((p) => (
-                <Link key={p.slug} to={`/projets/${p.slug}`} className="cat-other">{t(p.name)}</Link>
-              ))}
-            </div>
-          </Reveal>
+            <RowsList projects={others} />
+          </div>
         )}
       </div>
     </div>
@@ -147,12 +215,16 @@ function CategoryShowcase() {
   return (
     <section className="section dark">
       <div className="wrap">
-        <div className="section-head">
+        <div className="section-head work-head">
           <div>
             <span className="eyebrow">{ui("featuredEyebrow")}</span>
             <SplitText as="h2" className="h-1" text={ui("featuredTitle")} />
+            <Reveal><p className="lead muted-on-dark" style={{ marginTop: 24 }}>{ui("featuredIntro")}</p></Reveal>
           </div>
-          <Reveal><p className="lead muted-on-dark">{ui("featuredIntro")}</p></Reveal>
+          <Reveal className="surface-wrap">
+            <Surface3D className="surface3d" />
+            <span className="mono surface-cap">φ(u, v) · B-spline surface</span>
+          </Reveal>
         </div>
         {CATEGORIES.map((c) => <CategoryBlock key={c.key} cat={c} />)}
         <Reveal style={{ marginTop: 64, display: "flex", justifyContent: "center" }}>
@@ -185,18 +257,33 @@ export default function Home({ ready }) {
           <div style={{ margin: "28px 0 clamp(60px, 9vw, 120px)" }}>
             <ScrollStatement key={lang} className="statement" text={statement} />
           </div>
-          <Reveal>
-            <h2 className="h-2" style={{ marginBottom: 32 }}>{ui("pillarsTitle")}</h2>
-          </Reveal>
-          <div className="pillars">
-            {PILLARS.map((p, i) => (
-              <Reveal key={p.num} className="pillar" delay={i * 0.08}>
-                <span className="pillar-num">{p.num}</span>
-                <h3 className="h-3">{t(p.title)}</h3>
-                <p>{t(p.text)}</p>
-                <ul>{p.tags.map((tag) => <li key={tag} className="chip">{tag}</li>)}</ul>
-              </Reveal>
-            ))}
+        </div>
+      </section>
+
+      <section className="pillar-sub">
+        <div className="wrap pillar-split">
+          <div>
+            <span className="eyebrow">{ui("researchEyebrow")}</span>
+            <SplitText as="h2" className="h-1" text={ui("researchTitle")} />
+            <Reveal><p className="lead muted" style={{ margin: "20px 0 32px" }}>{ui("researchIntro")}</p></Reveal>
+            <div className="pillar-cards">
+              {PILLARS.slice(0, 2).map((p, i) => <PillarCard key={p.num} p={p} i={i} />)}
+            </div>
+          </div>
+          <Reveal className="pillar-art"><KANNetwork className="art-svg" /></Reveal>
+        </div>
+      </section>
+
+      <section className="pillar-sub dark">
+        <div className="wrap pillar-split reverse">
+          <Reveal className="pillar-art"><IsoStack className="art-svg" labels={ISO_LABELS[lang]} /></Reveal>
+          <div>
+            <span className="eyebrow">{ui("craftEyebrow")}</span>
+            <SplitText as="h2" className="h-1" text={ui("craftTitle")} />
+            <Reveal><p className="lead muted-on-dark" style={{ margin: "20px 0 32px" }}>{ui("craftIntro")}</p></Reveal>
+            <div className="pillar-cards">
+              {PILLARS.slice(2).map((p, i) => <PillarCard key={p.num} p={p} i={i} dark />)}
+            </div>
           </div>
         </div>
       </section>
@@ -211,8 +298,10 @@ export default function Home({ ready }) {
               { v: PROJECTS.filter((p) => p.featured).length, l: { fr: "projets mis en avant", en: "featured projects" } },
             ].map((c, i) => (
               <Reveal key={i} className="counter" delay={i * 0.06}>
-                <Counter value={c.v} />
-                <p>{t(c.l)}</p>
+                <Link to="/projets" data-cursor={ui("view")} style={{ display: "block" }}>
+                  <Counter value={c.v} />
+                  <p>{t(c.l)}</p>
+                </Link>
               </Reveal>
             ))}
           </div>
@@ -223,7 +312,8 @@ export default function Home({ ready }) {
 
       <section className="section dark" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <Reveal className="lab-card">
+          <Reveal>
+          <Link to="/parcours" className="lab-card" data-cursor={ui("view")}>
             <img src="/img/logos/lidia.webp" alt="LIDIA" />
             <div>
               <span className="eyebrow">{ui("labEyebrow")}</span>
@@ -234,6 +324,7 @@ export default function Home({ ready }) {
                   : "The lab where I research explainable AI and edge AI, applied to agriculture, health, security and finance. This site's visual identity borrows its colours."}
               </p>
             </div>
+          </Link>
           </Reveal>
         </div>
       </section>
