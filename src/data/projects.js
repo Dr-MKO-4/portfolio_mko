@@ -134,7 +134,8 @@ const LIVE = {
  "testing-platform": "https://mko-testing-platform.vercel.app",
  "hotel-manager": "https://mko-hotel.vercel.app",
  "crypto-trader-dqn": "https://mko-crypto-trader.vercel.app",
- "reseau-social-enspd": "https://mko-reseau-social.vercel.app"
+ "reseau-social-enspd": "https://mko-reseau-social.vercel.app",
+ "ecommerce-simple": "https://mko-ecommerce-stripe.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));

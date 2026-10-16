@@ -1,4 +1,64 @@
 {
+ "ecommerce-simple": [
+  {
+   "file": "/img/projects/ecommerce-simple-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil de la boutique MKO Digital : titre, recherche, illustrations de casque, chargeur et écouteurs, bandeau « Démo · paiement simulé ».",
+    "en": "MKO Digital shop home page: headline, search bar, headphone, charger and earbud illustrations, and a \"demo, simulated payment\" banner."
+   }
+  },
+  {
+   "file": "/img/projects/ecommerce-simple-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Catalogue avec recherche, filtres par catégorie et marque, tri, interrupteur « En stock » et cartes produits affichant le stock disponible.",
+    "en": "Catalogue with search, category and brand filters, sorting, an in-stock toggle and product cards showing available stock."
+   }
+  },
+  {
+   "file": "/img/projects/ecommerce-simple-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Étape de paiement du tunnel en 3 étapes : formulaire de carte simulé façon Stripe avec la carte de test 4242, choix PayPal et récapitulatif de commande.",
+    "en": "Payment step of the 3-step checkout: simulated Stripe-style card form with the 4242 test card, PayPal option and order summary."
+   }
+  }
+ ],
+ "fluxemi": [
+  {
+   "file": "/img/projects/fluxemi-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fluxemi Equipment Manager, tableau de bord en thème clair : barre latérale de navigation, huit cartes KPI (références, unités en stock, actifs, maintenance, valeur du parc, ventes du mois, stock critique, garanties), ajouts récents et alertes de stock critique.",
+    "en": "Fluxemi Equipment Manager dashboard in light theme: navigation sidebar, eight KPI cards (items, units in stock, active, maintenance, fleet value, monthly sales, low stock, warranties), recent additions and low-stock alerts."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Liste des produits Fluxemi : recherche, filtres par catégorie, département et statut, tableau à en-têtes discrets et lignes alternées avec quantité, prix d'achat, qualité et pastille de statut.",
+    "en": "Fluxemi product list: search, category, department and status filters, a table with subtle headers and alternating rows showing quantity, purchase price, condition and a status pill."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord Fluxemi en thème sombre, avec les mêmes cartes KPI et listes que le thème clair.",
+    "en": "Fluxemi dashboard in dark theme, with the same KPI cards and lists as the light theme."
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-new-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fiche produit Fluxemi, onglet Maintenance : historique des interventions d'une imprimante avec type, date, technicien, coût et statut En cours ou Terminée.",
+    "en": "Fluxemi product sheet, Maintenance tab: a printer's intervention history with type, date, technician, cost and an In progress or Completed status."
+   }
+  }
+ ],
  "testing-platform": [
   {
    "file": "/img/projects/testing-platform-new-1.webp",
@@ -913,24 +973,6 @@
    }
   }
  ],
- "ecommerce-simple": [
-  {
-   "file": "/img/projects/ecommerce-simple-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Liste des produits avec ajout au panier",
-    "en": "Product list with add-to-cart"
-   }
-  },
-  {
-   "file": "/img/projects/ecommerce-simple-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Panier d'achat",
-    "en": "Shopping cart"
-   }
-  }
- ],
  "smartcameroun": [
   {
    "file": "/img/projects/smartcameroun-web-1.webp",
@@ -1124,40 +1166,6 @@
    "alt": {
     "fr": "Concept PharmaCon : suivi de livraison par statut et code de remise",
     "en": "PharmaCon concept: status-based delivery tracking and handover code"
-   }
-  }
- ],
- "fluxemi": [
-  {
-   "file": "/img/projects/fluxemi-1.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Tableau de bord Fluxemi : indicateurs de stock, ajouts récents et alertes de stock critique (thème sombre WPF)",
-    "en": "Fluxemi dashboard: stock indicators, recent additions and critical-stock alerts (dark WPF theme)"
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Liste des produits avec filtres par catégorie, département et statut",
-    "en": "Product list with category, department and status filters"
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-3.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Fenêtre « Nouveau produit » ouverte au-dessus de la liste",
-    "en": "“New product” dialog open over the product list"
-   }
-  },
-  {
-   "file": "/img/projects/fluxemi-4.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Écran de connexion par code PIN",
-    "en": "PIN-code login screen"
    }
   }
  ],
