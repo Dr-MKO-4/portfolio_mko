@@ -9,7 +9,7 @@ export const OTHER_PROJECTS = [
     title: "WinPlus",
     group: { fr: "Produit en production", en: "Live product" },
     categories: ["ia", "fullstack", "mobile"],
-    year: "2026",
+    year: "2025 – 2026",
     color: "#2bb3a3",
     logo: "/img/logos/winplus.webp",
     cover: "/img/projects/winplus-dashboard.webp",
@@ -21,8 +21,8 @@ export const OTHER_PROJECTS = [
     status: { fr: "En production · développement actif", en: "In production · active development" },
     role: { fr: "Co-développeur full-stack et IA (backend, IA, application mobile)", en: "Full-stack and AI co-developer (backend, AI, mobile app)" },
     context: {
-      fr: "L'accès aux ressources de révision est inégal au Cameroun, les parents voient mal la progression de leurs enfants, et enseignants comme établissements manquent d'outils pour publier, suivre et monétiser leurs contenus.",
-      en: "Access to revision resources is uneven in Cameroon, parents struggle to follow their children's progress, and teachers and schools lack tools to publish, track and monetise content.",
+      fr: "L'accès aux ressources de révision est inégal au Cameroun, les parents voient mal la progression de leurs enfants, et enseignants comme établissements manquent d'outils pour publier, suivre et monétiser leurs contenus. WinPlus est né en 2025 d'un premier prototype, « Réussir », un chatbot pédagogique devenu une plateforme complète.",
+      en: "Access to revision resources is uneven in Cameroon, parents struggle to follow their children's progress, and teachers and schools lack tools to publish, track and monetise content. WinPlus grew in 2025 out of an early prototype, « Réussir », an educational chatbot that became a full platform.",
     },
     built: {
       fr: [
@@ -505,6 +505,39 @@ export const OTHER_PROJECTS = [
       en: ["Specification: online sales, inventory, Stripe and PayPal.", "Product list and cart (Zustand).", "Checkout page with Stripe Elements."],
     },
     stack: ["React", "TypeScript", "Zustand", "Stripe"],
+    links: [],
+  },
+  {
+    slug: "phone-price-bigdata",
+    order: 45,
+    title: "Phone Price Big Data",
+    group: { fr: "ENSPD · Big Data", en: "ENSPD · Big Data" },
+    categories: ["ia", "academic"],
+    year: "2025",
+    color: "#f59e0b",
+    subtitle: {
+      fr: "Pipeline Big Data de comparaison de prix de smartphones : scraping multi-sites, ingestion Flume vers PostgreSQL et archivage Hadoop HDFS.",
+      en: "Big Data pipeline comparing smartphone prices: multi-site scraping, Flume ingestion into PostgreSQL and Hadoop HDFS archiving.",
+    },
+    status: { fr: "Terminé côté données", en: "Data pipeline completed" },
+    role: { fr: "Auteur", en: "Author" },
+    context: {
+      fr: "Devoir de Big Data : collecter les prix de smartphones sur plusieurs sites marchands et les charger dans un écosystème Hadoop installé en local.",
+      en: "Big Data assignment: collect smartphone prices from several retail sites and load them into a locally installed Hadoop ecosystem.",
+    },
+    built: {
+      fr: [
+        "Spider Scrapy générique piloté par une configuration JSON de sélecteurs XPath, avec pagination et délai entre requêtes.",
+        "Nettoyage pandas : filtre par marque, normalisation des noms, conversion des prix et de la disponibilité.",
+        "Dépôt du fichier dans un répertoire surveillé par Apache Flume, qui alimente PostgreSQL ; archivage séparé du CSV dans HDFS.",
+      ],
+      en: [
+        "Generic Scrapy spider driven by a JSON config of XPath selectors, with pagination and request throttling.",
+        "pandas cleaning: brand filter, name normalisation, price and availability conversion.",
+        "File dropped into an Apache Flume spool directory feeding PostgreSQL; the CSV is archived separately in HDFS.",
+      ],
+    },
+    stack: ["Python", "Scrapy", "pandas", "Apache Flume", "PostgreSQL", "Hadoop HDFS"],
     links: [],
   },
   {

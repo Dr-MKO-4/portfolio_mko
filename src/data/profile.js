@@ -2,44 +2,55 @@ export const PROFILE = {
   fullName: "Georges Miguel MOUKOKO EKAMBI",
   email: "georgesmoukoko4@gmail.com",
   location: "Douala, Cameroun",
+  whatsapp: { display: "+237 691 69 79 24", url: "https://wa.me/237691697924" },
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/georgesmoukoko-3890542a5" },
     { label: "GitHub", url: "https://github.com/Dr-MKO-4" },
+    { label: "WhatsApp", url: "https://wa.me/237691697924" },
   ],
 };
 
 export const MARQUEE = {
-  fr: ["IA explicable", "Kolmogorov-Arnold Networks", "Détection de fraude", "RAG", "Vision par ordinateur", "Full-stack .NET · React", "MLOps", "Mobile Money"],
-  en: ["Explainable AI", "Kolmogorov-Arnold Networks", "Fraud detection", "RAG", "Computer vision", "Full-stack .NET · React", "MLOps", "Mobile Money"],
+  fr: ["IA explicable", "IA embarquée", "Kolmogorov-Arnold Networks", "Détection de fraude", "RAG", "Vision par ordinateur", "Full-stack .NET · React", "MLOps", "Mobile Money"],
+  en: ["Explainable AI", "Edge AI", "Kolmogorov-Arnold Networks", "Fraud detection", "RAG", "Computer vision", "Full-stack .NET · React", "MLOps", "Mobile Money"],
 };
 
 export const PILLARS = [
   {
     num: "01",
-    title: { fr: "Data Science & IA", en: "Data Science & AI" },
+    title: { fr: "IA explicable", en: "Explainable AI" },
     text: {
-      fr: "Modèles explicables pour des décisions qui engagent : détection d'anomalies, fraude Mobile Money, prédiction, vision par ordinateur. Chaque prédiction doit pouvoir être justifiée.",
-      en: "Explainable models for decisions that matter: anomaly detection, Mobile Money fraud, forecasting, computer vision. Every prediction should be justifiable.",
+      fr: "Axe de recherche. Des modèles qui justifient chaque décision : réseaux de Kolmogorov-Arnold, régression symbolique, SHAP, Grad-CAM, prédiction conforme. Indispensable en finance, en santé et face au régulateur.",
+      en: "Research track. Models that justify every decision: Kolmogorov-Arnold networks, symbolic regression, SHAP, Grad-CAM, conformal prediction. Essential in finance, health and in front of regulators.",
     },
-    tags: ["PyTorch", "KAN", "XGBoost", "SHAP", "Optuna", "scikit-learn"],
+    tags: ["KAN", "SHAP", "Grad-CAM", "Conformal", "PyTorch"],
   },
   {
     num: "02",
-    title: { fr: "IA générative & RAG", en: "Generative AI & RAG" },
+    title: { fr: "IA embarquée (Edge AI)", en: "Edge AI" },
     text: {
-      fr: "Assistants documentaires et systèmes multi-agents qui tournent sur une infrastructure maîtrisée : recherche hybride, reranking, GraphRAG, LLM locaux.",
-      en: "Document assistants and multi-agent systems running on infrastructure you control: hybrid retrieval, reranking, GraphRAG, local LLMs.",
+      fr: "Axe de recherche. Faire tourner l'IA sans réseau : quantification INT8, TensorFlow Lite, inférence sur smartphone et lunettes connectées, synchronisation hors ligne pour les zones rurales.",
+      en: "Research track. Running AI without a network: INT8 quantisation, TensorFlow Lite, inference on phones and smart glasses, offline sync for rural areas.",
     },
-    tags: ["LangGraph", "Qdrant", "Ollama", "HyDE", "RRF", "FastAPI"],
+    tags: ["TFLite", "INT8", "YOLOv8", "EfficientNet", "Flutter"],
   },
   {
     num: "03",
+    title: { fr: "IA générative & agents", en: "Generative AI & agents" },
+    text: {
+      fr: "Assistants documentaires souverains et systèmes multi-agents sur infrastructure maîtrisée : recherche hybride, reranking, GraphRAG, LLM locaux.",
+      en: "Sovereign document assistants and multi-agent systems on infrastructure you control: hybrid retrieval, reranking, GraphRAG, local LLMs.",
+    },
+    tags: ["RAG", "LangGraph", "Qdrant", "Ollama", "FastAPI"],
+  },
+  {
+    num: "04",
     title: { fr: "Ingénierie full-stack", en: "Full-stack engineering" },
     text: {
-      fr: "Des modèles aux produits : API en Clean Architecture, interfaces React, bases PostgreSQL, conteneurs Docker, déploiement cloud et intégration continue.",
-      en: "From models to products: Clean Architecture APIs, React interfaces, PostgreSQL, Docker containers, cloud deployment and continuous integration.",
+      fr: "Des modèles aux produits : API en Clean Architecture, interfaces React, applications Flutter, PostgreSQL, Docker, déploiement cloud et intégration continue.",
+      en: "From models to products: Clean Architecture APIs, React interfaces, Flutter apps, PostgreSQL, Docker, cloud deployment and CI.",
     },
-    tags: [".NET 8", "React", "TypeScript", "PostgreSQL", "Docker", "AWS"],
+    tags: [".NET 8", "React", "Flutter", "PostgreSQL", "AWS"],
   },
 ];
 
@@ -125,6 +136,15 @@ export const EXPERIENCES = [
         "Multi-tenant business email platform in production, HRIS, marketplaces, community and e-commerce platforms.",
         "Mobile Money payment integration (MTN MoMo, Orange Money) and AWS deployment.",
       ],
+    },
+  },
+  {
+    when: { fr: "2024", en: "2024" },
+    org: "Club IA · ENSPD",
+    role: { fr: "Responsable Recherche & Développement", en: "Head of Research & Development" },
+    points: {
+      fr: ["Organisation de la commission R&D et du programme hebdomadaire du club.", "Animation de projets étudiants en IA et participation aux compétitions de data science (Zindi, Data Tour)."],
+      en: ["Organised the R&D committee and the club's weekly programme.", "Led student AI projects and took part in data science competitions (Zindi, Data Tour)."],
     },
   },
   {

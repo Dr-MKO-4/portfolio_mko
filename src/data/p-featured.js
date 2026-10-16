@@ -478,6 +478,7 @@ export const FEATURED_PROJECTS = [
         "Score d'évolution temporelle par embeddings sur des paires d'images.",
         "Détection de clusters épidémiologiques par DBSCAN sur positions anonymisées.",
         "Boucle de retours et ré-entraînement hebdomadaire sur les consultations validées.",
+        "Application Flutter offline-first : inférence EfficientNet-B2 locale en TFLite (224×224) quand le serveur est inaccessible, synchronisation Hive au premier lancement puis différée.",
         "Spécification UX, atlas dermatologique et modèle financier.",
       ],
       en: [
@@ -486,6 +487,7 @@ export const FEATURED_PROJECTS = [
         "Temporal progression score using embeddings on image pairs.",
         "Epidemiological cluster detection with DBSCAN on anonymised locations.",
         "Feedback loop and weekly retraining on validated consultations.",
+        "Offline-first Flutter app: local EfficientNet-B2 TFLite inference (224×224) when the server is unreachable, Hive sync on first launch then deferred.",
         "UX specification, dermatology atlas and financial model.",
       ],
     },

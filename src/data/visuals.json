@@ -1,0 +1,1212 @@
+{
+ "kalati-rag": [
+  {
+   "file": "/img/projects/kalati-rag-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran principal de KALATI RAG : saisie de question et suggestions par métier",
+    "en": "KALATI RAG main screen: question box and suggestions by business area"
+   }
+  },
+  {
+   "file": "/img/projects/kalati-rag-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de KALATI RAG (matricule et mot de passe)",
+    "en": "KALATI RAG sign-in page (staff ID and password)"
+   }
+  },
+  {
+   "file": "/img/projects/kalati-rag-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fenêtre « Comment fonctionne KALATI » : réponses sourcées et journalisation",
+    "en": "\"How KALATI works\" dialog: sourced answers and audit logging"
+   }
+  }
+ ],
+ "predoc": [
+  {
+   "file": "/img/projects/predoc-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord PREDOC : incidents, couverture IC 85 % et MAPE",
+    "en": "PREDOC dashboard: incidents, 85% interval coverage and MAPE"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Formulaire de nouvelle prédiction de durée d’occupation de canton",
+    "en": "New prediction form for track-section blocking time"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique des incidents : indicateurs agrégés et courbe réel/prédit",
+    "en": "Incident history: aggregated metrics and actual vs predicted curve"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Saisie post-reddition de la durée réelle pour réentraîner le modèle",
+    "en": "Post-closure entry of the actual duration to retrain the model"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de PREDOC",
+    "en": "PREDOC sign-in page"
+   }
+  }
+ ],
+ "ma-ra": [
+  {
+   "file": "/img/projects/ma-ra-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Gammes de maintenance et détail des étapes pour un équipement ferroviaire",
+    "en": "Maintenance routines and step-by-step detail for a railway asset"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Parc d’équipements référencés et fiche équipement",
+    "en": "Registered equipment fleet and asset sheet"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord de la console Maintenance Augmentée",
+    "en": "Augmented Maintenance console dashboard"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion à la console de maintenance",
+    "en": "Maintenance console sign-in page"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-realwear-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Vue lunettes RealWear de MA-RA : compresseur reconnu dans l'atelier, étape de gamme avec niveau de sécurité et commandes vocales",
+    "en": "MA-RA RealWear headset view: compressor recognised in the workshop, maintenance step with safety level and voice commands"
+   }
+  }
+ ],
+ "sisia-sarl": [
+  {
+   "file": "/img/projects/sisia-sarl-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d’accueil du site SISIA SARL",
+    "en": "SISIA SARL website home page"
+   }
+  },
+  {
+   "file": "/img/projects/sisia-sarl-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page « À propos » du site SISIA SARL",
+    "en": "SISIA SARL \"About\" page"
+   }
+  },
+  {
+   "file": "/img/projects/sisia-sarl-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page service « Alarme à incendie »",
+    "en": "\"Fire alarm\" service page"
+   }
+  },
+  {
+   "file": "/img/projects/sisia-sarl-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de contact de SISIA SARL",
+    "en": "SISIA SARL contact page"
+   }
+  },
+  {
+   "file": "/img/projects/sisia-sarl-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Version mobile de la page « À propos »",
+    "en": "Mobile version of the \"About\" page"
+   }
+  }
+ ],
+ "winplus": [
+  {
+   "file": "/img/projects/winplus-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord élève WinPlus : score moyen, temps d’étude, série",
+    "en": "WinPlus student dashboard: average score, study time, streak"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Assistant WinAI expliquant pas à pas une équation du second degré",
+    "en": "WinAI assistant explaining a quadratic equation step by step"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Catalogue des annales corrigées avec filtres par examen et matière",
+    "en": "Catalogue of corrected past papers with exam and subject filters"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Coach d’examen : plan de révision personnalisé généré par WinAI",
+    "en": "Exam coach: personalised revision plan generated by WinAI"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Correction d’une copie avec l’analyse WinAI côté enseignant",
+    "en": "Grading a submission with WinAI analysis (teacher side)"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-6.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Espace parent : suivi des enfants et capsule WinAI de la semaine",
+    "en": "Parent area: children follow-up and weekly WinAI digest"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-7.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "WinAI sur mobile",
+    "en": "WinAI on mobile"
+   }
+  },
+  {
+   "file": "/img/projects/winplus-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil publique de WinPlus : catalogue d'annales corrigées",
+    "en": "WinPlus public home page: catalogue of corrected past papers"
+   }
+  }
+ ],
+ "beac-detect-anomalies": [
+  {
+   "file": "/img/projects/beac-detect-anomalies-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de l’outil de détection d’anomalies monétaires",
+    "en": "Sign-in page of the monetary anomaly detection tool"
+   }
+  }
+ ],
+ "beac-retention-exportations": [
+  {
+   "file": "/img/projects/beac-retention-exportations-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Trajectoires du taux de rétention des exportations par bandes de diagnostic",
+    "en": "Export retention rate trajectories across diagnostic bands"
+   }
+  },
+  {
+   "file": "/img/projects/beac-retention-exportations-2.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Matrice de transition entre bandes de rétention d’une année à l’autre",
+    "en": "Year-to-year transition matrix between retention bands"
+   }
+  },
+  {
+   "file": "/img/projects/beac-retention-exportations-3.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Radar des métriques structurelles de la balance des paiements (2024)",
+    "en": "Radar of balance-of-payments structural metrics (2024)"
+   }
+  },
+  {
+   "file": "/img/projects/beac-retention-exportations-4.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Tableau de bord macroéconomique comparatif (données FMI)",
+    "en": "Comparative macroeconomic scorecard (IMF data)"
+   }
+  },
+  {
+   "file": "/img/projects/beac-retention-exportations-5.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Comparaison des indices de validation du clustering par méthode",
+    "en": "Clustering validation indices compared across methods"
+   }
+  }
+ ],
+ "meerkat": [
+  {
+   "file": "/img/projects/meerkat-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Résumé exécutif généré par l’agent : score de risque, vulnérabilités, couverture (cible de test example.com)",
+    "en": "Agent-generated executive summary: risk score, findings, coverage (test target example.com)"
+   }
+  }
+ ],
+ "ia-generative": [
+  {
+   "file": "/img/projects/ia-generative-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "CNN avec attention : image PlantVillage et distribution des probabilités",
+    "en": "CNN with attention: PlantVillage image and probability distribution"
+   }
+  },
+  {
+   "file": "/img/projects/ia-generative-2.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Cartes d’attention superposées par couche d’encodeur",
+    "en": "Attention maps overlaid per encoder layer"
+   }
+  },
+  {
+   "file": "/img/projects/ia-generative-3.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Images Fashion-MNIST générées par le GAN en fin d’entraînement",
+    "en": "Fashion-MNIST images generated by the GAN after training"
+   }
+  },
+  {
+   "file": "/img/projects/ia-generative-4.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Dynamique des états cachés d’un RNN et effet du gradient clipping",
+    "en": "RNN hidden-state dynamics and effect of gradient clipping"
+   }
+  }
+ ],
+ "gaz-dissous": [
+  {
+   "file": "/img/projects/gaz-dissous-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Série temporelle du CH4 et anomalies détectées",
+    "en": "CH4 time series and detected anomalies"
+   }
+  },
+  {
+   "file": "/img/projects/gaz-dissous-2.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Matrice de corrélation de Spearman entre gaz dissous",
+    "en": "Spearman correlation matrix of dissolved gases"
+   }
+  },
+  {
+   "file": "/img/projects/gaz-dissous-3.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Décomposition saisonnière du CO2 (lissage, saisonnalité, résidus)",
+    "en": "CO2 seasonal decomposition (smoothing, seasonality, residuals)"
+   }
+  }
+ ],
+ "chiffres-manuscrits": [
+  {
+   "file": "/img/projects/chiffres-manuscrits-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Courbes d’accuracy, de précision et de log loss (train/test)",
+    "en": "Accuracy, precision and log-loss curves (train/test)"
+   }
+  }
+ ],
+ "depot-boissons": [
+  {
+   "file": "/img/projects/depot-boissons-1.webp",
+   "kind": "diagram",
+   "alt": {
+    "fr": "Diagramme de classes UML du dépôt de boissons",
+    "en": "UML class diagram of the beverage depot"
+   }
+  },
+  {
+   "file": "/img/projects/depot-boissons-2.webp",
+   "kind": "diagram",
+   "alt": {
+    "fr": "Diagramme de cas d’utilisation du gérant",
+    "en": "Manager use-case diagram"
+   }
+  }
+ ],
+ "ngondo": [
+  {
+   "file": "/img/projects/ngondo-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil du site Ngondo : carrousel plein écran sur le festival Ngand'a",
+    "en": "Ngondo website home page: full-screen carousel on the Ngand'a festival"
+   }
+  },
+  {
+   "file": "/img/projects/ngondo-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page « L'institution du Ngondo » : présentation de l'assemblée traditionnelle Sawa",
+    "en": "\"The Ngondo institution\" page presenting the Sawa traditional assembly"
+   }
+  },
+  {
+   "file": "/img/projects/ngondo-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Répertoire des cantons, villages et chefferies avec filtres par canton et type",
+    "en": "Directory of cantons, villages and chiefdoms with canton and type filters"
+   }
+  },
+  {
+   "file": "/img/projects/ngondo-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page du Musée Sawa : présentation, horaires, tarifs et accès à la visite 3D",
+    "en": "Sawa Museum page: overview, opening hours, prices and 3D tour entry"
+   }
+  }
+ ],
+ "gala-promo": [
+  {
+   "file": "/img/projects/gala-promo-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Programme de la soirée de gala présenté sous forme de roue interactive",
+    "en": "Gala evening schedule shown as an interactive wheel"
+   }
+  },
+  {
+   "file": "/img/projects/gala-promo-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Section Awards : catégories de vote de la promotion",
+    "en": "Awards section: class voting categories"
+   }
+  },
+  {
+   "file": "/img/projects/gala-promo-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Billetterie : formulaire de réservation et billet à QR code",
+    "en": "Ticketing: booking form and QR-code ticket"
+   }
+  },
+  {
+   "file": "/img/projects/gala-promo-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion de l'espace d'administration du gala",
+    "en": "Gala administration login screen"
+   }
+  }
+ ],
+ "ai4sg-cameroon": [
+  {
+   "file": "/img/projects/ai4sg-cameroon-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil du programme AI for Social Good Cameroon 2026",
+    "en": "AI for Social Good Cameroon 2026 programme home page"
+   }
+  },
+  {
+   "file": "/img/projects/ai4sg-cameroon-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Domaines prioritaires des prototypes (santé, agriculture, éducation…)",
+    "en": "Priority areas for prototypes (health, agriculture, education…)"
+   }
+  },
+  {
+   "file": "/img/projects/ai4sg-cameroon-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Formulaire de candidature en quatre étapes",
+    "en": "Four-step application form"
+   }
+  },
+  {
+   "file": "/img/projects/ai4sg-cameroon-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Présentation du programme : ateliers, hackathon et mentorat",
+    "en": "Programme overview: workshops, hackathon and mentoring"
+   }
+  }
+ ],
+ "homegamesfive": [
+  {
+   "file": "/img/projects/homegamesfive-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Accueil de la boutique Home Game Five : bannière services et catégories",
+    "en": "Home Game Five store home page: services banner and categories"
+   }
+  },
+  {
+   "file": "/img/projects/homegamesfive-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Catalogue produits avec filtres par catégorie et prix (données de démonstration)",
+    "en": "Product catalogue with category and price filters (demo data)"
+   }
+  },
+  {
+   "file": "/img/projects/homegamesfive-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fiche produit : prix, disponibilité par ville et ajout au panier",
+    "en": "Product page: price, availability by city and add to cart"
+   }
+  },
+  {
+   "file": "/img/projects/homegamesfive-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Produits vedettes et parcours « Quel joueur êtes-vous ? »",
+    "en": "Featured products and \"What kind of gamer are you?\" guide"
+   }
+  }
+ ],
+ "testing-platform": [
+  {
+   "file": "/img/projects/testing-platform-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord administrateur de la plateforme de tests techniques",
+    "en": "Administrator dashboard of the technical testing platform"
+   }
+  },
+  {
+   "file": "/img/projects/testing-platform-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Gestion des tests : recherche, filtres par domaine et difficulté",
+    "en": "Test management: search and filters by domain and difficulty"
+   }
+  },
+  {
+   "file": "/img/projects/testing-platform-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Connexion sans mot de passe par code envoyé par e-mail",
+    "en": "Passwordless login with an e-mailed code"
+   }
+  }
+ ],
+ "ajpeac-platform": [
+  {
+   "file": "/img/projects/ajpeac-platform-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord de la plateforme SIG hydrogéologique AJPEAC",
+    "en": "Dashboard of the AJPEAC hydrogeological GIS platform"
+   }
+  },
+  {
+   "file": "/img/projects/ajpeac-platform-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Cartographie SIG : couches forages, zones vulnérables et aquifères",
+    "en": "GIS mapping: boreholes, vulnerable zones and aquifer layers"
+   }
+  },
+  {
+   "file": "/img/projects/ajpeac-platform-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Module Vulnérabilité WASH : indice DRASTIC et carte de vulnérabilité",
+    "en": "WASH vulnerability module: DRASTIC index and vulnerability map"
+   }
+  },
+  {
+   "file": "/img/projects/ajpeac-platform-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Suivi et monitoring des ouvrages hydrauliques",
+    "en": "Monitoring of water infrastructure"
+   }
+  }
+ ],
+ "nexus-ai": [
+  {
+   "file": "/img/projects/nexus-ai-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord NEXUS AI : campagnes en cours et répartition du budget par canal (données de démonstration)",
+    "en": "NEXUS AI dashboard: running campaigns and budget split by channel (demo data)"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Centre de contrôle des agents : graphe LangGraph de l'orchestration",
+    "en": "Agent control centre: LangGraph orchestration graph"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Liste des campagnes marketing avec statut et budget",
+    "en": "Marketing campaign list with status and budget"
+   }
+  },
+  {
+   "file": "/img/projects/nexus-ai-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Calendrier éditorial des contenus générés",
+    "en": "Editorial calendar of generated content"
+   }
+  }
+ ],
+ "mboa-shop": [
+  {
+   "file": "/img/projects/mboa-shop-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Accueil de Mboa Shop : mode locale, paiement mobile money et livraison suivie",
+    "en": "Mboa Shop home page: local fashion, mobile money payment and tracked delivery"
+   }
+  },
+  {
+   "file": "/img/projects/mboa-shop-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Catalogue des articles avec filtres",
+    "en": "Item catalogue with filters"
+   }
+  },
+  {
+   "file": "/img/projects/mboa-shop-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fiche produit : couleurs, tailles et ajout au panier",
+    "en": "Product page: colours, sizes and add to cart"
+   }
+  },
+  {
+   "file": "/img/projects/mboa-shop-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Espace d'administration : supervision des produits, commandes et livraisons",
+    "en": "Admin area: supervision of products, orders and deliveries"
+   }
+  }
+ ],
+ "ma-co": [
+  {
+   "file": "/img/projects/ma-co-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil de Ma Co, plateforme de réservation beauté",
+    "en": "Ma Co home page, a beauty booking platform"
+   }
+  },
+  {
+   "file": "/img/projects/ma-co-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Recherche de prestataires par type, ville et prestation (données de démonstration)",
+    "en": "Provider search by type, city and service (demo data)"
+   }
+  },
+  {
+   "file": "/img/projects/ma-co-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Mise en avant des prestataires beauté",
+    "en": "Featured beauty providers"
+   }
+  },
+  {
+   "file": "/img/projects/ma-co-web-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Marché de cosmétiques entre membres de la communauté",
+    "en": "Community cosmetics marketplace"
+   }
+  }
+ ],
+ "messagerie-multitenant": [
+  {
+   "file": "/img/projects/messagerie-multitenant-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion de la messagerie professionnelle",
+    "en": "Business webmail login screen"
+   }
+  },
+  {
+   "file": "/img/projects/messagerie-multitenant-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran de connexion de l'administration (sociétés, domaines, boîtes mail)",
+    "en": "Administration login screen (companies, domains, mailboxes)"
+   }
+  }
+ ],
+ "hotel-manager": [
+  {
+   "file": "/img/projects/hotel-manager-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord NERADash : indicateurs, revenus et dernières transactions",
+    "en": "NERADash dashboard: KPIs, revenue and latest transactions"
+   }
+  },
+  {
+   "file": "/img/projects/hotel-manager-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Gestion du personnel de l'hôtel (données fictives)",
+    "en": "Hotel staff management (fictitious data)"
+   }
+  },
+  {
+   "file": "/img/projects/hotel-manager-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Gestion du stock de produits avec état d'approvisionnement",
+    "en": "Product stock management with supply status"
+   }
+  }
+ ],
+ "ecommerce-simple": [
+  {
+   "file": "/img/projects/ecommerce-simple-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Liste des produits avec ajout au panier",
+    "en": "Product list with add-to-cart"
+   }
+  },
+  {
+   "file": "/img/projects/ecommerce-simple-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Panier d'achat",
+    "en": "Shopping cart"
+   }
+  }
+ ],
+ "crypto-trader-dqn": [
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Accueil de l'interface Trading Agent : cartes de synthèse et tendances (valeurs d'exemple codées en dur)",
+    "en": "Trading Agent home screen: summary cards and trends (hard-coded sample values)"
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Configuration d'une simulation DQN : crypto, agent, learning rate, gamma",
+    "en": "DQN simulation setup: crypto, agent, learning rate, gamma"
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique des simulations",
+    "en": "Simulation history"
+   }
+  }
+ ],
+ "smartcameroun": [
+  {
+   "file": "/img/projects/smartcameroun-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil du site Smart Cameroun SA",
+    "en": "Smart Cameroun SA website home page"
+   }
+  },
+  {
+   "file": "/img/projects/smartcameroun-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Solutions sectorielles : agriculture, finance, santé, éducation",
+    "en": "Sector solutions: agriculture, finance, health, education"
+   }
+  },
+  {
+   "file": "/img/projects/smartcameroun-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau des services clés",
+    "en": "Key services table"
+   }
+  }
+ ],
+ "reseau-social-enspd": [
+  {
+   "file": "/img/projects/reseau-social-enspd-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fil d'actualité du prototype de réseau social étudiant (HTML/CSS statique)",
+    "en": "News feed of the student social network prototype (static HTML/CSS)"
+   }
+  }
+ ],
+ "agrosense": [
+  {
+   "file": "/img/projects/agrosense-mobile-showcase.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile AgroSense (accueil, résultat avec Grad-CAM, prise de photo)",
+    "en": "AgroSense mobile app mockups (home, result with Grad-CAM, photo capture)"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Accueil AgroSense : statistiques de la semaine, alertes phytosanitaires actives de la zone et diagnostics récents",
+    "en": "AgroSense home: weekly stats, active plant-health alerts in the area and recent diagnoses"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Écran Diagnostic IA : photo d'une feuille prête pour l'analyse",
+    "en": "AI Diagnosis screen: leaf photo ready for analysis"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Résultat du diagnostic : maladie la plus probable, carte de chaleur Grad-CAM et autres hypothèses du top-3",
+    "en": "Diagnosis result: most likely disease, Grad-CAM heatmap and the other top-3 hypotheses"
+   }
+  },
+  {
+   "file": "/img/projects/agrosense-mobile-4.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Historique des diagnostics par culture et par parcelle",
+    "en": "Diagnosis history by crop and plot"
+   }
+  }
+ ],
+ "dermai": [
+  {
+   "file": "/img/projects/dermai-mobile-showcase.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile DermAI (capture, résultat Grad-CAM, paramètres hors ligne)",
+    "en": "DermAI mobile app mockups (capture, Grad-CAM result, offline settings)"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Première synchronisation de DermAI en mode hors ligne avec les données médicales embarquées",
+    "en": "DermAI first sync in offline mode with embedded medical data"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Capture de la lésion avec cadre ovale et indicateurs de luminosité et de distance",
+    "en": "Lesion capture with oval guide and lighting and distance indicators"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Résultat de l'analyse : diagnostic principal, zones décisives Grad-CAM et diagnostics différentiels",
+    "en": "Analysis result: main diagnosis, Grad-CAM decisive areas and differential diagnoses"
+   }
+  },
+  {
+   "file": "/img/projects/dermai-mobile-4.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Paramètres : profil professionnel, consultations en attente de synchronisation hors ligne et préférences",
+    "en": "Settings: professional profile, consultations pending offline sync and preferences"
+   }
+  }
+ ],
+ "swiftpay": [
+  {
+   "file": "/img/projects/swiftpay-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Paiement sans contact : scan du tag NFC en cours",
+    "en": "Contactless payment: NFC tag scan in progress"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Authentification par reconnaissance faciale avec détection de vivacité, ou par empreinte digitale",
+    "en": "Face recognition authentication with liveness detection, or fingerprint"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-showcase.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile SwiftPay (portefeuille, paiement NFC, biométrie)",
+    "en": "SwiftPay mobile app mockups (wallet, NFC payment, biometrics)"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Accueil du portefeuille SwiftPay avec comptes Mobile Money et Orange Money liés",
+    "en": "SwiftPay wallet home with linked Mobile Money and Orange Money accounts"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-4.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Historique des transactions validées et refusées",
+    "en": "History of approved and declined transactions"
+   }
+  }
+ ],
+ "pharmacon": [
+  {
+   "file": "/img/projects/pharmacon-mobile-showcase.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquettes conceptuelles de l'application PharmaCon (recherche, ordonnance, livraison)",
+    "en": "PharmaCon app concept mockups (search, prescription, delivery)"
+   }
+  },
+  {
+   "file": "/img/projects/pharmacon-mobile-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Concept PharmaCon : recherche d'un médicament et disponibilité par pharmacie vérifiée",
+    "en": "PharmaCon concept: medicine search and availability per verified pharmacy"
+   }
+  },
+  {
+   "file": "/img/projects/pharmacon-mobile-2.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Concept PharmaCon : dépôt sécurisé d'une ordonnance et statut de vérification",
+    "en": "PharmaCon concept: secure prescription upload and verification status"
+   }
+  },
+  {
+   "file": "/img/projects/pharmacon-mobile-3.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Concept PharmaCon : suivi de livraison par statut et code de remise",
+    "en": "PharmaCon concept: status-based delivery tracking and handover code"
+   }
+  }
+ ],
+ "fluxemi": [
+  {
+   "file": "/img/projects/fluxemi-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Tableau de bord Fluxemi : indicateurs de stock, ajouts récents et alertes de stock critique (thème sombre WPF)",
+    "en": "Fluxemi dashboard: stock indicators, recent additions and critical-stock alerts (dark WPF theme)"
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Liste des produits avec filtres par catégorie, département et statut",
+    "en": "Product list with category, department and status filters"
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Fenêtre « Nouveau produit » ouverte au-dessus de la liste",
+    "en": "“New product” dialog open over the product list"
+   }
+  },
+  {
+   "file": "/img/projects/fluxemi-4.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Écran de connexion par code PIN",
+    "en": "PIN-code login screen"
+   }
+  }
+ ],
+ "syswatch": [
+  {
+   "file": "/img/projects/syswatch-1.webp",
+   "kind": "terminal",
+   "alt": {
+    "fr": "Agent SysWatch démarré à gauche, client nc envoyant cpu, mem et ps à droite",
+    "en": "SysWatch agent starting on the left, nc client sending cpu, mem and ps on the right"
+   }
+  },
+  {
+   "file": "/img/projects/syswatch-2.webp",
+   "kind": "terminal",
+   "alt": {
+    "fr": "Console maître : scan du réseau, sélection d'une machine et commande envoyée à tous les postes",
+    "en": "Master console: network scan, machine selection and a command broadcast to every host"
+   }
+  }
+ ],
+ "winui-prototypes": [
+  {
+   "file": "/img/projects/winui-prototypes-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Prototype WinUI 3 de boutique d'applications : barre de recherche, navigation latérale, sections de jeux",
+    "en": "WinUI 3 app-store prototype: search bar, side navigation, game sections"
+   }
+  },
+  {
+   "file": "/img/projects/winui-prototypes-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Prototype WinUI 3 de lecteur de musique : mixes, playlists et barre de lecture",
+    "en": "WinUI 3 music-player prototype: mixes, playlists and playback bar"
+   }
+  }
+ ],
+ "talentis": [
+  {
+   "file": "/img/projects/talentis-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Tableau de bord RH Talentis : effectif, KPI, postes ouverts et répartition par département et par contrat",
+    "en": "Talentis HR dashboard: headcount, KPIs, open positions and breakdown by department and contract"
+   }
+  },
+  {
+   "file": "/img/projects/talentis-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Liste du personnel avec filtres avancés, statuts, contrats et pagination",
+    "en": "Staff list with advanced filters, statuses, contracts and pagination"
+   }
+  }
+ ],
+ "gestion-absences": [
+  {
+   "file": "/img/projects/gestion-absences-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Saisie des présences d'une classe par l'enseignant (Bootstrap)",
+    "en": "Teacher taking class attendance (Bootstrap)"
+   }
+  },
+  {
+   "file": "/img/projects/gestion-absences-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Tableau de bord enseignant",
+    "en": "Teacher dashboard"
+   }
+  }
+ ],
+ "lidia-restaurant": [
+  {
+   "file": "/img/projects/lidia-restaurant-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette de la caisse tactile : plan de salle et commande de la table en mode hors ligne",
+    "en": "Touch POS mockup: floor plan and table order in offline mode"
+   }
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-2.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette de l'encaissement : addition divisée en parts égales et paiement multi-moyens",
+    "en": "Checkout mockup: bill split into equal parts and multi-method payment"
+   }
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-3.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette du back-office : pilotage, Food Cost par plat et fiche technique",
+    "en": "Back-office mockup: KPIs, food cost per dish and recipe card"
+   }
+  }
+ ],
+ "aura-careos": [
+  {
+   "file": "/img/projects/aura-careos-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette générique d'un Security Center : couverture MFA et sessions actives",
+    "en": "Generic Security Center mockup: MFA coverage and active sessions"
+   }
+  },
+  {
+   "file": "/img/projects/aura-careos-2.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette générique : file de revue des accès d'urgence et journal d'audit chaîné",
+    "en": "Generic mockup: emergency-access review queue and hash-chained audit log"
+   }
+  }
+ ],
+ "gestion-scolarite": [
+  {
+   "file": "/img/projects/gestion-scolarite-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette WPF de l'espace étudiant : solvabilité, certificats de scolarité, relevés de notes et nouvelle demande",
+    "en": "WPF student-portal mockup: solvency, enrolment certificates, transcripts and a new request"
+   }
+  }
+ ],
+ "phone-price-bigdata": [
+  {
+   "file": "/img/projects/phone-price-bigdata-2.webp",
+   "kind": "terminal",
+   "alt": {
+    "fr": "Exécution du spider Scrapy multi-sites et export CSV",
+    "en": "Multi-site Scrapy spider run and CSV export"
+   }
+  },
+  {
+   "file": "/img/projects/phone-price-bigdata-1.webp",
+   "kind": "diagram",
+   "alt": {
+    "fr": "Pipeline Scrapy, nettoyage pandas, agent Flume spoolDir et dépôt HDFS",
+    "en": "Pipeline: Scrapy, pandas cleaning, Flume spoolDir agent and HDFS storage"
+   }
+  }
+ ],
+ "drone-livraison": [
+  {
+   "file": "/img/projects/drone-livraison-1.webp",
+   "kind": "diagram",
+   "alt": {
+    "fr": "Architecture fonctionnelle du drone : capteurs, contrôleur de vol, actionneurs et station sol",
+    "en": "Drone functional architecture: sensors, flight controller, actuators and ground station"
+   }
+  }
+ ],
+ "cademi-clustering": [
+  {
+   "file": "/img/projects/cademi-clustering-1.webp",
+   "kind": "diagram",
+   "alt": {
+    "fr": "Architecture de la bibliothèque : classe de base, six algorithmes et module de validation",
+    "en": "Library architecture: base class, six algorithms and validation module"
+   }
+  }
+ ],
+ "qr-image-platform": [
+  {
+   "file": "/img/projects/qr-image-platform-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "QR code généré après l'envoi d'une image (mode sombre)",
+    "en": "QR code generated after uploading an image (dark mode)"
+   }
+  },
+  {
+   "file": "/img/projects/qr-image-platform-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page d'accueil et zone de dépôt",
+    "en": "Home page and upload area"
+   }
+  }
+ ],
+ "mko-riccati": [
+  {
+   "file": "/img/projects/mko-riccati-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-2.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-3.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  },
+  {
+   "file": "/img/projects/mko-riccati-4.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Graphique produit par le package MKO.RICCATI",
+    "en": "Plot produced by the MKO.RICCATI package"
+   }
+  }
+ ],
+ "em-variationnel": [
+  {
+   "file": "/img/projects/em-variationnel-1.webp",
+   "kind": "figure",
+   "alt": {
+    "fr": "Illustration de l'algorithme EM sur un mélange gaussien synthétique",
+    "en": "Illustration of EM on a synthetic Gaussian mixture"
+   }
+  }
+ ]
+}

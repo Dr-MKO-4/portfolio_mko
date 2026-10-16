@@ -52,8 +52,8 @@ export const UI = {
   heroLine3: { fr: "explicables", en: "you can explain" },
   heroLine4: { fr: "et je les mets en production.", en: "and ship them to production." },
   heroIntro: {
-    fr: "M2 Science des Données & IA à l'ENSPD Douala, chercheur au LIDIA Lab. Je travaille à la jonction de la modélisation et du logiciel : réseaux de Kolmogorov-Arnold, détection de fraude Mobile Money, systèmes RAG et plateformes full-stack.",
-    en: "MSc Data Science & AI student at ENSPD Douala and researcher at LIDIA Lab. I work where modelling meets software: Kolmogorov-Arnold networks, Mobile Money fraud detection, RAG systems and full-stack platforms.",
+    fr: "M2 Science des Données & IA à l'ENSPD Douala, chercheur au LIDIA Lab. Mes recherches portent sur l'IA explicable (réseaux de Kolmogorov-Arnold, SHAP, Grad-CAM) et l'IA embarquée (modèles quantifiés qui tournent hors ligne). Je les mets en production dans des plateformes full-stack.",
+    en: "MSc Data Science & AI student at ENSPD Douala and researcher at LIDIA Lab. My research covers explainable AI (Kolmogorov-Arnold networks, SHAP, Grad-CAM) and edge AI (quantised models that run offline). I ship them inside full-stack platforms.",
   },
   seeWork: { fr: "Voir les projets", en: "See the work" },
   contactMe: { fr: "Me contacter", en: "Get in touch" },
@@ -61,10 +61,16 @@ export const UI = {
   available: { fr: "Ouvert aux opportunités", en: "Open to opportunities" },
 
   pillarsEyebrow: { fr: "Ce que je fais", en: "What I do" },
-  pillarsTitle: { fr: "Trois métiers, une même exigence", en: "Three crafts, one standard" },
+  pillarsTitle: { fr: "Deux axes de recherche, deux savoir-faire", en: "Two research tracks, two crafts" },
 
-  featuredEyebrow: { fr: "Projets phares", en: "Featured work" },
-  featuredTitle: { fr: "Recherche, laboratoire et concours industriels", en: "Research, lab work and industry challenges" },
+  featuredEyebrow: { fr: "Projets par catégorie", en: "Work by category" },
+  featuredTitle: { fr: "Huit domaines, deux projets phares chacun", en: "Eight fields, two highlights each" },
+  featuredIntro: {
+    fr: "Chaque catégorie met en avant ses projets les plus représentatifs. Les autres restent accessibles juste en dessous et sur la page Projets.",
+    en: "Each category highlights its most representative projects. The others remain one click away, below and on the Work page.",
+  },
+  viewCategory: { fr: "Voir la catégorie", en: "View category" },
+  alsoInCategory: { fr: "Aussi dans cette catégorie", en: "Also in this category" },
   allEyebrow: { fr: "Tous mes projets", en: "All projects" },
   allTitle: { fr: "L'archive complète", en: "The full archive" },
   allIntro: {

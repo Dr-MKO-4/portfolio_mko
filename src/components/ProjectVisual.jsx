@@ -22,7 +22,7 @@ export default function ProjectVisual({ project, showLogo = true, logoClass = "c
       ) : (
         <GenCover seed={project.slug} color={project.color} initials={initials(name)} />
       )}
-      {showLogo && project.logo && (
+      {showLogo && project.logo && project.coverFit !== "cover" && (
         <div className={logoClass}>
           <img src={project.logo} alt={`Logo ${name}`} loading="lazy" />
         </div>

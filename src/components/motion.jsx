@@ -165,7 +165,7 @@ export function Preloader({ onDone }) {
       onAnimationComplete={() => { if (!show) onDone(); }}
     >
       <div className="preloader-top mono">
-        <span>MKO · Portfolio</span>
+        <motion.img className="preloader-logo" src="/logo-mko-192.png" alt="" initial={{ scale: 0.6, rotate: -20, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} transition={{ duration: 0.9, ease: EASE }} />
         <span>Douala · CM</span>
       </div>
       <div>

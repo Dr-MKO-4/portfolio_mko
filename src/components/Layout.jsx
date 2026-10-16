@@ -15,7 +15,7 @@ const LINKS = [
 export function Logo() {
   return (
     <span className="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 64 64"><path d="M12 48V16l20 20 20-20v32" fill="none" stroke="#cd4918" strokeWidth="7" /></svg>
+      <img src="/logo-mko-192.png" alt="" width="44" height="44" />
     </span>
   );
 }

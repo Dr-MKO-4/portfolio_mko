@@ -46,11 +46,14 @@ export default function Contact() {
                   <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>
                   <button className="mono" onClick={copy}>{copied ? ui("copied") : ui("copy")}</button>
                 </div>
-                {PROFILE.socials.map((s) => (
+                {PROFILE.socials.filter((s) => s.label !== "WhatsApp").map((s) => (
                   <a key={s.label} className="contact-line" href={s.url} target="_blank" rel="noopener noreferrer">
                     <span>{s.label}</span><span className="mono">↗</span>
                   </a>
                 ))}
+                <a className="contact-line" href={PROFILE.whatsapp.url} target="_blank" rel="noopener noreferrer">
+                  <span>WhatsApp · {PROFILE.whatsapp.display}</span><span className="mono">↗</span>
+                </a>
                 <div className="contact-line" style={{ cursor: "default" }}>
                   <span>{PROFILE.location}</span><span className="mono">GMT+1</span>
                 </div>
