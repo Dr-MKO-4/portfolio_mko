@@ -1,4 +1,38 @@
 {
+ "depot-boissons": [
+  {
+   "file": "/img/projects/depot-boissons-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Kasa, tableau de bord : ventes du jour, recettes, dettes, casiers consignés, graphique des 7 derniers jours et alertes de stock",
+    "en": "Kasa dashboard: daily sales, cash received, customer debts, crates on deposit, 7-day sales chart and low-stock alerts"
+   }
+  },
+  {
+   "file": "/img/projects/depot-boissons-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Kasa, caisse tactile : vente à crédit au casier avec retour des vides et calcul de la consigne",
+    "en": "Kasa touch point of sale: credit sale by the crate with empty-bottle returns and deposit calculation"
+   }
+  },
+  {
+   "file": "/img/projects/depot-boissons-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Kasa, suivi des livraisons en colonnes : préparée, en route, livrée, payée, avec les livreurs",
+    "en": "Kasa delivery board with columns: prepared, on the way, delivered, paid, plus courier list"
+   }
+  },
+  {
+   "file": "/img/projects/depot-boissons-new-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Kasa, rapports : chiffre d'affaires et bénéfice par jour, top produits, dettes clients et exports CSV",
+    "en": "Kasa reports: revenue and profit per day, top products, customer debts and CSV exports"
+   }
+  }
+ ],
  "ecommerce-simple": [
   {
    "file": "/img/projects/ecommerce-simple-new-1.webp",
@@ -654,24 +688,6 @@
    "alt": {
     "fr": "Courbes d’accuracy, de précision et de log loss (train/test)",
     "en": "Accuracy, precision and log-loss curves (train/test)"
-   }
-  }
- ],
- "depot-boissons": [
-  {
-   "file": "/img/projects/depot-boissons-1.webp",
-   "kind": "diagram",
-   "alt": {
-    "fr": "Diagramme de classes UML du dépôt de boissons",
-    "en": "UML class diagram of the beverage depot"
-   }
-  },
-  {
-   "file": "/img/projects/depot-boissons-2.webp",
-   "kind": "diagram",
-   "alt": {
-    "fr": "Diagramme de cas d’utilisation du gérant",
-    "en": "Manager use-case diagram"
    }
   }
  ],

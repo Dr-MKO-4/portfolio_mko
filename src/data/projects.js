@@ -117,6 +117,7 @@ function withVisuals(p) {
 }
 
 const LOGOS = {
+  "depot-boissons": "/img/logos/depot-boissons.webp",
   "mkan-momtsim": "/img/logos/mkan.webp", "beac-detect-anomalies": "/img/logos/beac-detect.webp", predoc: "/img/logos/predoc.webp",
   "ma-ra": "/img/logos/mara.webp", "lidia-restaurant": "/img/logos/lidia-restaurant.webp", talentis: "/img/logos/talentis.webp",
   "langue-des-signes": "/img/logos/langue-signes.webp", "drone-livraison": "/img/logos/drone.webp", syswatch: "/img/logos/syswatch.webp",
@@ -135,7 +136,8 @@ const LIVE = {
  "hotel-manager": "https://mko-hotel.vercel.app",
  "crypto-trader-dqn": "https://mko-crypto-trader.vercel.app",
  "reseau-social-enspd": "https://mko-reseau-social.vercel.app",
- "ecommerce-simple": "https://mko-ecommerce-stripe.vercel.app"
+ "ecommerce-simple": "https://mko-ecommerce-stripe.vercel.app",
+ "depot-boissons": "https://mko-depot-boissons.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
