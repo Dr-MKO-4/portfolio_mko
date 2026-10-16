@@ -1,4 +1,54 @@
 {
+ "crypto-trader-dqn": [
+  {
+   "file": "/img/projects/crypto-trader-dqn-new-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord de Crypto Trader DQN en thème sombre : indicateurs du portefeuille, courbe d'équité de l'agent face au Buy & Hold et décisions récentes (données de démonstration).",
+    "en": "Crypto Trader DQN dashboard in dark theme: portfolio KPIs, agent equity curve against Buy & Hold and recent decisions (demo data)."
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-new-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran des résultats d'une simulation : valeur finale, rendement, ratio de Sharpe, drawdown, courbe de portefeuille et signaux d'achat et de vente.",
+    "en": "Simulation results screen: final value, return, Sharpe ratio, drawdown, portfolio curve and buy and sell signals."
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-new-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Configuration d'une simulation : choix de l'actif, de la période de backtest et des hyperparamètres DQN (learning rate, gamma, epsilon, replay buffer).",
+    "en": "Simulation setup: asset, backtest period and DQN hyperparameters (learning rate, gamma, epsilon, replay buffer)."
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Accueil de l'interface Trading Agent : cartes de synthèse et tendances (valeurs d'exemple codées en dur)",
+    "en": "Trading Agent home screen: summary cards and trends (hard-coded sample values)"
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Configuration d'une simulation DQN : crypto, agent, learning rate, gamma",
+    "en": "DQN simulation setup: crypto, agent, learning rate, gamma"
+   }
+  },
+  {
+   "file": "/img/projects/crypto-trader-dqn-web-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique des simulations",
+    "en": "Simulation history"
+   }
+  }
+ ],
  "qr-image-platform": [
   {
    "file": "/img/projects/qr-image-platform-new-1.webp",
@@ -934,32 +984,6 @@
    "alt": {
     "fr": "Panier d'achat",
     "en": "Shopping cart"
-   }
-  }
- ],
- "crypto-trader-dqn": [
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Accueil de l'interface Trading Agent : cartes de synthèse et tendances (valeurs d'exemple codées en dur)",
-    "en": "Trading Agent home screen: summary cards and trends (hard-coded sample values)"
-   }
-  },
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Configuration d'une simulation DQN : crypto, agent, learning rate, gamma",
-    "en": "DQN simulation setup: crypto, agent, learning rate, gamma"
-   }
-  },
-  {
-   "file": "/img/projects/crypto-trader-dqn-web-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Historique des simulations",
-    "en": "Simulation history"
    }
   }
  ],
