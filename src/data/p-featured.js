@@ -458,7 +458,7 @@ export const FEATURED_PROJECTS = [
       fr: "ERP et caisse unifiés pour la restauration, avec encaissement 100 % hors ligne et comptabilité SYSCOHADA intégrée.",
       en: "Unified restaurant ERP and POS with fully offline checkout and built-in SYSCOHADA accounting.",
     },
-    status: { fr: "Cahier des charges client", en: "Client specification" },
+    status: { fr: "En conception · développement à venir", en: "In design · development upcoming" },
     role: { fr: "Concepteur et auteur du cahier des charges", en: "Designer and specification author" },
     context: {
       fr: "Les restaurants souffrent de ressaisies comptables, de coupures de service quand internet tombe et d'une visibilité tardive sur le coût de revient. LIDIA Restaurant relie prise de commande, encaissement, comptabilité, achats, stocks et pilotage dans un seul outil.",
@@ -466,26 +466,26 @@ export const FEATURED_PROJECTS = [
     },
     built: {
       fr: [
-        "Caisse tactile hors ligne avec synchronisation différée, tickets numérotés, bons cuisine et bar, division d'addition.",
-        "Comptabilité SYSCOHADA révisé : écritures automatiques, TVA multi-taux, écritures immuables et clôture verrouillée.",
-        "Achats, trésorerie, stocks, fiches techniques et calcul du food cost théorique contre réel.",
-        "Tableaux de bord consultables sur ordinateur et smartphone, module RH de pointage en option.",
+        "Cahier des charges complet rédigé avec le client : caisse, comptabilité, achats, stocks, pilotage et RH.",
+        "Maquettes des écrans clés : caisse tactile hors ligne, encaissement avec addition divisée, back-office et food cost par plat.",
+        "Architecture cible définie : poste caisse hors ligne, back-office web et backend, synchronisation traitée comme lot dédié.",
+        "À venir : développement de la caisse hors ligne avec synchronisation différée, puis de la comptabilité SYSCOHADA (écritures automatiques, TVA multi-taux, clôture verrouillée).",
       ],
       en: [
-        "Offline touch POS with deferred sync, numbered tickets, kitchen and bar slips, bill splitting.",
-        "Revised SYSCOHADA accounting: automatic entries, multi-rate VAT, immutable entries and locked closing.",
-        "Purchasing, treasury, inventory, recipe cards and theoretical versus actual food cost.",
-        "Dashboards on desktop and smartphone, optional HR time-clock module.",
+        "Full specification written with the client: POS, accounting, purchasing, inventory, reporting and HR.",
+        "Mock-ups of the key screens: offline touch POS, checkout with bill splitting, back office and per-dish food cost.",
+        "Target architecture defined: offline POS terminal, web back office and backend, sync handled as a dedicated work package.",
+        "Next: building the offline POS with deferred sync, then SYSCOHADA accounting (automatic entries, multi-rate VAT, locked closing).",
       ],
     },
     architecture: {
       fr: [
-        "Poste caisse React encapsulé dans Tauri avec base locale pour le hors ligne.",
+        "Prévu : poste caisse React encapsulé dans Tauri avec base locale pour le hors ligne.",
         "Back-office React et backend ASP.NET Core sur AWS.",
         "PostgreSQL ; la synchronisation multi-terminaux hors ligne est traitée comme lot technique dédié.",
       ],
       en: [
-        "React POS wrapped in Tauri with a local database for offline use.",
+        "Planned: React POS wrapped in Tauri with a local database for offline use.",
         "React back office and ASP.NET Core backend on AWS.",
         "PostgreSQL; multi-terminal offline sync handled as a dedicated technical work package.",
       ],
