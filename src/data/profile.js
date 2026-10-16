@@ -5,7 +5,7 @@ export const PROFILE = {
   cv: { fr: "/cv/CV_Georges-Miguel-MOUKOKO_FR.pdf", en: "/cv/CV_Georges-Miguel-MOUKOKO_EN.pdf" },
   whatsapp: { display: "+237 691 69 79 24", url: "https://wa.me/237691697924" },
   socials: [
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/georgesmoukoko-3890542a5" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/georges-miguel-moukoko-3890542a5" },
     { label: "GitHub", url: "https://github.com/Dr-MKO-4" },
     { label: "WhatsApp", url: "https://wa.me/237691697924" },
   ],
