@@ -352,6 +352,47 @@ export const FEATURED_PROJECTS = [
     links: [],
   },
   {
+    slug: "leads-ai",
+    order: 9,
+    title: "Lead's AI",
+    group: { fr: "LIDIA Lab", en: "LIDIA Lab" },
+    categories: ["ia", "concept"],
+    year: "2026",
+    color: "#cd4918",
+    subtitle: {
+      fr: "LLM souverain africain organisé en agents métier spécialisés (agriculture, santé, secteur public, microfinance, langues locales), déployable sur site.",
+      en: "Sovereign African LLM organised as specialised business agents (agriculture, health, public sector, microfinance, local languages), deployable on-premise.",
+    },
+    status: { fr: "En développement · conception", en: "In development · design" },
+    role: { fr: "Conception et architecture (LIDIA Lab)", en: "Design and architecture (LIDIA Lab)" },
+    context: {
+      fr: "Les grands assistants généralistes ignorent les langues, les infrastructures et les secteurs vitaux de l'Afrique centrale, et imposent l'envoi des données vers le cloud. Lead's AI vise un modèle spécifique et souverain : chaque agent est conçu pour un contexte métier africain précis et tourne sur l'infrastructure du client.",
+      en: "Large general-purpose assistants ignore Central Africa's languages, infrastructure and vital sectors, and require sending data to the cloud. Lead's AI aims for a specific, sovereign model: each agent is built for a precise African business context and runs on the client's infrastructure.",
+    },
+    built: {
+      fr: [
+        "Plateforme d'agents spécialisés par contexte métier : agriculture, santé, secteur public, microfinance, langues locales.",
+        "Traitement du langage en contexte juridique, bancaire, médical, agricole et administratif.",
+        "Raisonnement structuré sur documents longs et bases de connaissances propriétaires, réponses sourcées.",
+        "Prise en charge des langues africaines : français local, langues nationales, pidgin.",
+        "Déploiement on-premise : confidentialité totale et aucune dépendance au cloud.",
+      ],
+      en: [
+        "Platform of agents specialised by business context: agriculture, health, public sector, microfinance, local languages.",
+        "Language processing in legal, banking, medical, agricultural and administrative contexts.",
+        "Structured reasoning over long documents and proprietary knowledge bases, with sourced answers.",
+        "Support for African languages: local French, national languages, pidgin.",
+        "On-premise deployment: full confidentiality and no cloud dependency.",
+      ],
+    },
+    stack: ["LLM", "Agents", "RAG", "NLP multilingue", "On-premise"],
+    links: [],
+    note: {
+      fr: "Produit en cours de conception au LIDIA Lab : la maquette illustre le fonctionnement visé, pas un produit livré.",
+      en: "Product under design at LIDIA Lab: the mockup illustrates the intended experience, not a shipped product.",
+    },
+  },
+  {
     slug: "pharmacon",
     featured: true,
     order: 9,

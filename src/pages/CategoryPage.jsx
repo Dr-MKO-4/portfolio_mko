@@ -53,8 +53,8 @@ export default function CategoryPage() {
   const prev = CATEGORIES[(idx - 1 + CATEGORIES.length) % CATEGORIES.length];
   const next = CATEGORIES[(idx + 1) % CATEGORIES.length];
   const all = byCategory(cat.key);
-  const featured = all.filter((p) => p.featured);
-  const others = all.filter((p) => !p.featured);
+  const featured = all.filter((p) => cat.featured.includes(p.slug));
+  const others = all.filter((p) => !cat.featured.includes(p.slug));
 
   return (
     <Page>

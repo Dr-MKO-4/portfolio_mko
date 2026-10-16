@@ -181,8 +181,8 @@ function CategoryBlock({ cat }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const all = byCategory(cat.key);
-  const featured = all.filter((p) => p.featured);
-  const others = all.filter((p) => !p.featured);
+  const featured = all.filter((p) => cat.featured.includes(p.slug));
+  const others = all.filter((p) => !cat.featured.includes(p.slug));
   return (
     <div className="cat-block">
       <div className="cat-head">

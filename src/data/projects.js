@@ -29,8 +29,8 @@ export const CATEGORIES = [
     num: "03",
     label: { fr: "IA générative, RAG & agents", en: "Generative AI, RAG & agents" },
     desc: {
-      fr: "Je construis des assistants documentaires souverains et des systèmes multi-agents : recherche hybride, GraphRAG, LLM auto-hébergés, validation humaine.",
-      en: "I build sovereign document assistants and multi-agent systems: hybrid retrieval, GraphRAG, self-hosted LLMs, human approval.",
+      fr: "Je construis des assistants documentaires souverains et des systèmes multi-agents, dont les trois produits agentiques du LIDIA Lab : Nexus (marketing), Meerkat (cybersécurité) et Lead's AI (LLM souverain). Recherche hybride, GraphRAG, LLM auto-hébergés, validation humaine.",
+      en: "I build sovereign document assistants and multi-agent systems, including LIDIA Lab's three agentic products: Nexus (marketing), Meerkat (security) and Lead's AI (sovereign LLM). Hybrid retrieval, GraphRAG, self-hosted LLMs, human approval.",
     },
     featured: ["kalati-rag", "nexus-ai"],
   },
@@ -89,7 +89,7 @@ export const CATEGORIES = [
 const CAT_OF = {
   "mkan-momtsim": "xai", "beac-detect-anomalies": "xai", "beac-retention-exportations": "xai", "em-variationnel": "xai", "mko-riccati": "xai",
   agrosense: "edge", "ma-ra": "edge", dermai: "edge", "langue-des-signes": "edge", "drone-livraison": "edge",
-  "kalati-rag": "genai", "nexus-ai": "genai",
+  "kalati-rag": "genai", "nexus-ai": "genai", "leads-ai": "genai",
   predoc: "ds", "crypto-trader-dqn": "ds", "cademi-clustering": "ds", "ia-generative": "ds", "gaz-dissous": "ds", "chiffres-manuscrits": "ds", "phone-price-bigdata": "ds",
   meerkat: "security", "aura-careos": "security",
   winplus: "platforms", homegamesfive: "platforms", "messagerie-multitenant": "platforms", ngondo: "platforms", "mboa-shop": "platforms", talentis: "platforms", "ajpeac-platform": "platforms", "testing-platform": "platforms", "gala-promo": "platforms",
@@ -138,7 +138,8 @@ export const PROJECTS = [...RESEARCH_PRO, ...FEATURED_PROJECTS, ...OTHER_PROJECT
 
 export const CATEGORY_OF = Object.fromEntries(CATEGORIES.map((c) => [c.key, c]));
 export const FEATURED = PROJECTS.filter((p) => p.featured);
-export const byCategory = (key) => PROJECTS.filter((p) => p.cat === key);
+const EXTRA_CATS = { meerkat: ["genai"] };
+export const byCategory = (key) => PROJECTS.filter((p) => p.cat === key || EXTRA_CATS[p.slug]?.includes(key));
 
 export const publicRepoCount = new Set(
   PROJECTS.flatMap((p) => (p.links || []).map((l) => l.url).filter((u) => u.startsWith("https://github.com/")))

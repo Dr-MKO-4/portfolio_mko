@@ -227,6 +227,16 @@
    }
   }
  ],
+ "leads-ai": [
+  {
+   "file": "/img/projects/leads-ai-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Concept Lead's AI : agent Agriculture, réponses sourcées et sortie en langues locales",
+    "en": "Lead's AI concept: Agriculture agent, sourced answers and output in local languages"
+   }
+  }
+ ],
  "kalati-rag": [
   {
    "file": "/img/projects/kalati-rag-1.webp",

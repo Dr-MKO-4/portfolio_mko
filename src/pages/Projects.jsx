@@ -10,7 +10,7 @@ import ProjectVisual from "../components/ProjectVisual.jsx";
 function CategoryTile({ cat, index }) {
   const { t, ui } = useLang();
   const all = byCategory(cat.key);
-  const featured = all.filter((p) => p.featured);
+  const featured = all.filter((p) => cat.featured.includes(p.slug));
   return (
     <Reveal delay={(index % 2) * 0.08} y={30}>
       <Link to={`/projets/categorie/${cat.key}`} className="cat-tile" data-cursor={ui("view")}>
