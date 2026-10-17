@@ -460,7 +460,7 @@ export const FEATURED_PROJECTS = [
       fr: "ERP et caisse unifiés pour la restauration, avec encaissement 100 % hors ligne et comptabilité SYSCOHADA intégrée.",
       en: "Unified restaurant ERP and POS with fully offline checkout and built-in SYSCOHADA accounting.",
     },
-    status: { fr: "En conception · développement à venir", en: "In design · development upcoming" },
+    status: { fr: "En conception · démo de conception en ligne", en: "In design · live design demo" },
     role: { fr: "Concepteur et auteur du cahier des charges", en: "Designer and specification author" },
     context: {
       fr: "Les restaurants souffrent de ressaisies comptables, de coupures de service quand internet tombe et d'une visibilité tardive sur le coût de revient. LIDIA Restaurant relie prise de commande, encaissement, comptabilité, achats, stocks et pilotage dans un seul outil.",
@@ -471,12 +471,14 @@ export const FEATURED_PROJECTS = [
         "Cahier des charges complet rédigé avec le client : caisse, comptabilité, achats, stocks, pilotage et RH.",
         "Maquettes des écrans clés : caisse tactile hors ligne, encaissement avec addition divisée, back-office et food cost par plat.",
         "Architecture cible définie : poste caisse hors ligne, back-office web et backend, synchronisation traitée comme lot dédié.",
+        "Démo de conception en ligne : caisse tactile hors ligne (plan de salle, bons cuisine, addition divisée, ticket, Z de caisse) et back-office (food cost, fiches techniques, stocks, écritures SYSCOHADA), le tout simulé dans le navigateur.",
         "À venir : développement de la caisse hors ligne avec synchronisation différée, puis de la comptabilité SYSCOHADA (écritures automatiques, TVA multi-taux, clôture verrouillée).",
       ],
       en: [
         "Full specification written with the client: POS, accounting, purchasing, inventory, reporting and HR.",
         "Mock-ups of the key screens: offline touch POS, checkout with bill splitting, back office and per-dish food cost.",
         "Target architecture defined: offline POS terminal, web back office and backend, sync handled as a dedicated work package.",
+        "Live design demo: offline touch POS (floor plan, kitchen slips, bill splitting, receipt, Z report) and back office (food cost, recipe cards, inventory, SYSCOHADA entries), all simulated in the browser.",
         "Next: building the offline POS with deferred sync, then SYSCOHADA accounting (automatic entries, multi-rate VAT, locked closing).",
       ],
     },
