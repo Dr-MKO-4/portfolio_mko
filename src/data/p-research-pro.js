@@ -127,7 +127,7 @@ export const RESEARCH_PRO = [
       ],
     },
     stack: ["Python", "PyTorch", "Dash", "PyQt6", "SHAP", "STL", "SQLite", "PyInstaller"],
-    links: [],
+    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/detect-anomalies-demo" }],
     note: {
       fr: "Les données de la BEAC sont confidentielles : seules les méthodes sont présentées ici.",
       en: "BEAC data is confidential: only the methods are presented here.",
@@ -572,7 +572,7 @@ export const RESEARCH_PRO = [
       ],
     },
     stack: ["C#", ".NET 8", "WinUI 3", "XAML"],
-    links: [],
+    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/winui-prototypes" }],
   },
   {
     slug: "smartcameroun",
