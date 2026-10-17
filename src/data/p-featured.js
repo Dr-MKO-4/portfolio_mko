@@ -251,7 +251,7 @@ export const FEATURED_PROJECTS = [
       ],
     },
     stack: ["TensorFlow Lite", "EfficientNet", "Grad-CAM", "DBSCAN", "FastAPI", "ASP.NET Core 8", "Flutter", "PostGIS"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/agrosense-demo" }],
+    links: [],
   },
   {
     slug: "nexus-ai",
@@ -352,7 +352,7 @@ export const FEATURED_PROJECTS = [
       ],
     },
     stack: ["Python", "Typer", "httpx", "SQLAlchemy", "Jinja2", "FastAPI", "APScheduler", "LangGraph"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/meerkat-demo" }],
+    links: [],
   },
   {
     slug: "leads-ai",
@@ -495,7 +495,7 @@ export const FEATURED_PROJECTS = [
       ],
     },
     stack: ["React", "Tauri", "ASP.NET Core", "PostgreSQL", "AWS"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/lidia-restaurant-demo" }],
+    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/lidia-restaurant" }],
   },
   {
     slug: "dermai",
@@ -542,7 +542,7 @@ export const FEATURED_PROJECTS = [
       en: ["Offline-first Flutter app with a TFLite model.", "ASP.NET Core backend.", "FastAPI AI service (EfficientNet-B2, Grad-CAM, DBSCAN, scheduled retraining).", "PostgreSQL."],
     },
     stack: ["EfficientNet-B2", "TensorFlow Lite", "PyTorch", "Grad-CAM", "FastAPI", "Flutter", "ASP.NET Core"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/dermai-demo" }],
+    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/dermai" }],
   },
   {
     slug: "swiftpay",
@@ -584,7 +584,7 @@ export const FEATURED_PROJECTS = [
       en: ["React Native app (NFC, biometrics, camera).", "Node.js / Express API.", "Flask face recognition microservice.", "PostgreSQL, Docker Compose."],
     },
     stack: ["React Native", "NFC", "Node.js", "Express", "Flask", "MediaPipe", "OpenCV", "PostgreSQL"],
-    links: [gh("Dr-MKO-4/swiftpay", { fr: "Dépôt SwiftPay", en: "SwiftPay repository" }), { label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/swiftpay-demo" }],
+    links: [gh("Dr-MKO-4/swiftpay", { fr: "Dépôt SwiftPay", en: "SwiftPay repository" }), { label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/swiftpay/tree/demo" }],
   },
   {
     slug: "drone-livraison",

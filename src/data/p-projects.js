@@ -283,7 +283,7 @@ export const OTHER_PROJECTS = [
       ],
     },
     stack: ["C#", "WPF", "MVVM", "EF Core", "SQLite", "LLM API", "Inno Setup"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/fluxemi-demo" }],
+    links: [],
   },
   {
     slug: "ai4sg-cameroon",
@@ -379,7 +379,7 @@ export const OTHER_PROJECTS = [
       ],
     },
     stack: ["ASP.NET Core 8", "MediatR", "FluentValidation", "EF Core", "PostgreSQL", "React", "AWS"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/talentis-demo" }],
+    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/talentis" }],
   },
   {
     slug: "reussir",

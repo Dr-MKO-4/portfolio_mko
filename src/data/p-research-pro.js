@@ -127,7 +127,7 @@ export const RESEARCH_PRO = [
       ],
     },
     stack: ["Python", "PyTorch", "Dash", "PyQt6", "SHAP", "STL", "SQLite", "PyInstaller"],
-    links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/detect-anomalies-demo" }],
+    links: [],
     note: {
       fr: "Les données de la BEAC sont confidentielles : seules les méthodes sont présentées ici.",
       en: "BEAC data is confidential: only the methods are presented here.",
