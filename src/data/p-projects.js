@@ -382,37 +382,6 @@ export const OTHER_PROJECTS = [
     links: [{ label: { fr: "Code de la démo", en: "Demo source code" }, url: "https://github.com/Dr-MKO-4/talentis" }],
   },
   {
-    slug: "reussir",
-    order: 29,
-    title: "Réussir",
-    group: PERSO,
-    categories: ["ia", "fullstack"],
-    year: "2025",
-    color: "#5b8db8",
-    logo: "/img/logos/reussir.webp",
-    subtitle: { fr: "Chatbot pédagogique et service de recommandation pour la réussite scolaire.", en: "Educational chatbot and recommendation service for academic success." },
-    status: { fr: "Prototype · travail d'équipe", en: "Prototype · team work" },
-    role: { fr: "Architecture et cadrage", en: "Architecture and scoping" },
-    context: {
-      fr: "Accompagner les élèves avec un assistant qui comprend leurs difficultés et leur propose des contenus adaptés.",
-      en: "Support students with an assistant that understands their difficulties and suggests suitable content.",
-    },
-    built: {
-      fr: [
-        "Cahier des charges, modules fonctionnels et architecture IA du chatbot.",
-        "API de conversation : fichiers joints, suggestions, cache Redis, limitation de débit, recherche plein texte.",
-        "Service d'analyse de difficulté et de recommandation, interface de chat React.",
-      ],
-      en: [
-        "Specification, functional modules and chatbot AI architecture.",
-        "Conversation API: attachments, suggestions, Redis cache, rate limiting, full-text search.",
-        "Difficulty analysis and recommendation service, React chat interface.",
-      ],
-    },
-    stack: ["React", "TypeScript", "Node.js", "Flask", "PostgreSQL", "Redis"],
-    links: [gh("Dr-MKO-4/reussir", { fr: "Dépôt", en: "Repository" })],
-  },
-  {
     slug: "hotel-manager",
     order: 50,
     title: "Hôtel-restaurant",
