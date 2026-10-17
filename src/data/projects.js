@@ -148,7 +148,9 @@ const LIVE = {
  "dermai": "https://mko-dermai.vercel.app",
  "fluxemi": "https://mko-fluxemi.vercel.app",
  "winui-prototypes": "https://mko-winui.vercel.app",
- "syswatch": "https://mko-syswatch.vercel.app"
+ "syswatch": "https://mko-syswatch.vercel.app",
+ "swiftpay": "https://mko-swiftpay.vercel.app",
+ "beac-detect-anomalies": "https://mko-detect-anomalies.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));

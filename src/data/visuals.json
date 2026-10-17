@@ -73,6 +73,104 @@
    }
   }
  ],
+ "beac-detect-anomalies": [
+  {
+   "file": "/img/projects/beac-detect-anomalies-demo-1.webp",
+   "alt": {
+    "fr": "Page Analyse sur séries synthétiques : aide à la calibration du seuil, anomalies triées par sévérité et score LOF* dans le temps",
+    "en": "Analysis page on synthetic series: threshold calibration aid, anomalies ranked by severity and LOF* score over time"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-demo-2.webp",
+   "alt": {
+    "fr": "Décomposition STL robuste d'un indicateur synthétique et composante creuse de la RPCA",
+    "en": "Robust STL decomposition of a synthetic indicator and RPCA sparse component"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-demo-3.webp",
+   "alt": {
+    "fr": "Score profond simulé avec seuils de prédiction conforme q̂90 / q̂95 (simulation pédagogique)",
+    "en": "Simulated deep score with conformal prediction thresholds q̂90 / q̂95 (teaching simulation)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-demo-4.webp",
+   "alt": {
+    "fr": "Visualisation : scree plot de l'ACP, projection 2D et profils LOF selon MinPts",
+    "en": "Visualisation: PCA scree plot, 2D projection and LOF profiles across MinPts"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Comparaison LOF* et BiVAT sur scores normalisés, concordance par pays",
+    "en": "LOF* vs BiVAT comparison on normalised scores, per-country agreement"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Exploration : scree plot RPCA et projection ACP",
+    "en": "Exploration: RPCA scree plot and PCA projection"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Prétraitement : carte des valeurs manquantes et décomposition STL",
+    "en": "Preprocessing: missing-value map and STL decomposition"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Réentraînement LOF* et BiVAT avec calibration conforme",
+    "en": "LOF* and BiVAT retraining with conformal calibration"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Optimisation heuristique des hyperparamètres par algorithme génétique",
+    "en": "Genetic-algorithm hyperparameter search"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-6.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Génération de rapports HTML / PDF",
+    "en": "HTML / PDF report generation"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-app-7.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique et revue des exécutions",
+    "en": "Run history and review"
+   }
+  },
+  {
+   "file": "/img/projects/beac-detect-anomalies-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de l’outil de détection d’anomalies monétaires",
+    "en": "Sign-in page of the monetary anomaly detection tool"
+   }
+  }
+ ],
  "dermai": [
   {
    "file": "/img/projects/dermai-demo-1.webp",
@@ -437,6 +535,80 @@
    }
   }
  ],
+ "swiftpay": [
+  {
+   "file": "/img/projects/swiftpay-demo-1.webp",
+   "alt": {
+    "fr": "Écran d'accueil de SwiftPay dans un cadre de téléphone : solde, modes Envoyer / Recevoir, bouton NFC et transactions récentes (données fictives)",
+    "en": "SwiftPay home screen in a phone frame: balance, Send / Receive modes, NFC button and recent transactions (fictitious data)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/swiftpay-demo-2.webp",
+   "alt": {
+    "fr": "Vérification Face ID simulée : visage de synthèse, rapport d'ouverture des yeux (EAR) image par image et seuil de clignement",
+    "en": "Simulated Face ID check: synthetic face, per-frame eye aspect ratio (EAR) and blink threshold"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/swiftpay-demo-3.webp",
+   "alt": {
+    "fr": "Historique des transactions avec recherche et filtres Entrées / Sorties",
+    "en": "Transaction history with search and In / Out filters"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/swiftpay-demo-4.webp",
+   "alt": {
+    "fr": "Reçu de paiement NFC après accusé de réception du destinataire",
+    "en": "NFC payment receipt after the recipient's acknowledgement"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Paiement sans contact : scan du tag NFC en cours",
+    "en": "Contactless payment: NFC tag scan in progress"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-3.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Authentification par reconnaissance faciale avec détection de vivacité, ou par empreinte digitale",
+    "en": "Face recognition authentication with liveness detection, or fingerprint"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-showcase.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquettes de l'application mobile SwiftPay (portefeuille, paiement NFC, biométrie)",
+    "en": "SwiftPay mobile app mockups (wallet, NFC payment, biometrics)"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Accueil du portefeuille SwiftPay avec comptes Mobile Money et Orange Money liés",
+    "en": "SwiftPay wallet home with linked Mobile Money and Orange Money accounts"
+   }
+  },
+  {
+   "file": "/img/projects/swiftpay-mobile-4.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Historique des transactions validées et refusées",
+    "en": "History of approved and declined transactions"
+   }
+  }
+ ],
  "syswatch": [
   {
    "file": "/img/projects/syswatch-demo-1.webp",
@@ -476,6 +648,56 @@
    "alt": {
     "fr": "Console maître : scan du réseau, sélection d'une machine et commande envoyée à tous les postes",
     "en": "Master console: network scan, machine selection and a command broadcast to every host"
+   }
+  }
+ ],
+ "talentis": [
+  {
+   "file": "/img/projects/talentis-demo-1.webp",
+   "alt": {
+    "fr": "Tableau de bord RH de Talentis : effectif, turnover et indicateurs calculés sur des données fictives",
+    "en": "Talentis HR dashboard: headcount, turnover and indicators computed on fictitious data"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/talentis-demo-2.webp",
+   "alt": {
+    "fr": "Recrutement : pipeline Kanban des candidatures d'une offre, de la réception à l'embauche",
+    "en": "Recruiting: Kanban pipeline of a job's applications, from receipt to hire"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/talentis-demo-3.webp",
+   "alt": {
+    "fr": "Paie : bulletin calculé avec les règles du service de calcul (primes, cotisations, impôt)",
+    "en": "Payroll: payslip computed with the calculation service rules (bonuses, contributions, tax)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/talentis-demo-4.webp",
+   "alt": {
+    "fr": "Fiche collaborateur : identité, coordonnées, affectation et rémunération",
+    "en": "Employee profile: identity, contact details, assignment and pay"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/talentis-1.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Tableau de bord RH Talentis : effectif, KPI, postes ouverts et répartition par département et par contrat",
+    "en": "Talentis HR dashboard: headcount, KPIs, open positions and breakdown by department and contract"
+   }
+  },
+  {
+   "file": "/img/projects/talentis-2.webp",
+   "kind": "mockup",
+   "alt": {
+    "fr": "Liste du personnel avec filtres avancés, statuts, contrats et pagination",
+    "en": "Staff list with advanced filters, statuses, contracts and pagination"
    }
   }
  ],
@@ -740,72 +962,6 @@
    "alt": {
     "fr": "Illustration de l'algorithme EM sur un mélange gaussien synthétique",
     "en": "Illustration of EM on a synthetic Gaussian mixture"
-   }
-  }
- ],
- "beac-detect-anomalies": [
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Comparaison LOF* et BiVAT sur scores normalisés, concordance par pays",
-    "en": "LOF* vs BiVAT comparison on normalised scores, per-country agreement"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Exploration : scree plot RPCA et projection ACP",
-    "en": "Exploration: RPCA scree plot and PCA projection"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Prétraitement : carte des valeurs manquantes et décomposition STL",
-    "en": "Preprocessing: missing-value map and STL decomposition"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-4.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Réentraînement LOF* et BiVAT avec calibration conforme",
-    "en": "LOF* and BiVAT retraining with conformal calibration"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-5.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Optimisation heuristique des hyperparamètres par algorithme génétique",
-    "en": "Genetic-algorithm hyperparameter search"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-6.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Génération de rapports HTML / PDF",
-    "en": "HTML / PDF report generation"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-app-7.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Historique et revue des exécutions",
-    "en": "Run history and review"
-   }
-  },
-  {
-   "file": "/img/projects/beac-detect-anomalies-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de connexion de l’outil de détection d’anomalies monétaires",
-    "en": "Sign-in page of the monetary anomaly detection tool"
    }
   }
  ],
@@ -1483,48 +1639,6 @@
    }
   }
  ],
- "swiftpay": [
-  {
-   "file": "/img/projects/swiftpay-mobile-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Paiement sans contact : scan du tag NFC en cours",
-    "en": "Contactless payment: NFC tag scan in progress"
-   }
-  },
-  {
-   "file": "/img/projects/swiftpay-mobile-3.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Authentification par reconnaissance faciale avec détection de vivacité, ou par empreinte digitale",
-    "en": "Face recognition authentication with liveness detection, or fingerprint"
-   }
-  },
-  {
-   "file": "/img/projects/swiftpay-mobile-showcase.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Maquettes de l'application mobile SwiftPay (portefeuille, paiement NFC, biométrie)",
-    "en": "SwiftPay mobile app mockups (wallet, NFC payment, biometrics)"
-   }
-  },
-  {
-   "file": "/img/projects/swiftpay-mobile-1.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Accueil du portefeuille SwiftPay avec comptes Mobile Money et Orange Money liés",
-    "en": "SwiftPay wallet home with linked Mobile Money and Orange Money accounts"
-   }
-  },
-  {
-   "file": "/img/projects/swiftpay-mobile-4.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Historique des transactions validées et refusées",
-    "en": "History of approved and declined transactions"
-   }
-  }
- ],
  "pharmacon": [
   {
    "file": "/img/projects/pharmacon-mobile-showcase.webp",
@@ -1556,24 +1670,6 @@
    "alt": {
     "fr": "Concept PharmaCon : suivi de livraison par statut et code de remise",
     "en": "PharmaCon concept: status-based delivery tracking and handover code"
-   }
-  }
- ],
- "talentis": [
-  {
-   "file": "/img/projects/talentis-1.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Tableau de bord RH Talentis : effectif, KPI, postes ouverts et répartition par département et par contrat",
-    "en": "Talentis HR dashboard: headcount, KPIs, open positions and breakdown by department and contract"
-   }
-  },
-  {
-   "file": "/img/projects/talentis-2.webp",
-   "kind": "mockup",
-   "alt": {
-    "fr": "Liste du personnel avec filtres avancés, statuts, contrats et pagination",
-    "en": "Staff list with advanced filters, statuses, contracts and pagination"
    }
   }
  ],
