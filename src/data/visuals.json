@@ -311,6 +311,196 @@
    }
   }
  ],
+ "kalati-rag": [
+  {
+   "file": "/img/projects/kalati-rag-demo-1.webp",
+   "alt": {
+    "fr": "Réponse sourcée de l'assistant avec citations",
+    "en": "Grounded answer with citations"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/kalati-rag-demo-2.webp",
+   "alt": {
+    "fr": "Panneau source ouvert depuis une citation",
+    "en": "Source panel opened from a citation"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/kalati-rag-demo-3.webp",
+   "alt": {
+    "fr": "Refus calibré avec passages les plus proches",
+    "en": "Calibrated refusal with nearest passages"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/kalati-rag-demo-4.webp",
+   "alt": {
+    "fr": "Journal d'audit chaîné SHA-256 vérifié",
+    "en": "Verified SHA-256 hash-chained audit log"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/kalati-rag-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Écran principal de KALATI RAG : saisie de question et suggestions par métier",
+    "en": "KALATI RAG main screen: question box and suggestions by business area"
+   }
+  },
+  {
+   "file": "/img/projects/kalati-rag-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de KALATI RAG (matricule et mot de passe)",
+    "en": "KALATI RAG sign-in page (staff ID and password)"
+   }
+  },
+  {
+   "file": "/img/projects/kalati-rag-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Fenêtre « Comment fonctionne KALATI » : réponses sourcées et journalisation",
+    "en": "\"How KALATI works\" dialog: sourced answers and audit logging"
+   }
+  }
+ ],
+ "lidia-restaurant": [
+  {
+   "file": "/img/projects/lidia-restaurant-demo-1.webp",
+   "alt": {
+    "fr": "Caisse tactile : plan de salle par statut et commande de la table 7 avec bons cuisine et bar",
+    "en": "Touch POS: floor plan by table status and table 7 order with kitchen and bar tickets"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-demo-2.webp",
+   "alt": {
+    "fr": "Encaissement : addition divisée en trois parts réglées par carte, Mobile Money et espèces",
+    "en": "Checkout: bill split into three parts paid by card, Mobile Money and cash"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-demo-3.webp",
+   "alt": {
+    "fr": "Back-office : chiffre d'affaires, marge brute et Food Cost par plat calculés sur des données fictives",
+    "en": "Back office: revenue, gross margin and per-dish food cost computed on fictitious data"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-demo-4.webp",
+   "alt": {
+    "fr": "Fiche technique avec sous-recette : coût de revient recalculé au dernier prix d'achat",
+    "en": "Recipe card with sub-recipe: cost recomputed at the latest purchase price"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette de la caisse tactile : plan de salle et commande de la table en mode hors ligne",
+    "en": "Touch POS mockup: floor plan and table order in offline mode"
+   }
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-2.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette de l'encaissement : addition divisée en parts égales et paiement multi-moyens",
+    "en": "Checkout mockup: bill split into equal parts and multi-method payment"
+   }
+  },
+  {
+   "file": "/img/projects/lidia-restaurant-3.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Maquette du back-office : pilotage, Food Cost par plat et fiche technique",
+    "en": "Back-office mockup: KPIs, food cost per dish and recipe card"
+   }
+  }
+ ],
+ "ma-ra": [
+  {
+   "file": "/img/projects/ma-ra-demo-1.webp",
+   "alt": {
+    "fr": "Reconnaissance d'équipement simulée sur image générée",
+    "en": "Simulated equipment recognition on a generated image"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/ma-ra-demo-2.webp",
+   "alt": {
+    "fr": "Tableau de bord d'usage (journal fictif)",
+    "en": "Usage dashboard (fictitious log)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/ma-ra-demo-3.webp",
+   "alt": {
+    "fr": "Gamme de maintenance et étapes de sécurité",
+    "en": "Maintenance routine with safety steps"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/ma-ra-demo-4.webp",
+   "alt": {
+    "fr": "Détection simulée d'un signal ferroviaire",
+    "en": "Simulated detection of a railway signal"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/ma-ra-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Gammes de maintenance et détail des étapes pour un équipement ferroviaire",
+    "en": "Maintenance routines and step-by-step detail for a railway asset"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Parc d’équipements référencés et fiche équipement",
+    "en": "Registered equipment fleet and asset sheet"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord de la console Maintenance Augmentée",
+    "en": "Augmented Maintenance console dashboard"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion à la console de maintenance",
+    "en": "Maintenance console sign-in page"
+   }
+  },
+  {
+   "file": "/img/projects/ma-ra-realwear-1.webp",
+   "kind": "concept-mockup",
+   "alt": {
+    "fr": "Vue lunettes RealWear de MA-RA : compresseur reconnu dans l'atelier, étape de gamme avec niveau de sécurité et commandes vocales",
+    "en": "MA-RA RealWear headset view: compressor recognised in the workshop, maintenance step with safety level and voice commands"
+   }
+  }
+ ],
  "meerkat": [
   {
    "file": "/img/projects/meerkat-demo-1.webp",
@@ -474,6 +664,72 @@
    "alt": {
     "fr": "Calendrier éditorial des contenus générés",
     "en": "Editorial calendar of generated content"
+   }
+  }
+ ],
+ "predoc": [
+  {
+   "file": "/img/projects/predoc-demo-1.webp",
+   "alt": {
+    "fr": "Prédiction avec intervalle 85 % et contributions SHAP (modèle simulé)",
+    "en": "Prediction with 85% interval and SHAP contributions (simulated model)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/predoc-demo-2.webp",
+   "alt": {
+    "fr": "Tableau de bord des incidents (données fictives)",
+    "en": "Incident dashboard (fictitious data)"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/predoc-demo-3.webp",
+   "alt": {
+    "fr": "Historique des durées prédites et réelles",
+    "en": "History of predicted and actual durations"
+   },
+   "kind": "demo"
+  },
+  {
+   "file": "/img/projects/predoc-1.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Tableau de bord PREDOC : incidents, couverture IC 85 % et MAPE",
+    "en": "PREDOC dashboard: incidents, 85% interval coverage and MAPE"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-2.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Formulaire de nouvelle prédiction de durée d’occupation de canton",
+    "en": "New prediction form for track-section blocking time"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-3.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Historique des incidents : indicateurs agrégés et courbe réel/prédit",
+    "en": "Incident history: aggregated metrics and actual vs predicted curve"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-4.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Saisie post-reddition de la durée réelle pour réentraîner le modèle",
+    "en": "Post-closure entry of the actual duration to retrain the model"
+   }
+  },
+  {
+   "file": "/img/projects/predoc-5.webp",
+   "kind": "screenshot",
+   "alt": {
+    "fr": "Page de connexion de PREDOC",
+    "en": "PREDOC sign-in page"
    }
   }
  ],
@@ -1006,116 +1262,6 @@
    "alt": {
     "fr": "Concept Lead's AI : agent Agriculture, réponses sourcées et sortie en langues locales",
     "en": "Lead's AI concept: Agriculture agent, sourced answers and output in local languages"
-   }
-  }
- ],
- "kalati-rag": [
-  {
-   "file": "/img/projects/kalati-rag-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Écran principal de KALATI RAG : saisie de question et suggestions par métier",
-    "en": "KALATI RAG main screen: question box and suggestions by business area"
-   }
-  },
-  {
-   "file": "/img/projects/kalati-rag-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de connexion de KALATI RAG (matricule et mot de passe)",
-    "en": "KALATI RAG sign-in page (staff ID and password)"
-   }
-  },
-  {
-   "file": "/img/projects/kalati-rag-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Fenêtre « Comment fonctionne KALATI » : réponses sourcées et journalisation",
-    "en": "\"How KALATI works\" dialog: sourced answers and audit logging"
-   }
-  }
- ],
- "predoc": [
-  {
-   "file": "/img/projects/predoc-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Tableau de bord PREDOC : incidents, couverture IC 85 % et MAPE",
-    "en": "PREDOC dashboard: incidents, 85% interval coverage and MAPE"
-   }
-  },
-  {
-   "file": "/img/projects/predoc-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Formulaire de nouvelle prédiction de durée d’occupation de canton",
-    "en": "New prediction form for track-section blocking time"
-   }
-  },
-  {
-   "file": "/img/projects/predoc-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Historique des incidents : indicateurs agrégés et courbe réel/prédit",
-    "en": "Incident history: aggregated metrics and actual vs predicted curve"
-   }
-  },
-  {
-   "file": "/img/projects/predoc-4.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Saisie post-reddition de la durée réelle pour réentraîner le modèle",
-    "en": "Post-closure entry of the actual duration to retrain the model"
-   }
-  },
-  {
-   "file": "/img/projects/predoc-5.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de connexion de PREDOC",
-    "en": "PREDOC sign-in page"
-   }
-  }
- ],
- "ma-ra": [
-  {
-   "file": "/img/projects/ma-ra-1.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Gammes de maintenance et détail des étapes pour un équipement ferroviaire",
-    "en": "Maintenance routines and step-by-step detail for a railway asset"
-   }
-  },
-  {
-   "file": "/img/projects/ma-ra-2.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Parc d’équipements référencés et fiche équipement",
-    "en": "Registered equipment fleet and asset sheet"
-   }
-  },
-  {
-   "file": "/img/projects/ma-ra-3.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Tableau de bord de la console Maintenance Augmentée",
-    "en": "Augmented Maintenance console dashboard"
-   }
-  },
-  {
-   "file": "/img/projects/ma-ra-4.webp",
-   "kind": "screenshot",
-   "alt": {
-    "fr": "Page de connexion à la console de maintenance",
-    "en": "Maintenance console sign-in page"
-   }
-  },
-  {
-   "file": "/img/projects/ma-ra-realwear-1.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Vue lunettes RealWear de MA-RA : compresseur reconnu dans l'atelier, étape de gamme avec niveau de sécurité et commandes vocales",
-    "en": "MA-RA RealWear headset view: compressor recognised in the workshop, maintenance step with safety level and voice commands"
    }
   }
  ],
@@ -1688,32 +1834,6 @@
    "alt": {
     "fr": "Tableau de bord enseignant",
     "en": "Teacher dashboard"
-   }
-  }
- ],
- "lidia-restaurant": [
-  {
-   "file": "/img/projects/lidia-restaurant-1.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Maquette de la caisse tactile : plan de salle et commande de la table en mode hors ligne",
-    "en": "Touch POS mockup: floor plan and table order in offline mode"
-   }
-  },
-  {
-   "file": "/img/projects/lidia-restaurant-2.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Maquette de l'encaissement : addition divisée en parts égales et paiement multi-moyens",
-    "en": "Checkout mockup: bill split into equal parts and multi-method payment"
-   }
-  },
-  {
-   "file": "/img/projects/lidia-restaurant-3.webp",
-   "kind": "concept-mockup",
-   "alt": {
-    "fr": "Maquette du back-office : pilotage, Food Cost par plat et fiche technique",
-    "en": "Back-office mockup: KPIs, food cost per dish and recipe card"
    }
   }
  ],

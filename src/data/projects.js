@@ -150,7 +150,10 @@ const LIVE = {
  "winui-prototypes": "https://mko-winui.vercel.app",
  "syswatch": "https://mko-syswatch.vercel.app",
  "swiftpay": "https://mko-swiftpay.vercel.app",
- "beac-detect-anomalies": "https://mko-detect-anomalies.vercel.app"
+ "beac-detect-anomalies": "https://mko-detect-anomalies.vercel.app",
+ "kalati-rag": "https://mko-kalati.vercel.app",
+ "predoc": "https://mko-predoc.vercel.app",
+ "ma-ra": "https://mko-mara.vercel.app"
 };
 
 const FEATURED_SET = new Set(CATEGORIES.flatMap((c) => c.featured));
