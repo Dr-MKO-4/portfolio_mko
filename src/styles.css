@@ -177,6 +177,8 @@ input, textarea { font: inherit; color: inherit; }
   .burger { display: block; }
 }
 @media (max-width: 560px) {
+  .nav-inner { gap: 12px; }
+  .nav-right { gap: 6px; }
   .brand { white-space: nowrap; font-size: 14px; }
   .brand small { display: none; }
 }
@@ -286,7 +288,7 @@ input, textarea { font: inherit; color: inherit; }
 }
 .stack-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
 @media (max-width: 900px) {
-  .stack-card { position: relative; top: 0; height: auto; }
+  .stack-card { position: relative; top: auto !important; height: auto; }
   .stack-inner { grid-template-columns: 1fr; }
   .stack-visual { aspect-ratio: 16 / 10; order: -1; }
 }
@@ -531,7 +533,13 @@ img.cover.contain { object-fit: contain; background: #fff; padding: 4%; }
 .surface3d { width: 100%; height: auto; display: block; }
 .surface-cap { position: absolute; right: 8px; bottom: 6px; color: var(--muted-dark); }
 @media (max-width: 900px) {
-  .cat-body .stack-card { height: auto; }
+  /* Mobile: no sticky stack. Cards become a simple single-column list.
+     `top` and `transform` are set inline by the scroll animation, hence !important. */
+  .cat-body .stack-card { height: auto; top: auto !important; }
+  .cat-body .stack-inner { grid-template-columns: 1fr; transform: none !important; }
+  .stack-dim { display: none; }
+  .stack-text .title-row { flex-wrap: wrap; }
+  .stack-text h3 { overflow-wrap: anywhere; }
   .cat-others .row { grid-template-columns: 32px minmax(0, 1fr) 24px; }
   .surface-wrap { justify-self: center; max-width: 420px; }
 }
