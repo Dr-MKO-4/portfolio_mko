@@ -55,14 +55,13 @@ export default function Projects() {
     <Page>
       <section className="page-hero">
         <div className="wrap">
-          <span className="eyebrow">{ui("featuredEyebrow")}</span>
-          <h1 className="h-display" style={{ marginTop: 20 }}>
+          <h1 className="h-display">
             <SplitText text={ui("navProjects")} delay={0.5} />
-            <span className="serif accent" style={{ fontSize: "0.5em", marginLeft: 16 }}>({PROJECTS.length})</span>
+            <span className="serif accent" style={{ fontSize: "0.5em", marginLeft: 14 }}>({PROJECTS.length})</span>
           </h1>
-          <Reveal delay={0.6}><p className="lead muted" style={{ marginTop: 24 }}>{ui("projectsIndexIntro")}</p></Reveal>
+          <Reveal delay={0.6}><p className="lead muted" style={{ marginTop: 21 }}>{ui("projectsIndexIntro")}</p></Reveal>
           <Reveal delay={0.7} className="filters">
-            <input className="search" style={{ marginLeft: 0, maxWidth: 520 }} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui("search")} aria-label={ui("search")} />
+            <input className="search" style={{ marginLeft: 0, maxWidth: 458 }} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={ui("search")} aria-label={ui("search")} />
           </Reveal>
           {q.trim() && (
             <div className="search-results">
@@ -78,7 +77,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section style={{ paddingBottom: 120 }}>
+      <section style={{ paddingBottom: 106 }}>
         <div className="wrap cat-tiles">
           {CATEGORIES.map((c, i) => <CategoryTile key={c.key} cat={c} index={i} />)}
         </div>

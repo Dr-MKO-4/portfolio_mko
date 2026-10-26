@@ -64,20 +64,20 @@ export default function CategoryPage() {
         <div className="wrap" style={{ position: "relative" }}>
           <Reveal delay={0.5} y={10}><Link to="/projets" className="pd-back mono" style={{ color: "var(--muted-dark)" }}>← {ui("allCategories")}</Link></Reveal>
           <motion.span className="cat-hero-num" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 1, ease: EASE }}>{cat.num}</motion.span>
-          <h1 className="h-display" style={{ marginTop: 8 }}><SplitText key={cat.key} text={t(cat.label)} delay={0.55} /></h1>
-          <Reveal delay={0.7}><p className="lead muted-on-dark" style={{ marginTop: 24 }}>{t(cat.desc)}</p></Reveal>
-          <Reveal delay={0.8}><p className="mono muted-on-dark" style={{ marginTop: 18 }}>{all.length} {ui("projectsCount")}</p></Reveal>
+          <h1 className="h-display" style={{ marginTop: 7 }}><SplitText key={cat.key} text={t(cat.label)} delay={0.55} /></h1>
+          <Reveal delay={0.7}><p className="lead muted-on-dark" style={{ marginTop: 21 }}>{t(cat.desc)}</p></Reveal>
+          <Reveal delay={0.8}><p className="mono muted-on-dark" style={{ marginTop: 16 }}>{all.length} {ui("projectsCount")}</p></Reveal>
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: "clamp(48px, 7vw, 90px)" }}>
+      <section className="section" style={{ paddingTop: "clamp(42px, 6.16vw, 79px)" }}>
         <div className="wrap">
           <div className={`big-cards n${featured.length}`}>
             {featured.map((p, i) => <BigCard key={p.slug} p={p} i={i} />)}
           </div>
           {others.length > 0 && (
             <>
-              <Reveal><span className="eyebrow" style={{ margin: "clamp(56px, 8vw, 96px) 0 28px" }}>{ui("alsoInCategory")}</span></Reveal>
+              <Reveal><h2 className="h-3" style={{ margin: "clamp(49px, 7.04vw, 84px) 0 25px" }}>{ui("alsoInCategory")}</h2></Reveal>
               <div className="grid">{others.map((p, i) => <Card key={p.slug} p={p} i={i} />)}</div>
             </>
           )}

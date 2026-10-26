@@ -14,7 +14,7 @@ import {
 
 export const EASE = [0.22, 1, 0.36, 1];
 
-/* ---------- Split text: words rise from a mask ---------- */
+/* Split text: words rise from a mask */
 export function SplitText({ text, as: Tag = "span", className, delay = 0, stagger = 0.045, once = true, play = true }) {
   const ref = useRef(null);
   const seen = useInView(ref, { once, margin: "0px 0px -10% 0px" });
@@ -38,7 +38,7 @@ export function SplitText({ text, as: Tag = "span", className, delay = 0, stagge
   );
 }
 
-/* ---------- Generic reveal ---------- */
+/* Generic reveal */
 export function Reveal({ children, delay = 0, y = 40, className, as = "div", ...rest }) {
   const M = motion[as];
   return (
@@ -55,7 +55,7 @@ export function Reveal({ children, delay = 0, y = 40, className, as = "div", ...
   );
 }
 
-/* ---------- Statement: words light up with scroll ---------- */
+/* Statement: words light up with scroll */
 export function ScrollStatement({ text, className }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 85%", "end 45%"] });
@@ -80,7 +80,7 @@ function Word({ children, progress, range }) {
   );
 }
 
-/* ---------- Magnetic wrapper ---------- */
+/* Magnetic wrapper */
 export function Magnetic({ children, strength = 0.3 }) {
   const ref = useRef(null);
   const x = useSpring(0, { stiffness: 200, damping: 15, mass: 0.4 });
@@ -100,7 +100,7 @@ export function Magnetic({ children, strength = 0.3 }) {
   );
 }
 
-/* ---------- Custom cursor (labels via data-cursor attribute) ---------- */
+/* Custom cursor (labels via data-cursor attribute) */
 export function Cursor() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
@@ -143,7 +143,7 @@ export function Cursor() {
   );
 }
 
-/* ---------- Preloader (once per session) ---------- */
+/* Preloader (once per session) */
 export function Preloader({ onDone }) {
   const [count, setCount] = useState(0);
   const [show, setShow] = useState(true);
@@ -181,7 +181,7 @@ export function Preloader({ onDone }) {
   );
 }
 
-/* ---------- Page wrapper with curtain transition ---------- */
+/* Page wrapper with curtain transition */
 const COLS = 5;
 export function Page({ children }) {
   const reduce = useReducedMotion();
@@ -206,7 +206,7 @@ export function Page({ children }) {
   );
 }
 
-/* ---------- Velocity marquee ---------- */
+/* Velocity marquee */
 export function Marquee({ items, baseSpeed = 40 }) {
   const x = useMotionValue(0);
   const ref = useRef(null);
@@ -239,7 +239,7 @@ export function Marquee({ items, baseSpeed = 40 }) {
   );
 }
 
-/* ---------- Animated counter ---------- */
+/* Animated counter */
 export function Counter({ value, suffix }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -257,7 +257,7 @@ export function Counter({ value, suffix }) {
   );
 }
 
-/* ---------- Seeded random ---------- */
+/* Seeded random */
 function rng(seedStr) {
   let h = 2166136261;
   for (const ch of seedStr) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
@@ -286,7 +286,7 @@ function smoothPath(pts) {
   return d;
 }
 
-/* ---------- Signature: animated B-spline field (KAN learned activations) ---------- */
+/* Signature: animated B-spline field (KAN learned activations) */
 export function SplineField({ className, lines = 16, seed = "mko", accentIndex = 9, light = false }) {
   const W = 1600, H = 900, K = 11;
   const reduce = useReducedMotion();
@@ -394,7 +394,7 @@ export function SplineField({ className, lines = 16, seed = "mko", accentIndex =
   );
 }
 
-/* ---------- Generated cover for projects without imagery ---------- */
+/* Generated cover for projects without imagery */
 export function GenCover({ seed, color = "#cd4918", initials, dark = true }) {
   const paths = useMemo(() => {
     const r = rng(seed);
@@ -424,11 +424,11 @@ export function GenCover({ seed, color = "#cd4918", initials, dark = true }) {
   );
 }
 
-/* ---------- Smooth scroll context ---------- */
+/* Smooth scroll context */
 export const ScrollContext = createContext({ current: null });
 export const useLenis = () => useContext(ScrollContext);
 
-/* ---------- 3D surface: rotating B-spline landscape (projected SVG) ---------- */
+/* 3D surface: rotating B-spline landscape (projected SVG) */
 export function Surface3D({ className, n = 22 }) {
   const reduce = useReducedMotion();
   const ref = useRef(null);
@@ -513,7 +513,7 @@ export function Surface3D({ className, n = 22 }) {
   );
 }
 
-/* ---------- KAN network: spline edges with travelling activations ---------- */
+/* KAN network: spline edges with travelling activations */
 export function KANNetwork({ className, layers = [3, 5, 5, 2] }) {
   const reduce = useReducedMotion();
   const W = 600, H = 460;
@@ -589,7 +589,7 @@ export function KANNetwork({ className, layers = [3, 5, 5, 2] }) {
   );
 }
 
-/* ---------- Isometric stack: data → models → API → apps ---------- */
+/* Isometric stack: data → models → API → apps */
 export function IsoStack({ className, labels }) {
   const reduce = useReducedMotion();
   const W = 640, H = 480, cx = 190, w = 160, h = 80;

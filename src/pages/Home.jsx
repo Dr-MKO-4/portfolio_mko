@@ -22,9 +22,6 @@ function Hero({ ready }) {
       <div className="wrap">
         <div className="hero-grid">
           <motion.div style={{ y: textY }}>
-            <motion.span className="eyebrow" initial={{ opacity: 0 }} animate={ready ? { opacity: 1 } : {}} transition={{ delay: d }}>
-              {ui("heroEyebrow")}
-            </motion.span>
             <h1 className="h-display hero-title">
               <SplitText className="split-line" text={ui("heroLine1")} play={ready} delay={d + 0.05} />
               <span className="split-line">
@@ -35,7 +32,7 @@ function Hero({ ready }) {
             <motion.p className="h-3" initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.55, duration: 0.9, ease: EASE }}>
               {ui("heroLine4")}
             </motion.p>
-            <motion.p className="lead hero-intro" style={{ marginTop: 18 }} initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.65, duration: 0.9, ease: EASE }}>
+            <motion.p className="lead hero-intro" style={{ marginTop: 16 }} initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.65, duration: 0.9, ease: EASE }}>
               {ui("heroIntro")}
             </motion.p>
             <motion.div className="hero-actions" initial={{ opacity: 0, y: 20 }} animate={ready ? { opacity: 1, y: 0 } : {}} transition={{ delay: d + 0.75, duration: 0.9, ease: EASE }}>
@@ -56,8 +53,8 @@ function Hero({ ready }) {
           <div className="hero-photo">
             <motion.div
               className="hero-photo-frame"
-              initial={{ clipPath: "inset(100% 0 0 0 round 28px)" }}
-              animate={ready ? { clipPath: "inset(0% 0 0 0 round 28px)" } : {}}
+              initial={{ clipPath: "inset(100% 0 0 0 round 25px)" }}
+              animate={ready ? { clipPath: "inset(0% 0 0 0 round 25px)" } : {}}
               transition={{ duration: 1.3, ease: [0.76, 0, 0.24, 1], delay: d + 0.2 }}
             >
               <motion.img
@@ -74,8 +71,8 @@ function Hero({ ready }) {
               <span className="pulse" /> {ui("available")}
             </motion.div>
             <div className="hero-photo-caption mono">
-              <span>LIDIA Lab</span>
-              <span>ENSPD · Douala</span>
+              <span>{ui("heroRole")}</span>
+              <span>LIDIA Lab · Douala</span>
             </div>
           </div>
         </div>
@@ -112,7 +109,7 @@ function StackCard({ project, index, total, progress }) {
   const scale = useTransform(progress, [index / total, 1], [1, 1 - (total - index) * 0.04]);
   const dim = useTransform(progress, [index / total, 1], [0, index < total - 1 ? 0.35 : 0]);
   return (
-    <div className="stack-card" style={{ top: `calc(110px + ${index * 18}px)` }}>
+    <div className="stack-card" style={{ top: `calc(97px + ${index * 16}px)` }}>
       <motion.div className="stack-inner" style={{ scale }}>
         <div className="stack-text">
           <div>
@@ -123,7 +120,7 @@ function StackCard({ project, index, total, progress }) {
             <h3 className="title-row">{project.logo && <img className="p-logo" src={project.logo} alt="" loading="lazy" />}{t(project.name)}</h3>
             <p>{t(project.subtitle)}</p>
           </div>
-          <div style={{ display: "grid", gap: 18 }}>
+          <div style={{ display: "grid", gap: 16 }}>
             <div className="stack-chips">{project.stack.slice(0, 5).map((s) => <span key={s} className="chip">{s}</span>)}</div>
             <div>
               <Link to={`/projets/${project.slug}`} className="btn btn-primary" data-cursor={ui("view")}>
@@ -220,9 +217,8 @@ function CategoryShowcase() {
       <div className="wrap">
         <div className="section-head work-head">
           <div>
-            <span className="eyebrow">{ui("featuredEyebrow")}</span>
             <SplitText as="h2" className="h-1" text={ui("featuredTitle")} />
-            <Reveal><p className="lead muted-on-dark" style={{ marginTop: 24 }}>{ui("featuredIntro")}</p></Reveal>
+            <Reveal><p className="lead muted-on-dark" style={{ marginTop: 21 }}>{ui("featuredIntro")}</p></Reveal>
           </div>
           <Reveal className="surface-wrap">
             <Surface3D className="surface3d" />
@@ -230,7 +226,7 @@ function CategoryShowcase() {
           </Reveal>
         </div>
         {CATEGORIES.map((c) => <CategoryBlock key={c.key} cat={c} />)}
-        <Reveal style={{ marginTop: 64, display: "flex", justifyContent: "center" }}>
+        <Reveal style={{ marginTop: 56, display: "flex", justifyContent: "center" }}>
           <Magnetic>
             <Link to="/projets" className="btn btn-primary">
               {ui("viewAll")} ({PROJECTS.length}) <span className="arrow">→</span>
@@ -256,8 +252,7 @@ export default function Home({ ready }) {
 
       <section className="section">
         <div className="wrap">
-          <span className="eyebrow">{ui("pillarsEyebrow")}</span>
-          <div style={{ margin: "28px 0 clamp(60px, 9vw, 120px)" }}>
+          <div style={{ marginBottom: "clamp(53px, 7.92vw, 106px)" }}>
             <ScrollStatement key={lang} className="statement" text={statement} />
           </div>
         </div>
@@ -266,9 +261,8 @@ export default function Home({ ready }) {
       <section className="pillar-sub">
         <div className="wrap pillar-split">
           <div>
-            <span className="eyebrow">{ui("researchEyebrow")}</span>
             <SplitText as="h2" className="h-1" text={ui("researchTitle")} />
-            <Reveal><p className="lead muted" style={{ margin: "20px 0 32px" }}>{ui("researchIntro")}</p></Reveal>
+            <Reveal><p className="lead muted" style={{ margin: "18px 0 28px" }}>{ui("researchIntro")}</p></Reveal>
             <div className="pillar-cards">
               {PILLARS.slice(0, 2).map((p, i) => <PillarCard key={p.num} p={p} i={i} />)}
             </div>
@@ -281,9 +275,8 @@ export default function Home({ ready }) {
         <div className="wrap pillar-split reverse">
           <Reveal className="pillar-art"><IsoStack className="art-svg" labels={ISO_LABELS[lang]} /></Reveal>
           <div>
-            <span className="eyebrow">{ui("craftEyebrow")}</span>
             <SplitText as="h2" className="h-1" text={ui("craftTitle")} />
-            <Reveal><p className="lead muted-on-dark" style={{ margin: "20px 0 32px" }}>{ui("craftIntro")}</p></Reveal>
+            <Reveal><p className="lead muted-on-dark" style={{ margin: "18px 0 28px" }}>{ui("craftIntro")}</p></Reveal>
             <div className="pillar-cards">
               {PILLARS.slice(2).map((p, i) => <PillarCard key={p.num} p={p} i={i} dark />)}
             </div>
@@ -291,7 +284,7 @@ export default function Home({ ready }) {
         </div>
       </section>
 
-      <section className="dark" style={{ paddingTop: "clamp(60px, 8vw, 100px)" }}>
+      <section className="dark" style={{ paddingTop: "clamp(53px, 7.04vw, 88px)" }}>
         <div className="wrap">
           <div className="counters">
             {[
@@ -319,8 +312,7 @@ export default function Home({ ready }) {
           <Link to="/parcours" className="lab-card" data-cursor={ui("view")}>
             <img src="/img/logos/lidia.webp" alt="LIDIA" />
             <div>
-              <span className="eyebrow">{ui("labEyebrow")}</span>
-              <h2 className="h-2" style={{ margin: "14px 0" }}>LIDIA Lab</h2>
+              <h2 className="h-2" style={{ marginBottom: 12 }}>LIDIA Lab</h2>
               <p className="lead muted">
                 {lang === "fr"
                   ? "La startup d'IA souveraine que j'ai fondée, où je mène mes recherches sur l'IA explicable et l'IA embarquée, appliquées à l'agriculture, la santé, la sécurité et la finance. L'identité visuelle de ce site reprend ses couleurs."
@@ -334,13 +326,12 @@ export default function Home({ ready }) {
 
       <section className="cta-band">
         <div className="wrap">
-          <span className="eyebrow">{ui("contactEyebrow")}</span>
-          <h2 className="h-display" style={{ marginTop: 24 }}>
+          <h2 className="h-display">
             <Link to="/contact" data-cursor={ui("letsTalk")}>
               <SplitText text={ui("letsTalk")} /> <span className="serif accent">↗</span>
             </Link>
           </h2>
-          <p className="mono muted" style={{ marginTop: 24 }}>{PROFILE.email}</p>
+          <p className="mono muted" style={{ marginTop: 21 }}>{PROFILE.email}</p>
         </div>
       </section>
       <Footer />

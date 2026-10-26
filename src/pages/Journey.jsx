@@ -12,14 +12,13 @@ export default function Journey() {
 
   return (
     <Page>
-      <section className="dark" style={{ position: "relative", overflow: "hidden", padding: "150px 0 80px" }}>
+      <section className="dark" style={{ position: "relative", overflow: "hidden", padding: "132px 0 70px" }}>
         <SplineField className="hero-field" lines={10} seed="journey" accentIndex={6} />
         <div className="wrap" style={{ position: "relative" }}>
-          <span className="eyebrow">{ui("journeyEyebrow")}</span>
-          <h1 className="h-display" style={{ marginTop: 20 }}>
+          <h1 className="h-display">
             <SplitText text={ui("journeyTitle")} delay={0.5} />
           </h1>
-          <Reveal delay={0.7} style={{ marginTop: 32 }}>
+          <Reveal delay={0.7} style={{ marginTop: 28 }}>
             <Magnetic>
               <a href={t(PROFILE.cv)} className="btn btn-primary" target="_blank" rel="noopener noreferrer" data-cursor={ui("cvShort")}>{ui("downloadCv")} <span className="arrow">↓</span></a>
             </Magnetic>
@@ -27,7 +26,7 @@ export default function Journey() {
         </div>
       </section>
 
-      <section className="dark" style={{ paddingBottom: "clamp(80px, 10vw, 140px)" }}>
+      <section className="dark" style={{ paddingBottom: "clamp(70px, 8.8vw, 123px)" }}>
         <div className="wrap">
           <div ref={ref} className="timeline">
             <div className="timeline-track">
@@ -58,7 +57,7 @@ export default function Journey() {
       <section className="section" style={{ paddingBottom: 0 }}>
         <div className="wrap edu-grid">
           <div>
-            <span className="eyebrow">{ui("educationTitle")}</span>
+            <h2 className="h-3">{ui("educationTitle")}</h2>
             <div className="edu-list">
               {EDUCATION.map((e, i) => (
                 <Reveal key={i} className="edu-item" delay={i * 0.06}>
@@ -70,9 +69,9 @@ export default function Journey() {
             </div>
           </div>
           <div>
-            <span className="eyebrow">{ui("certsTitle")}</span>
+            <h2 className="h-3">{ui("certsTitle")}</h2>
             <ul className="edu-list plain">{CERTIFICATIONS.map((c) => <li key={c}>{c}</li>)}</ul>
-            <span className="eyebrow" style={{ marginTop: 36 }}>{ui("langsTitle")}</span>
+            <h2 className="h-3" style={{ marginTop: 32 }}>{ui("langsTitle")}</h2>
             <ul className="edu-list plain">{LANGUAGES.map((l) => <li key={l.name}><b>{l.name}</b> · {t(l.level)}</li>)}</ul>
           </div>
         </div>
@@ -82,7 +81,6 @@ export default function Journey() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <span className="eyebrow">{lang === "fr" ? "Compétences" : "Skills"}</span>
               <SplitText as="h2" className="h-1" text={lang === "fr" ? "Ma boîte à outils" : "My toolbox"} />
             </div>
           </div>

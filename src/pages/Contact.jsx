@@ -33,14 +33,13 @@ export default function Contact() {
       <section className="dark contact" style={{ position: "relative", overflow: "hidden" }}>
         <SplineField className="hero-field" lines={12} seed="contact" accentIndex={4} />
         <div className="wrap" style={{ position: "relative" }}>
-          <span className="eyebrow">{ui("contactEyebrow")}</span>
-          <h1 className="h-display" style={{ marginTop: 20 }}>
+          <h1 className="h-display">
             <SplitText className="split-line" text={ui("contactTitle1")} delay={0.5} />
             <SplitText className="split-line serif accent" text={ui("contactTitle2")} delay={0.65} />
           </h1>
           <div className="contact-grid">
             <Reveal delay={0.7}>
-              <p className="lead muted-on-dark" style={{ marginBottom: 32 }}>{ui("contactIntro")}</p>
+              <p className="lead muted-on-dark" style={{ marginBottom: 28 }}>{ui("contactIntro")}</p>
               <div className="contact-lines">
                 <div className="contact-line">
                   <a href={`mailto:${PROFILE.email}`}>{PROFILE.email}</a>

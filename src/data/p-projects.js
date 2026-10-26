@@ -9,7 +9,7 @@ export const OTHER_PROJECTS = [
     title: "WinPlus",
     group: { fr: "Produit en production", en: "Live product" },
     categories: ["ia", "fullstack", "mobile"],
-    year: "2025 – 2026",
+    year: "2025-2026",
     color: "#2bb3a3",
     logo: "/img/logos/winplus.webp",
     cover: "/img/projects/winplus-dashboard.webp",

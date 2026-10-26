@@ -151,7 +151,7 @@ export function Nav() {
                 </motion.li>
               ))}
             </ul>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
               <LangSwitch />
               <a href={`mailto:${PROFILE.email}`} className="mono">{PROFILE.email}</a>
             </div>
@@ -172,7 +172,7 @@ export function Footer() {
         <div className="footer-top">
           <div>
             <p className="lead" style={{ color: "var(--muted-dark)" }}>{ui("footerLine")}</p>
-            <a href={`mailto:${PROFILE.email}`} className="h-3" style={{ display: "inline-block", marginTop: 18 }}>{PROFILE.email}</a>
+            <a href={`mailto:${PROFILE.email}`} className="h-3" style={{ display: "inline-block", marginTop: 16 }}>{PROFILE.email}</a>
           </div>
           <div>
             <h5 className="mono">Navigation</h5>

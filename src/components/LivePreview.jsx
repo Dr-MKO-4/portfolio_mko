@@ -14,8 +14,7 @@ export default function LivePreview({ url, cover }) {
       <div className="wrap">
         <div className="live-head">
           <div>
-            <Reveal><span className="eyebrow">{ui("liveEyebrow")}</span></Reveal>
-            <Reveal><h2 className="h-2" style={{ marginTop: 14 }}>{ui("liveTitle")}</h2></Reveal>
+            <Reveal><h2 className="h-2">{ui("liveTitle")}</h2></Reveal>
           </div>
           <Reveal className="live-actions">
             <div className="live-toggle" role="group" aria-label={ui("liveDevice")}>

@@ -10,7 +10,7 @@ export default function NotFound() {
       <section className="notfound">
         <div>
           <h1 className="h-display"><SplitText text="404" delay={0.5} /></h1>
-          <p className="lead muted" style={{ margin: "20px auto 32px" }}>{ui("notFound")}</p>
+          <p className="lead muted" style={{ margin: "18px auto 28px" }}>{ui("notFound")}</p>
           <Link to="/" className="btn btn-primary">{ui("backHome")} <span className="arrow">→</span></Link>
         </div>
       </section>

@@ -47,7 +47,6 @@ export const UI = {
   educationTitle: { fr: "Formation", en: "Education" },
   certsTitle: { fr: "Certifications", en: "Certifications" },
   langsTitle: { fr: "Langues", en: "Languages" },
-  liveEyebrow: { fr: "Aperçu en direct", en: "Live preview" },
   liveTitle: { fr: "Essayez-le directement ici", en: "Try it right here" },
   liveOpen: { fr: "Voir le site en ligne", en: "Open the live site" },
   liveJump: { fr: "Aperçu intégré", en: "Embedded preview" },
@@ -64,7 +63,7 @@ export const UI = {
   menu: { fr: "Menu", en: "Menu" },
   close: { fr: "Fermer", en: "Close" },
 
-  heroEyebrow: { fr: "Data Scientist · Ingénieur IA · Douala", en: "Data Scientist · AI Engineer · Douala" },
+  heroRole: { fr: "Data Scientist · Ingénieur IA", en: "Data Scientist · AI Engineer" },
   heroLine1: { fr: "Je conçois des", en: "I design" },
   heroLine2: { fr: "modèles", en: "models" },
   heroLine3: { fr: "explicables", en: "you can explain" },
@@ -78,14 +77,11 @@ export const UI = {
   scroll: { fr: "Défiler", en: "Scroll" },
   available: { fr: "Ouvert aux opportunités", en: "Open to opportunities" },
 
-  pillarsEyebrow: { fr: "Ce que je fais", en: "What I do" },
-  researchEyebrow: { fr: "Axes de recherche", en: "Research tracks" },
   researchTitle: { fr: "Ce que je cherche", en: "What I research" },
   researchIntro: {
     fr: "Au LIDIA Lab et dans mon mémoire, je travaille sur deux questions : comment rendre une décision d'IA justifiable, et comment faire tourner l'IA là où le réseau manque.",
     en: "At LIDIA Lab and in my thesis I work on two questions: how to make an AI decision justifiable, and how to run AI where the network is missing.",
   },
-  craftEyebrow: { fr: "Savoir-faire", en: "Craft" },
   craftTitle: { fr: "Ce que je construis", en: "What I build" },
   craftIntro: {
     fr: "Pour que la recherche serve, je la mets en production : des données aux modèles, des API aux interfaces.",
@@ -93,7 +89,6 @@ export const UI = {
   },
   pillarsTitle: { fr: "Deux axes de recherche, deux savoir-faire", en: "Two research tracks, two crafts" },
 
-  featuredEyebrow: { fr: "Mes réalisations", en: "What I've built" },
   featuredTitle: { fr: "De la recherche à la production", en: "From research to production" },
   featuredIntro: {
     fr: "Je travaille sur toute la chaîne : je cherche, je modélise, puis je livre. Voici ce que j'ai construit, domaine par domaine, en commençant par les projets qui me représentent le mieux.",
@@ -107,7 +102,6 @@ export const UI = {
   categoriesMenu: { fr: "Catégories", en: "Categories" },
   viewCategory: { fr: "Voir la catégorie", en: "View category" },
   alsoInCategory: { fr: "J'ai aussi réalisé", en: "I also built" },
-  allEyebrow: { fr: "Tous mes projets", en: "All projects" },
   allTitle: { fr: "L'archive complète", en: "The full archive" },
   allIntro: {
     fr: "Chaque projet ci-dessous existe dans mes dossiers de travail. Les statuts sont indiqués tels quels : prototype, en production, concept documenté.",
@@ -120,11 +114,8 @@ export const UI = {
   noResult: { fr: "Aucun projet ne correspond.", en: "No project matches." },
   projectsCount: { fr: "projets", en: "projects" },
 
-  journeyEyebrow: { fr: "Parcours", en: "Journey" },
   journeyTitle: { fr: "Formation et expériences", en: "Education and experience" },
-  labEyebrow: { fr: "Laboratoire", en: "Lab" },
 
-  contactEyebrow: { fr: "Contact", en: "Contact" },
   contactTitle1: { fr: "Un projet, un poste,", en: "A project, a role," },
   contactTitle2: { fr: "une idée ?", en: "an idea?" },
   contactIntro: {
@@ -147,7 +138,6 @@ export const UI = {
   status: { fr: "Statut", en: "Status" },
   year: { fr: "Année", en: "Year" },
   role: { fr: "Rôle", en: "Role" },
-  context: { fr: "Contexte", en: "Context" },
   context2: { fr: "Le problème", en: "The problem" },
   approach: { fr: "Ce que j'ai construit", en: "What I built" },
   architecture: { fr: "Architecture", en: "Architecture" },
