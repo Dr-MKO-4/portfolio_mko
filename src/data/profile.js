@@ -79,29 +79,31 @@ export const EXPERIENCES = [
     },
   },
   {
-    when: { fr: "2026", en: "2026" },
-    org: "BEAC · Banque des États de l'Afrique Centrale",
-    role: { fr: "Stagiaire Data Scientist · Service de la Balance des Paiements", en: "Data Scientist Intern · Balance of Payments Department" },
-    points: {
-      fr: [
-        "Outil de détection d'anomalies sur les séries monétaires : LOF*, Transformer + BiLSTM + VAE avec prédiction conforme, explications SHAP.",
-        "Application Dash packagée en logiciel de bureau (PyQt6), base SQLite, spécification technique complète.",
-        "Analyse de la rétention des recettes d'exportation pétrolière dans la CEMAC : extraction BEAC / FMI, typologie, clustering.",
-      ],
-      en: [
-        "Anomaly detection tool for monetary series: LOF*, Transformer + BiLSTM + VAE with conformal prediction, SHAP explanations.",
-        "Dash application packaged as desktop software (PyQt6), SQLite storage, full technical specification.",
-        "Analysis of oil export revenue retention in CEMAC: BEAC / IMF data extraction, typology, clustering.",
-      ],
-    },
-  },
-  {
     when: { fr: "2026 · en cours", en: "2026 · present" },
     org: "NexCQISolutions",
     role: { fr: "Développeur logiciel · Aura CareOS", en: "Software developer · Aura CareOS" },
     points: {
       fr: ["Module sécurité d'un dossier médical électronique basé sur OpenEMR : MFA, contrôle d'accès, journal d'audit infalsifiable, tests PHPUnit."],
       en: ["Security module of an OpenEMR-based electronic medical record: MFA, access control, tamper-evident audit log, PHPUnit tests."],
+    },
+  },
+  {
+    when: { fr: "08/2026 · 10/2026", en: "08/2026 · 10/2026" },
+    org: { fr: "BEAC · Siège, Yaoundé", en: "BEAC (Bank of Central African States) · Yaoundé" },
+    role: { fr: "Stagiaire Data Scientist · Direction des Études et des Statistiques (DERSRI)", en: "Data Scientist Intern · Research and Statistics Directorate (DERSRI)" },
+    points: {
+      fr: [
+        "Mission principale au Service Statistiques et Analyses Monétaires : application livrée de détection d'anomalies sur les bilans bancaires des six pays de la CEMAC (12 fichiers, 86 indicateurs IFS mensuels), sans données étiquetées.",
+        "Trois modèles comparés : LOF*, réseau de Kolmogorov-Arnold (MKAN) et BiVAT (Transformer + BiLSTM + VAE) avec prédiction conforme et SHAP. BiVAT a isolé seul le choc du COVID-19. Logiciel Dash + PyQt6 avec rôles et rapports PDF.",
+        "Balance des paiements : diagnostic 2021 du Congo, du Gabon et du Tchad, puis rétention de la valeur des exportations sur 41 pays pétroliers et six années (FMI, BEAC, MBP6) : typologie en cinq bandes, transitions, profils de fuite par k-moyennes et ACP.",
+        "Analyse conjoncturelle du secteur pétrolier et gazier de la CEMAC, benchmark industriel des six États et rotation dans neuf services de la DERSRI.",
+      ],
+      en: [
+        "Main assignment in the Monetary Statistics and Analysis Department: delivered an anomaly detection application for the bank balance sheets of the six CEMAC countries (12 files, 86 monthly IFS indicators), with no labelled data.",
+        "Compared three models: LOF*, a Kolmogorov-Arnold network (MKAN) and BiVAT (Transformer + BiLSTM + VAE) with conformal prediction and SHAP. BiVAT isolated the COVID-19 shock on its own. Dash + PyQt6 desktop software with roles and PDF reports.",
+        "Balance of payments: 2021 diagnosis of Congo, Gabon and Chad, then export value retention across 41 oil exporters over six years (IMF, BEAC, BPM6): five-band typology, transitions, leakage profiles with k-means and PCA.",
+        "Oil and gas sector outlook for CEMAC, industrial benchmark of the six states and rotation across nine departments of the directorate.",
+      ],
     },
   },
   {
@@ -187,7 +189,11 @@ export const LANGUAGES = [
 export const SKILLS = [
   {
     title: { fr: "Data & IA", en: "Data & AI" },
-    items: ["Python", "PyTorch", "scikit-learn", "XGBoost", "SHAP", "Optuna", "KAN", "Transformers", "GAN / VAE", "Deep RL", "NSGA-II", "Séries temporelles"],
+    items: ["Python", "PyTorch", "scikit-learn", "XGBoost", "SHAP", "Optuna", "KAN", "Transformers", "GAN / VAE", "Deep RL", "NSGA-II", "Séries temporelles", "Détection d'anomalies", "Prédiction conforme"],
+  },
+  {
+    title: { fr: "Économie & finance", en: "Economics & finance" },
+    items: ["Statistiques monétaires (IFS)", "Balance des paiements (MBP6)", "Analyse conjoncturelle", "ACP", "k-moyennes"],
   },
   {
     title: { fr: "IA générative", en: "Generative AI" },
@@ -199,6 +205,6 @@ export const SKILLS = [
   },
   {
     title: { fr: "Données & Ops", en: "Data & Ops" },
-    items: ["PostgreSQL / PostGIS", "Redis", "Kafka", "Docker", "AWS EC2", "GitHub Actions", "Nginx / Caddy", "Plotly Dash", "LaTeX"],
+    items: ["PostgreSQL / PostGIS", "SQLite", "Redis", "Kafka", "Linux", "Docker", "AWS EC2", "GitHub Actions", "Nginx / Caddy", "Plotly Dash", "PyQt6", "LaTeX"],
   },
 ];
